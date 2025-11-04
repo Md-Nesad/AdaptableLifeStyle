@@ -7,7 +7,7 @@
  */
 :root,
 [data-bs-theme="light"] {
-  --bs-blue: #0d6efd;
+  --bs-blue: #272a3380;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -15,7 +15,7 @@
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
   --bs-green: #198754;
-  --bs-teal: #20c997;
+  --bs-teal: #c3e66e33;
   --bs-cyan: #0dcaf0;
   --bs-black: #000;
   --bs-white: #fff;
@@ -37,7 +37,8 @@
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  /* for background */
+  --bs-dark: #ffffff;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -86,10 +87,15 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  /* bg body color */
+  --bs-body-color: #eae7e3;
+  --bs-button-bg: #f9f4f1;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg: #fff;
+  /* bg body background color */
+  --bs-body-bg: #f9f4f1;
   --bs-body-bg-rgb: 255, 255, 255;
+  /* text color */
+  --bs-primary: #272a33;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
   --bs-secondary-color: rgba(33, 37, 41, 0.75);
@@ -136,9 +142,15 @@
 [data-bs-theme="dark"] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
+  --bs-blue: #272a33;
+  --bs-dark: #040200;
   --bs-body-color-rgb: 222, 226, 230;
-  --bs-body-bg: #212529;
+  --bs-body-bg: #1e1b18;
+  --bs-button-bg: #f9f4f1;
   --bs-body-bg-rgb: 33, 37, 41;
+  /* text color */
+  --bs-primary: #eae7e3;
+  --bs-teal: #eae7e3;
   --bs-emphasis-color: #fff;
   --bs-emphasis-color-rgb: 255, 255, 255;
   --bs-secondary-color: rgba(222, 226, 230, 0.75);

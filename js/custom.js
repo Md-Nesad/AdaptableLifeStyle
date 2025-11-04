@@ -233,31 +233,31 @@ dropdownToggle.addEventListener("click", function () {
   angleDropMenu.classList.toggle("active");
 });
 
-// const html = document.documentElement;
-// const toggleBtn = document.getElementById("theme-toggle");
+const html = document.documentElement;
+const toggleBtn = document.getElementById("theme-toggle");
 
-// // load saved theme (default: light)
-// const savedTheme = localStorage.getItem("theme") || "light";
-// html.setAttribute("data-bs-theme", savedTheme);
-// updateButton(savedTheme);
+// load saved theme (default: light)
+const savedTheme = localStorage.getItem("theme") || "light";
+html.setAttribute("data-bs-theme", savedTheme);
+updateButton(savedTheme);
 
-// // theme toggle
-// toggleBtn.addEventListener("click", () => {
-//   const current = html.getAttribute("data-bs-theme");
-//   const next = current === "light" ? "dark" : "light";
-//   html.setAttribute("data-bs-theme", next);
-//   localStorage.setItem("theme", next);
-//   updateButton(next);
-// });
+// theme toggle
+toggleBtn.addEventListener("click", () => {
+  const current = html.getAttribute("data-bs-theme");
+  const next = current === "light" ? "dark" : "light";
+  html.setAttribute("data-bs-theme", next);
+  localStorage.setItem("theme", next);
+  updateButton(next);
+});
 
-// function updateButton(theme) {
-//   if (theme === "dark") {
-//     toggleBtn.textContent = "☀️ Light Mode";
-//     toggleBtn.classList.remove("btn-outline-dark");
-//     toggleBtn.classList.add("btn-outline-light");
-//   } else {
-//     toggleBtn.textContent = "🌙 Dark Mode";
-//     toggleBtn.classList.remove("btn-outline-light");
-//     toggleBtn.classList.add("btn-outline-dark");
-//   }
-// }
+function updateButton(theme) {
+  if (theme === "dark") {
+    toggleBtn.textContent = "☀️";
+    toggleBtn.classList.remove("btn-outline-dark");
+    toggleBtn.classList.add("btn-outline-light");
+  } else {
+    toggleBtn.textContent = "🌙";
+    toggleBtn.classList.remove("btn-outline-light");
+    toggleBtn.classList.add("btn-outline-dark");
+  }
+}

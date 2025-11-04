@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,6 +43,7 @@
         <div class="row style_1">
           <div class="col-lg-2 side_menu">
             <div class="overly"></div>
+            <!-- sidebar -->
             <div class="sidebar">
               <div class="sidebar_tk">
                 <div class="angle_toggle_btn" id="sidebarToggle">
@@ -187,76 +188,60 @@
           <div class="col-lg-10 tk_width">
             <div class="row">
               <header>
-                <div class="header_area style_002 tk_style_1">
-                  <div class="row justify-content-between">
-                    <div class="col-lg-8 style_003 order_sm_1">
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <div class="menu_heading d-flex align-items-center">
-                            <div class="menu_toggle_bars tk_none_sm">
-                              <span class="menubar"
-                                ><i class="fa-solid fa-bars"></i
-                              ></span>
-                            </div>
-                            <div class="heading_area style_tk_1">
-                              <div class="heading">
-                                <h1>Hello, Petur Purker</h1>
-                              </div>
-                              <div class="description">
-                                <p>
-                                  Let’s begin your journey to better health
-                                  today
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-6 style_1">
-                          <div class="search_icon_area style_1 tk_none_sm">
-                            <div class="search_area style_001">
-                              <button>
-                                <img src="./images/header/search.png" alt="" />
-                              </button>
-                              <input
-                                type="text"
-                                placeholder="Search anything"
-                              />
-                            </div>
-                            <div class="icon_area">
-                              <ul>
-                                <li>
-                                  <img src="./images/header/icon1.png" alt="" />
-                                </li>
-                                <li>
-                                  <img src="./images/header/icon2.png" alt="" />
-                                </li>
-                                <li>
-                                  <img src="./images/header/icon3.png" alt="" />
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
+                <div class="header_area tk_style_1">
+                  <div class="row">
+                    <div class="col-lg-4 order_sm_2">
+                      <div class="menu_heading d-flex align-items-center">
+                        <div class="menu_toggle_bars tk_none_sm">
+                          <span class="menubar"
+                            ><i class="fa-solid fa-bars"></i
+                          ></span>
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-4 style_002 order_sm_0">
-                      <div class="mobile_device_meta style_1">
+                    <div class="col-lg-5 style_1 order_sm_1">
+                      <div class="search_icon_area tk_none_sm style_1">
+                        <div class="search_area style_001">
+                          <button>
+                            <img src="./images/header/search.png" alt="" />
+                          </button>
+                          <input type="text" placeholder="Search anything" />
+                        </div>
+                        <div class="ms-auto"></div>
+                        <div class="icon_area">
+                          <ul>
+                            <button id="theme-toggle" class="btn">
+                              🌙 Dark Mode
+                            </button>
+
+                            <li>
+                              <img src="./images/header/icon2.png" alt="" />
+                            </li>
+                            <li>
+                              <img src="./images/header/icon3.png" alt="" />
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 style_01 order_sm_0">
+                      <div class="mobile_device_meta">
                         <div class="menu_toggle_bars d-none tk_block_sm">
                           <span class="menubar"
                             ><i class="fa-solid fa-bars"></i
                           ></span>
                         </div>
-                        <div class="meta_area style_01 style_002">
+                        <div class="meta_area style_01">
                           <div class="meta_content">
                             <div class="profile order_sm_1">
                               <img src="./images/header/profile.png" alt="" />
                             </div>
-                            <div class="meta_title order_sm_0">
+                            <div class="meta_title">
                               <h3>Petur Purker</h3>
                               <p>Super Admin</p>
                             </div>
                           </div>
-                          <div class="ball_icon style_1">
+                          <div class="ball_icon">
                             <span class="icon_dropdown"
                               ><img src="./images/header/icon4.png" alt="" />
                               <div class="angle_drop d-none">
@@ -284,6 +269,7 @@
                 </div>
               </header>
             </div>
+            <!-- top rated trainers -->
             <div class="row style_life">
               <div class="col-lg-8 style_1">
                 <div class="main_content tk_style_01">
