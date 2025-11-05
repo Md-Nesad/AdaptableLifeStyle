@@ -261,3 +261,41 @@ function updateButton(theme) {
     toggleBtn.classList.add("btn-outline-dark");
   }
 }
+
+//hggghg
+const ctx = document.getElementById("stepsChart");
+
+new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    datasets: [
+      {
+        label: "",
+        data: [90, 120, 70, 130, 80, 140, 50],
+        borderColor: "#0d47a1",
+        borderWidth: 3,
+        fill: false,
+        tension: 0.5,
+        pointRadius: 0,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {
+        min: 40,
+        max: 160,
+        ticks: { stepSize: 20 },
+        grid: { display: false },
+      },
+      x: {
+        grid: { display: false },
+      },
+    },
+    plugins: {
+      legend: { display: false },
+    },
+  },
+});
