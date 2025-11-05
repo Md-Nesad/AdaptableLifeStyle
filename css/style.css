@@ -6722,6 +6722,12 @@ canvas {
   transition: all 0.3s ease;
 }
 
+.btn-custom:hover {
+  background-color: #c3e66e;
+  color: #272a33;
+  transition: all 0.3s ease;
+}
+
 .active {
   padding: 6px 20px;
 }
