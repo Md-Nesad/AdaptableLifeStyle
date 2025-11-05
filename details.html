@@ -45,7 +45,11 @@
             <div class="overly"></div>
             <div class="sidebar">
               <div class="sidebar_tk">
-                <div class="angle_toggle_btn" id="sidebarToggle">
+                <div
+                  onclick="togglePrivacyPolicy()"
+                  class="angle_toggle_btn"
+                  id="sidebarToggle"
+                >
                   <i class="fa-solid fa-angle-left"></i>
                 </div>
                 <div class="menu_toggle_btn">
@@ -196,6 +200,32 @@
                         /></span>
                         <p>Sign Out</p></a
                       >
+                    </div>
+
+                    <!-- About and privacy policy -->
+                    <div id="privacy_policy">
+                      <div class="d-flex gap-2">
+                        <button class="btn-custom active">About</button>
+                        <button class="btn-custom">Community Rules</button>
+                      </div>
+
+                      <div class="d-flex gap-2 mt-3">
+                        <button class="btn-custom">Trust & Safety</button>
+                        <button class="btn-custom">Work With Us</button>
+                      </div>
+
+                      <div class="d-flex gap-2 mt-3">
+                        <button class="btn-custom">Contact Us</button>
+
+                        <button class="btn-custom">Help & Support</button>
+                      </div>
+
+                      <button class="btn-custom mt-3 faq">FAQ</button>
+
+                      <!-- copyright text -->
+                      <div>
+                        <p id="new_date" class="copyright_text"></p>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -360,7 +360,7 @@
 
 .adopted_life_container .sidebar .menu_list_area ul li li a.active {
   background-color: transparent;
-  color: #c3e66e;
+  color: #ff8700;
 }
 
 .adopted_life_container
@@ -416,10 +416,9 @@
 }
 
 .adopted_life_container .sidebar .menu_list_area .btn_wrapper {
-  margin-left: 20px;
-  margin-top: 70px;
+  margin: 70px 20px;
 }
-
+/* all services for desktop and text */
 @media (min-width: 1301px) and (max-width: 1520px) {
   .adopted_life_container .sidebar .menu_list_area .btn_wrapper {
     font-size: 16px;
@@ -436,7 +435,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 13px 43px;
+  padding: 13px 33px;
   font-weight: 500;
   font-size: 16px;
   color: #272a33;
@@ -6707,4 +6706,43 @@ p {
 canvas {
   width: 100%;
   height: 200px;
+}
+
+/* about me and others button style is sidebar */
+
+.btn-custom {
+  font-family: Arial, sans-serif;
+  font-size: 12.5px;
+  color: #8a8c90;
+  background-color: transparent;
+  border: 1.5px solid #c0c0c0;
+  border-radius: 999px; /* Fully rounded corners */
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.active {
+  padding: 6px 20px;
+}
+
+.faq {
+  padding: 6px 25px;
+}
+
+#privacy_policy {
+  display: block;
+  border-top: 1px solid #dadada;
+  padding-top: 35px;
+}
+
+/* copyright text */
+.copyright_text {
+  color: #8a8c90;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 7px;
+  border-top: 1px solid #dadada;
+  padding-top: 35px;
 }

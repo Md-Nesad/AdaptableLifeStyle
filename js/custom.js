@@ -262,6 +262,22 @@ function updateButton(theme) {
   }
 }
 
+//privacy policy hide and show
+const privacyPolicy = document.getElementById("privacy_policy");
+
+function togglePrivacyPolicy() {
+  if (privacyPolicy.style.display === "none") {
+    privacyPolicy.style.display = "block";
+  } else {
+    privacyPolicy.style.display = "none";
+  }
+}
+
+//date for footer
+const dateElement = document.getElementById("new_date");
+const currentYear = new Date().getFullYear();
+dateElement.textContent = `© ${currentYear} AdoptedLifeStyle.`;
+
 //hggghg
 const ctx = document.getElementById("stepsChart");
 
