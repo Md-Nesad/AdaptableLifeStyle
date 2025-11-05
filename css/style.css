@@ -416,7 +416,7 @@
 }
 
 .adopted_life_container .sidebar .menu_list_area .btn_wrapper {
-  margin: 70px 20px;
+  margin: 60px 0px;
 }
 /* all services for desktop and text */
 @media (min-width: 1301px) and (max-width: 1520px) {
@@ -6723,7 +6723,7 @@ canvas {
 }
 
 .btn-custom:hover {
-  background-color: #c3e66e;
+  background: #ffdeb3;
   color: #272a33;
   transition: all 0.3s ease;
 }
