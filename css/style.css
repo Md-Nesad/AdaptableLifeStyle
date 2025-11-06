@@ -6824,7 +6824,7 @@ canvas {
   border: none;
   padding: 12px 12px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 5px 0px 0px 0px !important;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -7168,7 +7168,7 @@ canvas {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1300px) {
   .header-box {
     margin-left: 10px;
   }
