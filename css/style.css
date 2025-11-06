@@ -7070,14 +7070,14 @@ canvas {
   }
 
   .workout_sidebar {
-    display: none;
+    display: none !important;
   }
   .workout_list {
     margin: 0 10px;
   }
 
   .add-btn {
-    width: 100%;
+    width: 100% !important;
   }
 
   .filter-btn-group {
@@ -7103,7 +7103,7 @@ canvas {
     white-space: nowrap;
   }
   .workout-card img {
-    width: 100%;
+    width: 100% !important;
     height: auto;
   }
 }
@@ -7142,6 +7142,29 @@ canvas {
   .add_tablet_btn {
     display: block;
     width: 100%;
+  }
+
+  .filter-btn-group {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.2rem;
+    scrollbar-width: none;
+  }
+
+  /* Hide scrollbar for Chrome, Edge, Safari */
+  .filter-btn-group::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn-group button {
+    flex: 0 0 auto;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    white-space: nowrap;
   }
 }
 
