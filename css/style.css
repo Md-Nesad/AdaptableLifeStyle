@@ -6708,7 +6708,7 @@ canvas {
   height: 200px;
 }
 
-/* about me and others button style is sidebar */
+/* about me and others button style in sidebar */
 
 .btn-custom {
   font-family: Arial, sans-serif;
@@ -6753,7 +6753,7 @@ canvas {
   padding-top: 35px;
 }
 
-/* planner content here */
+/* workout code start here */
 .header-box {
   background: var(--bs-dark);
   border-radius: 10px;
@@ -7013,7 +7013,7 @@ canvas {
 .workout_time strong {
   color: var(--bs-primary);
 }
-
+/* mobile responsive */
 @media (max-width: 576px) {
   .header-box {
     margin: 10px;
@@ -7039,7 +7039,7 @@ canvas {
   }
 }
 
-/* mobile responsive */
+/* landscape responsive */
 @media (max-width: 768px) {
   .workout-card {
     flex-direction: column;
@@ -7168,13 +7168,34 @@ canvas {
     white-space: nowrap;
   }
 }
-
+/* responsive for desktop */
 @media (min-width: 992px) and (max-width: 1300px) {
   .header-box {
     margin-left: 10px;
   }
   .workout_list {
     margin: 0 10px;
+  }
+  .header-box {
+    flex-direction: column;
+    align-items: flex-start !important;
+    text-align: left;
+  }
+
+  .diet_and_filter_button {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px !important;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1456px) {
+  .header-box h5 {
+    font-size: 15px;
+  }
+
+  .header-box small {
+    font-size: 12px;
   }
 }
 
