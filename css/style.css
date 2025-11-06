@@ -7070,14 +7070,14 @@ canvas {
   }
 
   .workout_sidebar {
-    display: none !important;
+    display: none;
   }
   .workout_list {
     margin: 0 10px;
   }
 
   .add-btn {
-    width: 100% !important;
+    width: 100%;
   }
 
   .filter-btn-group {
@@ -7103,13 +7103,13 @@ canvas {
     white-space: nowrap;
   }
   .workout-card img {
-    width: 100% !important;
+    width: 100%;
     height: auto;
   }
 }
 
 /* Responsive for tablet device */
-@media (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .workout_list {
     margin: 0 10px;
   }
@@ -7168,7 +7168,7 @@ canvas {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1300px) {
+@media (min-width: 992px) {
   .header-box {
     margin-left: 10px;
   }
