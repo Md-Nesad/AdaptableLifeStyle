@@ -276,7 +276,48 @@ function togglePrivacyPolicy() {
 //date for footer
 const dateElement = document.getElementById("new_date");
 const currentYear = new Date().getFullYear();
-dateElement.textContent = `© ${currentYear} AdoptedLifeStyle.`;
+dateElement.textContent = `© ${currentYear} All rights reserved.`;
+
+// planner filter functinallity
+const filterButtons = document.querySelectorAll(".filter-btn-group button");
+const workoutCards = document.querySelectorAll(".workout-card");
+
+// message element create করে নিচে append করা
+const noDataMsg = document.createElement("p");
+noDataMsg.textContent = "⚠️ No workouts available for this category";
+noDataMsg.classList.add("no-data-message");
+noDataMsg.style.display = "none"; // default hidden
+document.querySelector(".workout_list").appendChild(noDataMsg);
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // active class পরিবর্তন
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    const filterValue = button.getAttribute("data-filter");
+    let visibleCount = 0;
+
+    // প্রতিটি workout card check করা
+    workoutCards.forEach((card) => {
+      const category = card.getAttribute("data-category");
+
+      if (filterValue === "all" || category === filterValue) {
+        card.style.display = "flex";
+        visibleCount++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    // যদি কোনো data না পাওয়া যায় তাহলে message show করো
+    if (visibleCount === 0) {
+      noDataMsg.style.display = "block";
+    } else {
+      noDataMsg.style.display = "none";
+    }
+  });
+});
 
 //hggghg
 const ctx = document.getElementById("stepsChart");
