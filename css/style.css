@@ -6809,18 +6809,22 @@ canvas {
 
 /* filter button group */
 .filter-btn-group {
-  background-color: white;
+  background-color: var(--bs-dark);
   margin-bottom: 20px;
   border-bottom: 1px solid #dadada;
 }
 
+.filter-btn-group button:first-child {
+  padding: 12px 17px !important;
+}
+
 .filter-btn-group button {
-  background-color: white;
+  background-color: var(--bs-dark);
   color: #8a8c90;
   border: none;
-  padding: 8px 10px;
+  padding: 12px 12px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 5px 0px 0px 0px !important;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -6864,10 +6868,16 @@ canvas {
 .workout-info p {
   margin-bottom: 4px;
   font-size: 14px;
-  color: #555;
+  color: #8a8c90;
+}
+
+.workout-info strong {
+  color: var(--bs-primary);
+  opacity: 0.7;
 }
 
 .add-btn {
+  color: #272a33;
   background-color: #b9f12d;
   border: none;
   border-radius: 6px;
@@ -6877,13 +6887,25 @@ canvas {
   transition: 0.3s;
 }
 
+.add_tablet_btn {
+  color: #272a33;
+  background-color: #b9f12d;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 8px 16px;
+  font-size: 14px;
+  transition: 0.3s;
+  display: none;
+}
+
 .add-btn:hover {
   background-color: #a1da22;
 }
 /* workout sidebar */
 .workout_sidebar {
   background-color: var(--bs-dark);
-  padding: 14px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin-right: 5px;
@@ -6892,7 +6914,7 @@ canvas {
 .workout_sidebar-card {
   background: var(--bs-body-bg);
   border-radius: 12px;
-  padding: 15px 5px;
+  padding: 20px 10px;
   margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -6901,7 +6923,7 @@ canvas {
   color: var(--bs-primary);
   font-weight: 700;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .workout_sidebar-card small {
@@ -6918,8 +6940,8 @@ canvas {
 }
 
 .workout_sidebar-item img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -6990,50 +7012,74 @@ canvas {
 .workout_time strong {
   color: var(--bs-primary);
 }
-/* Responsive */
-@media (max-width: 992px) {
-  .workout-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .workout-card img {
-    width: 100%;
-    height: auto;
+@media (max-width: 576px) {
+  .header-box {
+    margin: 10px;
   }
-
-  .add-btn {
-    width: 100%;
-    text-align: center;
+  .header-box h5 {
+    font-size: 14px;
+  }
+  .header-box small {
+    font-size: 11px;
   }
 
   .workout_sidebar {
-    position: static;
-    margin-top: 30px;
+    display: none;
+  }
+  .diet_btn,
+  .workout_filter_btn button {
+    flex: 1;
+    padding: 6px 10px;
+  }
+
+  .diet_btn {
+    font-size: 13px;
   }
 }
+
 /* mobile responsive */
 @media (max-width: 768px) {
+  .workout-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .header-box {
+    flex-direction: column;
+    align-items: flex-start !important;
+    text-align: left;
+  }
+
+  .diet_and_filter_button {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px !important;
+  }
+
+  .workout_filter_btn button {
+    border: none;
+    color: var(--bs-primary);
+    border-radius: 6px;
+  }
+
+  .workout_filter_btn span img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+
   .workout_sidebar {
     display: none;
   }
   .workout_list {
     margin: 0 10px;
   }
-  .diet_btn {
-    width: 150px;
-    margin-right: 10px;
-    font-size: 12px;
+
+  .add-btn {
+    width: 100%;
   }
-  .header-box {
-    margin: 10px;
-  }
-  .header-box h5 {
-    font-size: 13.5px;
-  }
-  .header-box small {
-    font-size: 11px;
-  }
+
   .filter-btn-group {
     display: flex;
     flex-wrap: nowrap;
@@ -7062,18 +7108,49 @@ canvas {
   }
 }
 
-@media (min-width: 768px) and (max-width: 959px) {
+/* Responsive for tablet device */
+@media (max-width: 992px) {
   .workout_list {
-    margin-left: 20px;
+    margin: 0 10px;
   }
-
+  .header-box {
+    margin: 10px;
+  }
   .workout_sidebar {
-    position: sticky;
-    top: 20px;
+    display: block;
   }
 
   .header-box {
-    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .workout-card img {
+    width: 200px;
+    height: auto;
+  }
+
+  .diet_and_filter_button {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px !important;
+  }
+
+  .add-btn {
+    display: none;
+  }
+
+  .add_tablet_btn {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-box {
+    margin-left: 10px;
+  }
+  .workout_list {
+    margin: 0 10px;
   }
 }
 
