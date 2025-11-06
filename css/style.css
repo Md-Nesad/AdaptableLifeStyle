@@ -6758,7 +6758,7 @@ canvas {
   background: var(--bs-dark);
   border-radius: 10px;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 22px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -6805,6 +6805,7 @@ canvas {
   background-color: var(--bs-dark);
   padding: 0px 15px 15px 0px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: 100%;
 }
 
 /* filter button group */
@@ -7168,7 +7169,7 @@ canvas {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1300px) {
   .header-box {
     margin-left: 10px;
   }
@@ -7183,3 +7184,5 @@ canvas {
   font-size: 16px;
   margin-top: 50px;
 }
+
+/* work type code end here */
