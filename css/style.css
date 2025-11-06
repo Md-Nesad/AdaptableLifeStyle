@@ -7018,17 +7018,21 @@ canvas {
     display: none;
   }
   .workout_list {
-    margin: 0 20px;
+    margin: 0 10px;
   }
   .diet_btn {
-    width: 255px;
-    margin-right: 20px;
+    width: 150px;
+    margin-right: 10px;
+    font-size: 12px;
   }
   .header-box {
-    margin: 20px;
+    margin: 10px;
   }
   .header-box h5 {
-    font-size: 19px;
+    font-size: 13.5px;
+  }
+  .header-box small {
+    font-size: 11px;
   }
   .filter-btn-group {
     display: flex;
