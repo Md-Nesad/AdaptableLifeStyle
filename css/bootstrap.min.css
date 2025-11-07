@@ -36,7 +36,7 @@
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
-  --bs-light: #f8f9fa;
+  --bs-light: #F9F4F1;
   /* for background */
   --bs-dark: #ffffff;
   --bs-primary-rgb: 13, 110, 253;
@@ -199,6 +199,7 @@
   --bs-form-valid-border-color: #75b798;
   --bs-form-invalid-color: #ea868f;
   --bs-form-invalid-border-color: #ea868f;
+  --bs-light: #C3E66E;
 }
 
 *,

@@ -232,7 +232,7 @@ const angleDropMenu = document.querySelector(".angle_drop_menu");
 dropdownToggle.addEventListener("click", function () {
   angleDropMenu.classList.toggle("active");
 });
-
+//for large device
 const html = document.documentElement;
 const toggleBtn = document.getElementById("theme-toggle");
 
@@ -262,6 +262,19 @@ function updateButton(theme) {
   }
 }
 
+//for mobile
+const html2 = document.documentElement;
+const toggleBtn2 = document.getElementById("theme-toggle_mobile");
+
+// theme toggle
+toggleBtn2.addEventListener("click", () => {
+  const current = html2.getAttribute("data-bs-theme");
+  const next = current === "light" ? "dark" : "light";
+  html2.setAttribute("data-bs-theme", next);
+  localStorage.setItem("theme", next);
+  updateButton(next);
+});
+
 //privacy policy hide and show
 const privacyPolicy = document.getElementById("privacy_policy");
 
@@ -278,7 +291,6 @@ const dateElement = document.getElementById("new_date");
 const currentYear = new Date().getFullYear();
 dateElement.textContent = `© ${currentYear} All rights reserved.`;
 
-// planner filter functinallity
 const filterButtons = document.querySelectorAll(".filter-btn-group button");
 const workoutCards = document.querySelectorAll(".workout-card");
 
