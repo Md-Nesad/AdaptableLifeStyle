@@ -6702,7 +6702,7 @@ p {
 }
 
 .chart-card {
-  width: 400px;
+  width: 100%;
   border-radius: 15px;
 }
 
@@ -6810,7 +6810,6 @@ canvas {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   height: 100%;
 }
-
 /* filter button group */
 .filter-btn-group {
   background-color: var(--bs-dark);
@@ -7270,8 +7269,8 @@ canvas {
 
 .icon-item .dotOne {
   position: absolute;
-  top: 6px;
-  right: 9px;
+  top: 9px;
+  right: 11px;
   width: 10px;
   height: 10px;
   background-color: #ff8c42;
@@ -7290,8 +7289,8 @@ canvas {
 
 .icon-item .dotThree {
   position: absolute;
-  top: 5px;
-  right: 3px;
+  top: 6px;
+  right: 6px;
   width: 10px;
   height: 10px;
   background-color: #ff8c42;
@@ -7336,4 +7335,520 @@ canvas {
 
 .custom-select-wrapper > option {
   color: var(--bs-primary) !important;
+}
+
+/* life style dashboard style */
+
+/* gender area */
+.info-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--bs-dark);
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: transform 0.2s;
+}
+
+.info-card:first-child {
+  border-left: 5px solid #c3e66e;
+}
+
+.info-card:nth-child(2) {
+  border-left: 5px solid #ffcb65;
+}
+
+.info-card:nth-child(3) {
+  border-left: 5px solid #a02cfa;
+}
+
+.info-card:nth-child(4) {
+  border-left: 5px solid #ffa157;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.info-text span:first-child {
+  font-size: 0.9rem;
+  color: #8a8c90;
+}
+
+.info-text span:last-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--bs-primary);
+}
+
+@media (max-width: 576px) {
+  .info-card {
+    max-width: 100%;
+  }
+}
+
+/* chart area */
+.chart-card {
+  background: var(--bs-dark);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  max-width: 480px;
+  margin: auto;
+}
+
+.chart-card_steps {
+  background: var(--bs-dark);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 15px 10px;
+  width: 100%;
+  margin: auto;
+}
+
+.chart-card_steps h2 {
+  color: var(--bs-primary);
+  opacity: 0.8;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.chart-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--bs-primary);
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+#chartContainer {
+  position: relative;
+  height: 220px; /* Fixed height */
+  width: 100%;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.progress-card {
+  background: var(--bs-dark);
+  border-radius: 12px;
+  width: 210px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.progress-card h3 {
+  font-size: 18px;
+  color: var(--bs-primary);
+  margin-bottom: 16px;
+  opacity: 0.8;
+  border-bottom: 01px solid #0000001a;
+  padding-bottom: 10px;
+}
+
+.chart-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 10px 10px 10px 10px;
+}
+
+.chart-container span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: 600;
+  color: #9bd650;
+}
+
+.progress-left {
+  color: var(--bs-primary);
+  opacity: 0.8;
+  font-weight: 500;
+  margin-top: 11px;
+  font-size: 13px;
+}
+
+.progress-left span {
+  color: #9bd650;
+}
+
+.programs-left small {
+  font-size: 5px;
+}
+
+.calories {
+  color: #ff8700 !important;
+}
+
+.row.justify-content-center {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.chart-card,
+.progress-card {
+  max-width: 100%;
+  margin: auto;
+}
+
+.chart_container {
+  margin-right: 10px !important;
+}
+
+/* total crab, proteins and fat area */
+.total_cabs {
+  width: 100%;
+  height: 120px;
+  background-color: var(--bs-dark);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.cabs {
+  border-left: 6px solid #c3e66e;
+}
+
+.protein {
+  border-left: 06px solid #ff8700;
+}
+
+.protein .icon_span {
+  background-color: #fff1e5;
+  padding: 7px;
+  border: 02px solid #ff8700;
+  border-radius: 10%;
+}
+.protein .icon_span span {
+  padding: 4px;
+}
+
+.fats {
+  border-left: 06px solid #a02cfa;
+}
+
+.fats .icon_span {
+  background-color: #f4e9ff;
+  padding: 7px;
+  border: 02px solid #a02cfa;
+  border-radius: 10%;
+}
+
+.fats .icon_span span {
+  padding: 6px;
+}
+
+.cabs .icon_span {
+  background-color: #fbf6f9;
+  padding: 7px;
+  border: 02px solid #c3e66e;
+  border-radius: 10%;
+}
+.total_crab p {
+  color: #8a8c90;
+  font-size: 12px;
+}
+.total_crab h2 {
+  color: var(--bs-primary);
+  font-size: 17px;
+  font-weight: 500;
+}
+.last_btn div:first-child {
+  background-color: #c3e66e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.gram {
+  color: #8a8c90;
+  font-size: 10px;
+  margin-right: 34px;
+}
+.lastbtn2 {
+  background-color: transparent;
+  color: #c3e66e;
+  padding: 4px 15px;
+  width: 80px;
+  font-size: 10px;
+  border: 2px solid #c3e66e;
+  border-radius: 999px;
+}
+.progress-container {
+  width: 150px;
+  background-color: #f3f6f8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Inner bar */
+.progress-bar {
+  width: 80%;
+  background-color: #c3e66e;
+  text-align: center;
+  color: white;
+  padding: 2px;
+  border-radius: 4px 0 0 4px;
+}
+
+.cabs .progress-bar {
+  background-color: #c3e66e;
+}
+.protein .progress-bar {
+  background-color: #ff8700;
+}
+.fats .progress-bar {
+  background-color: #a02cfa;
+}
+
+/* workout progress tacker */
+.card {
+  background-color: var(--bs-dark);
+  border-radius: 15px;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+/* .table tbody tr {
+  border-radius: 12px;
+}
+
+.table thead th {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.table td {
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.badge {
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+} */
+
+/* .card {
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.table tbody tr {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.table thead th {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.table td {
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.badge {
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+} */
+
+.tracker-container {
+  background: var(--bs-dark);
+  border-radius: 12px;
+  padding: 25px 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 01px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.tracker-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--bs-primary);
+  opacity: 0.8;
+}
+
+.tracker-search input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 14px;
+  width: 250px;
+  font-size: 0.95rem;
+}
+
+.tracker-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  color: var(--bs-primary);
+  opacity: 0.8;
+}
+
+.tracker-table thead {
+  color: var(--bs-primary);
+  font-size: 17px;
+}
+
+.tracker-table th,
+.tracker-table td {
+  text-align: left;
+  padding: 12px 16px;
+}
+
+.tracker-table thead {
+  background-color: var(--bs-dark);
+  border-bottom: 1px solid #e0e0e0;
+  opacity: 1;
+}
+
+.tracker-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.tracker-table tbody tr:hover {
+  background-color: #f9fbfd;
+}
+
+.progress_day {
+  background-color: #f0f4f6;
+  padding: 10px;
+  border-radius: 5px;
+  color: #038fd5;
+  font-weight: 550;
+}
+
+/* Badges */
+.status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.status.completed {
+  background-color: #d4fcd2;
+  color: #1b8a1b;
+}
+
+.status.inprogress {
+  background-color: #ffe9d1;
+  color: #d47b00;
+}
+
+.status.notstarted {
+  background-color: #e9ecef;
+  color: #555;
+}
+
+/* Percentage badge */
+.percentage {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.percentage.p100 {
+  background-color: #00b300;
+}
+.percentage.p60 {
+  background-color: #ff8000;
+  padding: 6px 16px;
+}
+.percentage.p0 {
+  background-color: #555;
+  padding: 6px 20px;
+}
+
+.breakfast {
+  background-color: #e5ffe5;
+  color: #00c700;
+  padding: 6px 15px;
+  border-radius: 3px;
+}
+
+.energized {
+  background-color: #00c700;
+  color: #ffffff;
+  padding: 6px 19px;
+  border-radius: 3px;
+}
+
+.quite {
+  background-color: #ff8700;
+  color: #ffffff;
+  padding: 6px 5px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.guilty {
+  background-color: #ffbe11;
+  color: #ffffff;
+  padding: 6px 34px;
+  border-radius: 3px;
+}
+
+.uncomfortable {
+  background-color: #f9468b;
+  color: #ffffff;
+  padding: 6px 5px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+/* Responsive behavior: hide extra columns on small screens */
+@media (max-width: 992px) {
+  .tracker-table th:nth-child(n + 6),
+  .tracker-table td:nth-child(n + 6) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .tracker-table th:nth-child(n + 4),
+  .tracker-table td:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .tracker-search input {
+    width: 100%;
+    margin-top: 10px;
+  }
 }

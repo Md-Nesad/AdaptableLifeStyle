@@ -294,12 +294,12 @@ dateElement.textContent = `© ${currentYear} All rights reserved.`;
 const filterButtons = document.querySelectorAll(".filter-btn-group button");
 const workoutCards = document.querySelectorAll(".workout-card");
 
-// message element create করে নিচে append করা
-const noDataMsg = document.createElement("p");
-noDataMsg.textContent = "⚠️ No workouts available for this category";
-noDataMsg.classList.add("no-data-message");
-noDataMsg.style.display = "none"; // default hidden
-document.querySelector(".workout_list").appendChild(noDataMsg);
+// // message element create করে নিচে append করা
+// const noDataMsg = document.createElement("p");
+// noDataMsg.textContent = "⚠️ No workouts available for this category";
+// noDataMsg.classList.add("no-data-message");
+// noDataMsg.style.display = "none"; // default hidden
+// document.querySelector(".workout_list").appendChild(noDataMsg);
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -331,40 +331,355 @@ filterButtons.forEach((button) => {
   });
 });
 
-//hggghg
-const ctx = document.getElementById("stepsChart");
+// progress
+const progressCtx = document
+  .getElementById("progressChartCanvas")
+  .getContext("2d");
 
+const progress = 81;
+const left = 100 - progress;
+
+new Chart(progressCtx, {
+  type: "doughnut",
+  data: {
+    datasets: [
+      {
+        data: [progress, left],
+        backgroundColor: ["#C3E66E", "#F3F6F8"],
+        borderWidth: 0,
+        cutout: "83%",
+      },
+    ],
+  },
+  options: {
+    rotation: -10,
+    circumference: 360,
+    plugins: {
+      tooltip: { enabled: false },
+      legend: { display: false },
+    },
+    animation: {
+      animateRotate: true,
+      duration: 1200,
+    },
+  },
+});
+// weekly chart
+let ctx = document.getElementById("weeklyChart").getContext("2d");
 new Chart(ctx, {
   type: "line",
   data: {
-    labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    labels: [
+      "Sun",
+      "",
+      "Mon",
+      "",
+      "Tue",
+      "",
+      "Wed",
+      "",
+      "Thu",
+      "",
+      "Fri",
+      "",
+      "Sat",
+    ],
     datasets: [
       {
-        label: "",
-        data: [90, 120, 70, 130, 80, 140, 50],
-        borderColor: "#0d47a1",
-        borderWidth: 3,
-        fill: false,
-        tension: 0.5,
+        label: "Weekly Challenge",
+        data: [100, 115, 95, 130, 70, 85, 70, 90, 100, 118, 80, 100, 80],
+        borderColor: "rgba(174, 238, 85, 0.9)",
+        backgroundColor: "rgba(174, 238, 85, 0.2)",
+        fill: true,
+        tension: 0.4,
         pointRadius: 0,
       },
     ],
   },
   options: {
     responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
         min: 40,
         max: 160,
-        ticks: { stepSize: 20 },
-        grid: { display: false },
+        ticks: {
+          stepSize: 20,
+          color: "#888",
+        },
+        grid: {
+          color: "#0121351A",
+          borderDash: [4, 4],
+        },
       },
       x: {
-        grid: { display: false },
+        ticks: {
+          color: "#888",
+          font: {
+            size: 10, // 🔹 x-axis label o choto hobe
+          },
+        },
+        grid: {
+          display: false,
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
+
+// Monthly Progress Doughnut Chart
+const monthlyProgressCtx = document
+  .getElementById("monthlyProgressChartCanvas")
+  .getContext("2d");
+const monthlyProgress = 81;
+new Chart(monthlyProgressCtx, {
+  type: "doughnut",
+  data: {
+    datasets: [
+      {
+        data: [monthlyProgress, 100 - monthlyProgress],
+        backgroundColor: ["#FF8700", "#eef0f3"],
+        borderWidth: 0,
+        cutout: "84%",
+      },
+    ],
+  },
+  options: {
+    rotation: -10,
+    circumference: 360,
+    plugins: { tooltip: { enabled: false }, legend: { display: false } },
+    animation: { animateRotate: true, duration: 1200 },
+  },
+});
+
+// Monthly Line Chart
+let monthlyctx = document.getElementById("monthlyChart").getContext("2d");
+
+new Chart(monthlyctx, {
+  type: "line",
+  data: {
+    labels: [
+      "Sun",
+      "",
+      "Mon",
+      "",
+      "Tue",
+      "",
+      "Wed",
+      "",
+      "Thu",
+      "",
+      "Fri",
+      "",
+      "Sat",
+    ],
+    datasets: [
+      {
+        label: "Weekly Challenge",
+        data: [100, 115, 95, 130, 70, 85, 70, 90, 100, 118, 80, 100, 80],
+        borderColor: "#FF8700",
+        backgroundColor: "#FF87001A",
+        fill: true,
+        tension: 0.4,
+        pointRadius: 0,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        min: 40,
+        max: 160,
+        ticks: {
+          stepSize: 20,
+          color: "#888",
+        },
+        grid: {
+          color: "#0121351A",
+          borderDash: [4, 4],
+        },
+      },
+      x: {
+        ticks: {
+          color: "#888",
+          font: {
+            size: "10px",
+          },
+        },
+        grid: {
+          display: false,
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
+
+// total ctx
+const totalctx = document.getElementById("stepsChart").getContext("2d");
+new Chart(totalctx, {
+  type: "line",
+  data: {
+    labels: ["Sun", "", "Mon", "Tue", "Wed", "", "Thu", "Fri", "", "Sat"],
+    datasets: [
+      {
+        data: [100, 75, 120, 100, 140, 102, 125, 125, 100, 155],
+        borderColor: "#ff8c00",
+        backgroundColor: "rgba(255,140,0,0.1)",
+        borderWidth: 4,
+        tension: 0,
+        fill: true,
+        pointRadius: 0,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        min: 40,
+        max: 160,
+        ticks: {
+          stepSize: 20,
+          color: "#6b7280",
+        },
+        grid: {
+          color: "#0121351A",
+        },
+      },
+      x: {
+        ticks: {
+          color: "#6b7280",
+        },
+        grid: {
+          display: false,
+        },
       },
     },
     plugins: {
       legend: { display: false },
+      tooltip: { enabled: false },
     },
   },
+});
+
+// sleep chart
+const sleepctx = document.getElementById("sleepChart").getContext("2d");
+new Chart(sleepctx, {
+  type: "line",
+  data: {
+    labels: ["Sun", "", "Mon", "", "Tue", "Wed", "Thu", "", "Fri", "Sat"],
+    datasets: [
+      {
+        data: [140, 87, 116, 119, 95, 125, 85, 105, 80, 90],
+        borderColor: "#A02CFA",
+        backgroundColor: "#A02CFA1A",
+        borderWidth: 4,
+        tension: 0,
+        fill: true,
+        pointRadius: 0,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        min: 40,
+        max: 160,
+        ticks: {
+          stepSize: 20,
+          color: "#6b7280",
+        },
+        grid: {
+          color: "#0121351A",
+        },
+      },
+      x: {
+        ticks: {
+          color: "#6b7280",
+        },
+        grid: {
+          display: false,
+        },
+      },
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: false },
+    },
+  },
+});
+
+const hydrationctx = document.getElementById("hydrationChart").getContext("2d");
+new Chart(hydrationctx, {
+  type: "line",
+  data: {
+    labels: ["Sun", "", "Mon", "Tue", "Wed", "", "Thu", "", "Fri", "Sat"],
+    datasets: [
+      {
+        data: [120, 130, 98, 120, 65, 110, 82, 84, 120, 50],
+        borderColor: "#F94687",
+        backgroundColor: "#F946871A",
+        borderWidth: 4,
+        tension: 0,
+        fill: true,
+        pointRadius: 0,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        min: 40,
+        max: 160,
+        ticks: {
+          stepSize: 20,
+          color: "#6b7280",
+        },
+        grid: {
+          color: "#0121351A",
+        },
+      },
+      x: {
+        ticks: {
+          color: "#6b7280",
+        },
+        grid: {
+          display: false,
+        },
+      },
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: false },
+    },
+  },
+});
+// filter data based on search
+document.getElementById("searchInput").addEventListener("keyup", function () {
+  const filter = this.value.toLowerCase();
+  const rows = document.querySelectorAll("tbody tr");
+  setTimeout(() => {
+    rows.forEach((row) => {
+      row.style.display = row.innerText.toLowerCase().includes(filter)
+        ? ""
+        : "none";
+    });
+  }, 1000);
 });
