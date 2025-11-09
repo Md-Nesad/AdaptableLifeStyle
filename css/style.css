@@ -7357,17 +7357,44 @@ canvas {
 .gender {
   border-left: 5px solid #c3e66e;
 }
+.gender .icon_span {
+  background-color: #f6fbf9;
+  padding: 5px 16px;
+  border: 02px solid #c3e66e;
+  border-radius: 10%;
+}
 
 .height {
   border-left: 5px solid #ffcb65;
+}
+
+.height .icon_span {
+  background-color: #fff6e5;
+  padding: 7px 13px;
+  border: 02px solid #ffcb65;
+  border-radius: 10%;
 }
 
 .wieght {
   border-left: 5px solid #a02cfa;
 }
 
+.wieght .icon_span {
+  background-color: #f4e6fe;
+  padding: 12px 10px;
+  border: 02px solid #a02cfa;
+  border-radius: 10%;
+}
+
 .bmt {
   border-left: 5px solid #ffa157;
+}
+
+.bmt .icon_span {
+  background-color: #fff1e5;
+  padding: 10px 10px;
+  border: 02px solid #ffa157;
+  border-radius: 10%;
 }
 
 .info-text {
@@ -7407,8 +7434,9 @@ canvas {
 .chart-card_steps h2 {
   color: var(--bs-primary);
   opacity: 0.8;
-  font-size: 23px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .chart-title {
@@ -7450,10 +7478,12 @@ canvas {
 }
 
 .progress-card h3 {
+  text-align: left;
   font-size: 18px;
   color: var(--bs-primary);
   margin-bottom: 16px;
   opacity: 0.8;
+  font-weight: 600;
   border-bottom: 01px solid #0000001a;
   padding-bottom: 15px;
 }
@@ -7574,13 +7604,6 @@ canvas {
 }
 
 /* total crab, proteins and fat area */
-/* .total_cabs {
-  width: 400px;
-  height: 120px;
-  background-color: var(--bs-dark);
-  padding: 10px;
-  border-radius: 10px;
-} */
 
 .cabs {
   border-left: 6px solid #c3e66e;
@@ -7613,23 +7636,6 @@ canvas {
   }
 }
 
-/* For small screens (mobiles) */
-/* @media (max-width: 767px) {
-  .total_cabs {
-    max-width: 100%; 
-    margin-bottom: 15px;
-  }
-
-  .last_btn {
-    margin-right: 0;
-    margin-top: 5px;
-  }
-
-  .progress-container {
-    width: 100px; 
-  }
-} */
-
 .protein {
   border-left: 06px solid #ff8700;
 }
@@ -7639,7 +7645,9 @@ canvas {
   padding: 7px;
   border: 02px solid #ff8700;
   border-radius: 10%;
+  margin-right: 20px;
 }
+
 .protein .icon_span span {
   padding: 4px;
 }
@@ -7653,6 +7661,7 @@ canvas {
   padding: 7px;
   border: 02px solid #a02cfa;
   border-radius: 10%;
+  margin-right: 15px;
 }
 
 .fats .icon_span span {
@@ -7664,6 +7673,7 @@ canvas {
   padding: 7px;
   border: 02px solid #c3e66e;
   border-radius: 10%;
+  margin-right: 10px;
 }
 .total_crab p {
   color: #8a8c90;
@@ -7674,25 +7684,61 @@ canvas {
   font-size: 17px;
   font-weight: 500;
 }
-.last_btn div:first-child {
+
+.cabs_btn {
   background-color: #c3e66e;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
 }
+
+.protine_btn {
+  background-color: #ff8700;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.fats_btn {
+  background-color: #a02cfa;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
 .gram {
   color: #8a8c90;
   font-size: 10px;
   margin-right: 34px;
 }
-.lastbtn2 {
+.crablastbtn2 {
   background-color: transparent;
   color: #c3e66e;
   padding: 4px 15px;
   width: 80px;
   font-size: 10px;
   border: 2px solid #c3e66e;
+  border-radius: 999px;
+}
+.protinelastbtn2 {
+  background-color: transparent;
+  color: #ff8700;
+  padding: 4px 15px;
+  width: 80px;
+  font-size: 10px;
+  border: 2px solid #ff8700;
+  border-radius: 999px;
+}
+.fatslastbtn2 {
+  background-color: transparent;
+  color: #a02cfa;
+  padding: 4px 15px;
+  width: 80px;
+  font-size: 10px;
+  border: 2px solid #a02cfa;
   border-radius: 999px;
 }
 .progress-container {
@@ -7704,7 +7750,7 @@ canvas {
 
 /* Inner bar */
 .progress-bar {
-  width: 50%;
+  width: 80%;
   background-color: #c3e66e;
   text-align: center;
   color: white;
@@ -7742,11 +7788,11 @@ canvas {
 
 .tracker-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 01px solid #e0e0e0;
   padding-bottom: 10px;
+  gap: 50px;
 }
 
 .tracker-title {
@@ -7757,11 +7803,14 @@ canvas {
 }
 
 .tracker-search input {
-  border: 1px solid #ddd;
+  border: none;
+  outline: none;
   border-radius: 6px;
-  padding: 8px 14px;
-  width: 250px;
+  padding: 10px 14px;
+  width: 350px;
   font-size: 0.95rem;
+  background-color: #f9f4f1;
+  color: #898c8f;
 }
 
 .tracker-table {
@@ -7889,10 +7938,6 @@ canvas {
   font-size: 15px;
 }
 
-.table-responsive {
-  overflow-x: auto;
-}
-
 .trainer-section {
   background-color: var(--bs-dark);
   border-radius: 12px;
@@ -7913,14 +7958,16 @@ canvas {
 
 .trainer-header h4 {
   font-weight: 600;
-  color: #5b5b5b;
+  color: var(--bs-primary);
+  opacity: 0.8;
+  font-size: 22px;
   margin: 0;
 }
 
 .view-more-btn {
-  background-color: #c3f37b;
+  background-color: #c3e66e;
   border: none;
-  color: #4a4a4a;
+  color: var(--bs-primary);
   font-weight: 500;
   padding: 8px 22px;
   border-radius: 8px;
@@ -7971,9 +8018,9 @@ canvas {
 }
 
 .send-btn {
-  background-color: #e8fdd2;
-  border: 1px solid #bdf47a;
-  color: #78c043;
+  background-color: #f8ffe6;
+  border: 1px solid #8fc901;
+  color: #8fc901;
   font-weight: 600;
   border-radius: 8px;
   padding: 6px 14px;
@@ -7982,7 +8029,7 @@ canvas {
 }
 
 .send-btn:hover {
-  background-color: #c7fa9f;
+  background-color: #e8f9bd;
 }
 .trainer_card_mobile {
   display: none;
@@ -7997,7 +8044,7 @@ canvas {
   color: var(--bs-primary);
   font-weight: 500;
   padding: 8px 22px;
-  width: 300px;
+  width: 200px;
   border-radius: 8px;
   transition: all 0.3s ease;
   margin: 0 auto 50px; /* Center horizontally */
@@ -8046,7 +8093,7 @@ canvas {
   .recomended_parent {
     padding-left: 10px;
   }
-.crab_area {
-  margin-left: 10px;
-}
+  .crab_area {
+    margin-left: 10px;
+  }
 }
