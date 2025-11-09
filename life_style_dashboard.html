@@ -388,114 +388,162 @@
               </header>
 
               <!-- Gender area -->
-              <div class="d-flex justify-content-between gap-3 mt-4">
-                <div class="info-card">
-                  <div class="icon_group">
-                    <img
-                      src="./images/list_style_dashboard/gender.png"
-                      alt=""
-                      width="60"
-                    />
+              <div class="mt-4 gender_container">
+                <div class="row g-3 mr-4">
+                  <div class="col-12 col-sm-12 col-md-3">
+                    <div
+                      class="info-card gender d-flex align-items-center gap-3 p-3 rounded shadow-sm"
+                    >
+                      <div class="icon_group">
+                        <img
+                          src="./images/list_style_dashboard/gender.png"
+                          alt=""
+                          width="60"
+                        />
+                      </div>
+                      <div class="info-text d-flex flex-column">
+                        <span>Gender</span>
+                        <span>Female</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="info-text">
-                    <span>Gender</span>
-                    <span>Female</span>
-                  </div>
-                </div>
 
-                <div class="info-card">
-                  <div class="icon_group">
-                    <img
-                      src="./images/list_style_dashboard/gender.png"
-                      alt=""
-                      width="60"
-                    />
+                  <div class="col-12 col-sm-12 col-md-3">
+                    <div
+                      class="info-card height d-flex align-items-center gap-3 p-3 rounded shadow-sm"
+                    >
+                      <div class="icon_group">
+                        <img
+                          src="./images/list_style_dashboard/gender.png"
+                          alt=""
+                          width="60"
+                        />
+                      </div>
+                      <div class="info-text d-flex flex-column">
+                        <span>Height</span>
+                        <span>5'10"</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="info-text">
-                    <span>Height</span>
-                    <span>5'10"</span>
-                  </div>
-                </div>
 
-                <div class="info-card">
-                  <div class="icon_group">
-                    <img
-                      src="./images/list_style_dashboard/gender.png"
-                      alt=""
-                      width="60"
-                    />
+                  <div class="col-12 col-sm-12 col-md-3">
+                    <div
+                      class="info-card wieght d-flex align-items-center gap-3 p-3 rounded shadow-sm"
+                    >
+                      <div class="icon_group">
+                        <img
+                          src="./images/list_style_dashboard/gender.png"
+                          alt=""
+                          width="60"
+                        />
+                      </div>
+                      <div class="info-text d-flex flex-column">
+                        <span>Weight</span>
+                        <span>145 lbs</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="info-text">
-                    <span>Weight</span>
-                    <span>145 lbs</span>
-                  </div>
-                </div>
 
-                <div class="info-card">
-                  <div class="icon_group">
-                    <img
-                      src="./images/list_style_dashboard/gender.png"
-                      alt=""
-                      width="60"
-                    />
-                  </div>
-                  <div class="info-text">
-                    <span>BMI</span>
-                    <span>3.5 kg/m²</span>
+                  <div class="col-12 col-sm-12 col-md-3">
+                    <div
+                      class="info-card bmt d-flex align-items-center gap-3 p-3 rounded shadow-sm"
+                    >
+                      <div class="icon_group">
+                        <img
+                          src="./images/list_style_dashboard/gender.png"
+                          alt=""
+                          width="60"
+                        />
+                      </div>
+                      <div class="info-text d-flex flex-column">
+                        <span>BMI</span>
+                        <span>3.5 kg/m²</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <!-- chart area -->
               <div
-                class="d-flex gap-3 justify-content-between mt-4 chart_container"
+                class="row chart_container align-items-stretch justify-content-between mt-4"
               >
                 <!-- Weekly Progress Doughnut Chart -->
-                <div class="progress-card mb-4">
-                  <h3>Weekly Progress</h3>
-                  <div class="chart-container">
-                    <canvas id="progressChartCanvas"></canvas>
-                    <span id="progressValue">81%</span>
-                  </div>
-                  <div class="progress-left">
-                    <span>19%</span> Weekly Progress <br />
-                    Left
+                <div class="col-12 col-sm-12 col-md-3">
+                  <div
+                    class="progress-card mb-4 text-center p-3 border rounded shadow-sm"
+                  >
+                    <h3>Weekly Progress</h3>
+                    <div
+                      class="chart-container position-relative mx-auto"
+                      style="max-width: 180px"
+                    >
+                      <canvas id="progressChartCanvas"></canvas>
+                      <span
+                        id="progressValue"
+                        class="position-absolute top-50 start-50 translate-middle fs-5 fw-bold"
+                        >81%</span
+                      >
+                    </div>
+                    <div class="progress-left mt-2">
+                      <span>19%</span> Weekly Progress <br />
+                      Left
+                    </div>
                   </div>
                 </div>
 
                 <!-- Weekly Challenge Line Chart -->
-                <div class="chart-card mb-4">
-                  <div class="chart-title">Weekly Challenge</div>
-                  <div id="chartContainer">
-                    <canvas id="weeklyChart"></canvas>
+                <div class="col-12 col-12-6 col-md-3">
+                  <div class="chart-card mb-4 p-3 border rounded shadow-sm">
+                    <div class="chart-title fw-semibold mb-2">
+                      Weekly Challenge
+                    </div>
+                    <div id="chartContainer">
+                      <canvas id="weeklyChart"></canvas>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Monthly Progress Doughnut Chart -->
-                <div class="progress-card mb-4">
-                  <h3>Calories Progress</h3>
-                  <div class="chart-container">
-                    <canvas id="monthlyProgressChartCanvas"></canvas>
-                    <span id="monthlyProgressValue" class="calories">81%</span>
-                  </div>
-                  <div class="progress-left">
-                    <span class="calories">450</span> Kelo Left <br />
-                    <small>Calorie Goal: 2,000 kcal</small>
+                <div class="col-12 col-sm-12 col-md-3">
+                  <div
+                    class="progress-card mb-4 text-center p-3 border rounded shadow-sm"
+                  >
+                    <h3>Calories Progress</h3>
+                    <div
+                      class="chart-container position-relative mx-auto"
+                      style="max-width: 180px"
+                    >
+                      <canvas id="monthlyProgressChartCanvas"></canvas>
+                      <span
+                        id="monthlyProgressValue"
+                        class="calories position-absolute top-50 start-50 translate-middle fs-5 fw-bold"
+                        >81%</span
+                      >
+                    </div>
+                    <div class="progress-left mt-2">
+                      <span class="calories">450</span> Kcal Left <br />
+                      <small>Calorie Goal: 2,000 kcal</small>
+                    </div>
                   </div>
                 </div>
 
                 <!-- Monthly Challenge Line Chart -->
-                <div class="chart-card mb-4">
-                  <div class="chart-title">Monthly Challenge</div>
-                  <div id="chartContainer">
-                    <canvas id="monthlyChart"></canvas>
+                <div class="col-12 col-sm-12 col-md-3">
+                  <div class="chart-card mb-4 p-3 border rounded shadow-sm">
+                    <div class="chart-title fw-semibold mb-2">
+                      Monthly Challenge
+                    </div>
+                    <div id="chartContainer">
+                      <canvas id="monthlyChart"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <!-- total crab, proteins and fat area -->
               <div
-                class="d-flex align-items-center justify-content-between gap-4"
+                class="d-flex align-items-center justify-content-between gap-4 crab_area"
               >
                 <div class="total_cabs d-flex align-items-center gap-3 cabs">
                   <div class="icon_span">
@@ -584,28 +632,35 @@
 
               <!-- total steps area -->
               <div
-                class="d-flex gap-4 align-items-center justify-content-between mt-4"
+                class="row g-3 align-items-stretch justify-content-between mt-2 steps_cnontainer"
               >
-                <!-- total steps chart -->
-                <div class="chart-card_steps">
-                  <h2>Total Steps</h2>
-                  <div id="chartContainer">
-                    <canvas id="stepsChart"></canvas>
+                <!-- Total Steps -->
+                <div class="col-12 col-sm-12 col-md-4">
+                  <div class="chart-card_steps h-100">
+                    <h2>Total Steps</h2>
+                    <div id="chartContainer">
+                      <canvas id="stepsChart"></canvas>
+                    </div>
                   </div>
                 </div>
 
-                <!-- sleep chart -->
-                <div class="chart-card_steps">
-                  <h2>Sleep</h2>
-                  <div id="chartContainer">
-                    <canvas id="sleepChart"></canvas>
+                <!-- Sleep -->
+                <div class="col-12 col-sm-12 col-md-4">
+                  <div class="chart-card_steps h-100">
+                    <h2>Sleep</h2>
+                    <div id="chartContainer">
+                      <canvas id="sleepChart"></canvas>
+                    </div>
                   </div>
                 </div>
-                <!-- hydration chart -->
-                <div class="chart-card_steps">
-                  <h2>Hydration</h2>
-                  <div id="chartContainer">
-                    <canvas id="hydrationChart"></canvas>
+
+                <!-- Hydration -->
+                <div class="col-12 col-sm-12 col-md-4">
+                  <div class="chart-card_steps h-100">
+                    <h2>Hydration</h2>
+                    <div id="chartContainer">
+                      <canvas id="hydrationChart"></canvas>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -905,6 +960,287 @@
                   </table>
                 </div>
               </div>
+
+              <div
+                class="d-flex flex-column flex-lg-row gap-2 recomended_parent"
+              >
+                <!-- recomended trainers area -->
+                <div class="trainer-section col-12 col-lg-6 recomended_parent">
+                  <div class="trainer-header">
+                    <h4>Recommend Trainers For You</h4>
+                    <button class="view-more-btn">View More</button>
+                  </div>
+
+                  <div class="row text-center">
+                    <!-- Trainer Card -->
+                    <div class="col-6 col-md-3 mb-4">
+                      <div class="trainer-card">
+                        <img
+                          src="./images/trainer/ellipse1.png"
+                          alt="Trainer"
+                        />
+                        <h6>Roberto Carloz</h6>
+                        <div
+                          class="d-flex justify-content-center align-items-center mb-1"
+                        >
+                          <span class="rating me-2">4.4</span>
+                          <span style="color: #ccc">|</span>
+                          <span class="trainer-info ms-2"
+                            >Body Building Trainer 1</span
+                          >
+                        </div>
+                        <button class="send-btn">Send Request</button>
+                      </div>
+                    </div>
+
+                    <!-- Duplicate Cards -->
+                    <div class="col-6 col-md-3 mb-4">
+                      <div class="trainer-card">
+                        <img
+                          src="./images/trainer/ellipse1.png"
+                          alt="Trainer"
+                        />
+                        <h6>Roberto Carloz</h6>
+                        <div
+                          class="d-flex justify-content-center align-items-center mb-1"
+                        >
+                          <span class="rating me-2">4.4</span>
+                          <span style="color: #ccc">|</span>
+                          <span class="trainer-info ms-2"
+                            >Body Building Trainer 1</span
+                          >
+                        </div>
+                        <button class="send-btn">Send Request</button>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3 mb-4">
+                      <div class="trainer-card">
+                        <img
+                          src="./images/trainer/ellipse1.png"
+                          alt="Trainer"
+                        />
+                        <h6>Roberto Carloz</h6>
+                        <div
+                          class="d-flex justify-content-center align-items-center mb-1"
+                        >
+                          <span class="rating me-2">4.4</span>
+                          <span style="color: #ccc">|</span>
+                          <span class="trainer-info ms-2"
+                            >Body Building Trainer 1</span
+                          >
+                        </div>
+                        <button class="send-btn">Send Request</button>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3 mb-4">
+                      <div class="trainer-card">
+                        <img
+                          src="./images/trainer/ellipse1.png"
+                          alt="Trainer"
+                        />
+                        <h6>Roberto Carloz</h6>
+                        <div
+                          class="d-flex justify-content-center align-items-center mb-1"
+                        >
+                          <span class="rating me-2">4.4</span>
+                          <span style="color: #ccc">|</span>
+                          <span class="trainer-info ms-2"
+                            >Body Building Trainer 1</span
+                          >
+                        </div>
+                        <button class="send-btn">Send Request</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- recomended diet section -->
+                <div
+                  class="trainer-section col-12 col-lg-6 recomended_parent recomended_diet"
+                >
+                  <div class="trainer-header">
+                    <h4>Recommend Trainers For You</h4>
+                    <button class="view-more-btn">View More</button>
+                  </div>
+
+                  <div class="row text-center">
+                    <!-- Trainer Card -->
+                    <div class="col-6 col-md-3 mb-4">
+                      <div class="trainer-card">
+                        <img
+                          src="./images/trainer/ellipse1.png"
+                          alt="Trainer"
+                        />
+                        <h6>Roberto Carloz</h6>
+                        <div
+                          class="d-flex justify-content-center align-items-center mb-1"
+                        >
+                          <span class="rating me-2">4.4</span>
+                          <span style="color: #ccc">|</span>
+                          <span class="trainer-info ms-2"
+                            >Body Building Trainer 1</span
+                          >
+                        </div>
+                        <button class="send-btn">Send Request</button>
+                      </div>
+                    </div>
+
+                    <!-- Duplicate Cards -->
+                    <div class="col-6 col-md-3 mb-4">
+                      <div class="trainer-card">
+                        <img
+                          src="./images/trainer/ellipse1.png"
+                          alt="Trainer"
+                        />
+                        <h6>Roberto Carloz</h6>
+                        <div
+                          class="d-flex justify-content-center align-items-center mb-1"
+                        >
+                          <span class="rating me-2">4.4</span>
+                          <span style="color: #ccc">|</span>
+                          <span class="trainer-info ms-2"
+                            >Body Building Trainer 1</span
+                          >
+                        </div>
+                        <button class="send-btn">Send Request</button>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3 mb-4">
+                      <div class="trainer-card">
+                        <img
+                          src="./images/trainer/ellipse1.png"
+                          alt="Trainer"
+                        />
+                        <h6>Roberto Carloz</h6>
+                        <div
+                          class="d-flex justify-content-center align-items-center mb-1"
+                        >
+                          <span class="rating me-2">4.4</span>
+                          <span style="color: #ccc">|</span>
+                          <span class="trainer-info ms-2"
+                            >Body Building Trainer 1</span
+                          >
+                        </div>
+                        <button class="send-btn">Send Request</button>
+                      </div>
+                    </div>
+
+                    <div class="col-6 col-md-3 mb-4">
+                      <div class="trainer-card">
+                        <img
+                          src="./images/trainer/ellipse1.png"
+                          alt="Trainer"
+                        />
+                        <h6>Roberto Carloz</h6>
+                        <div
+                          class="d-flex justify-content-center align-items-center mb-1"
+                        >
+                          <span class="rating me-2">4.4</span>
+                          <span style="color: #ccc">|</span>
+                          <span class="trainer-info ms-2"
+                            >Body Building Trainer 1</span
+                          >
+                        </div>
+                        <button class="send-btn">Send Request</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- for mobile -->
+              <div class="trainer-section col-md-6 trainer_card_mobile">
+                <div class="trainer-header_mobile">
+                  <h4 class="mt-2">Recommend Trainers For You</h4>
+                </div>
+
+                <div class="row text-center">
+                  <!-- Trainer Card -->
+                  <div class="col-6 col-md-3 mb-4">
+                    <div class="trainer-card">
+                      <img src="./images/trainer/ellipse1.png" alt="Trainer" />
+                      <h6>Roberto Carloz</h6>
+                      <div
+                        class="d-flex justify-content-center align-items-center mb-1"
+                      >
+                        <span class="rating me-2">4.4</span>
+                        <span style="color: #ccc">|</span>
+                        <span class="trainer-info ms-2"
+                          >Body Building Trainer 1</span
+                        >
+                      </div>
+                      <button class="send-btn">Send Request</button>
+                    </div>
+                  </div>
+
+                  <!-- Duplicate Cards -->
+                  <div class="col-6 col-md-3 mb-4">
+                    <div class="trainer-card">
+                      <img src="./images/trainer/ellipse1.png" alt="Trainer" />
+                      <h6>Roberto Carloz</h6>
+                      <div
+                        class="d-flex justify-content-center align-items-center mb-1"
+                      >
+                        <span class="rating me-2">4.4</span>
+                        <span style="color: #ccc">|</span>
+                        <span class="trainer-info ms-2"
+                          >Body Building Trainer 1</span
+                        >
+                      </div>
+                      <button class="send-btn">Send Request</button>
+                    </div>
+                  </div>
+                  <button class="view-more-btn_for_mobile">View More</button>
+                </div>
+              </div>
+
+              <div class="trainer-section col-md-6 trainer_card_mobile">
+                <div class="trainer-header_mobile">
+                  <h4>Recommend Trainers For You</h4>
+                </div>
+
+                <div class="row text-center">
+                  <!-- Trainer Card -->
+                  <div class="col-6 col-md-3 mb-4">
+                    <div class="trainer-card">
+                      <img src="./images/trainer/ellipse1.png" alt="Trainer" />
+                      <h6>Roberto Carloz</h6>
+                      <div
+                        class="d-flex justify-content-center align-items-center mb-1"
+                      >
+                        <span class="rating me-2">4.4</span>
+                        <span style="color: #ccc">|</span>
+                        <span class="trainer-info ms-2"
+                          >Body Building Trainer 1</span
+                        >
+                      </div>
+                      <button class="send-btn">Send Request</button>
+                    </div>
+                  </div>
+
+                  <!-- Duplicate Cards -->
+                  <div class="col-6 col-md-3 mb-4">
+                    <div class="trainer-card">
+                      <img src="./images/trainer/ellipse1.png" alt="Trainer" />
+                      <h6>Roberto Carloz</h6>
+                      <div
+                        class="d-flex justify-content-center align-items-center mb-1"
+                      >
+                        <span class="rating me-2">4.4</span>
+                        <span style="color: #ccc">|</span>
+                        <span class="trainer-info ms-2"
+                          >Body Building Trainer 1</span
+                        >
+                      </div>
+                      <button class="send-btn">Send Request</button>
+                    </div>
+                  </div>
+                  <button class="view-more-btn_for_mobile">View More</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -916,150 +1252,5 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery.nice-select.js"></script>
     <script src="./js/custom.js"></script>
-
-    <!-- <script>
-      let ctx = document.getElementById("weeklyChart").getContext("2d");
-
-      new Chart(ctx, {
-        type: "line",
-        data: {
-          labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-          datasets: [
-            {
-              label: "Weekly Challenge",
-              data: [100, 110, 130, 80, 120, 90, 85],
-              borderColor: "rgba(174, 238, 85, 0.9)",
-              backgroundColor: "rgba(174, 238, 85, 0.2)",
-              fill: true,
-              tension: 0.4,
-              pointRadius: 0,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false, // ✅ Allows fixed height to work
-          scales: {
-            y: {
-              min: 40,
-              max: 160,
-              ticks: {
-                stepSize: 20,
-                color: "#888",
-              },
-              grid: {
-                color: "#eee",
-              },
-            },
-            x: {
-              ticks: {
-                color: "#888",
-              },
-              grid: {
-                display: false,
-              },
-            },
-          },
-          plugins: {
-            legend: {
-              display: false,
-            },
-          },
-        },
-      });
-
-      // anothe
-      const progressCtx = document
-        .getElementById("progressChartCanvas")
-        .getContext("2d");
-
-      const progress = 81;
-      const left = 100 - progress;
-
-      new Chart(progressCtx, {
-        type: "doughnut",
-        data: {
-          datasets: [
-            {
-              data: [progress, left],
-              backgroundColor: ["#b4e16b", "#eef0f3"],
-              borderWidth: 0,
-              cutout: "75%",
-            },
-          ],
-        },
-        options: {
-          rotation: -90,
-          circumference: 360,
-          plugins: {
-            tooltip: { enabled: false },
-            legend: { display: false },
-          },
-          animation: {
-            animateRotate: true,
-            duration: 1200,
-          },
-        },
-      });
-
-      // Monthly Line Chart
-      let monthlyCtx = document.getElementById("monthlyChart").getContext("2d");
-      new Chart(monthlyCtx, {
-        type: "line",
-        data: {
-          labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
-          datasets: [
-            {
-              label: "Monthly Challenge",
-              data: [200, 180, 220, 210],
-              borderColor: "rgba(52, 152, 219, 0.9)",
-              backgroundColor: "rgba(52, 152, 219, 0.2)",
-              fill: true,
-              tension: 0.4,
-              pointRadius: 0,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            y: {
-              min: 100,
-              max: 250,
-              ticks: { stepSize: 30, color: "#888" },
-              grid: { color: "#eee" },
-            },
-            x: { ticks: { color: "#888" }, grid: { display: false } },
-          },
-          plugins: { legend: { display: false } },
-        },
-      });
-
-      // Monthly Progress Doughnut Chart
-      const monthlyProgressCtx = document
-        .getElementById("monthlyProgressChartCanvas")
-        .getContext("2d");
-      const monthlyProgress = 65;
-      new Chart(monthlyProgressCtx, {
-        type: "doughnut",
-        data: {
-          datasets: [
-            {
-              data: [monthlyProgress, 100 - monthlyProgress],
-              backgroundColor: ["#3498db", "#eef0f3"],
-              borderWidth: 0,
-              cutout: "75%",
-            },
-          ],
-        },
-        options: {
-          rotation: -90,
-          circumference: 360,
-          plugins: { tooltip: { enabled: false }, legend: { display: false } },
-          animation: { animateRotate: true, duration: 1200 },
-        },
-      });
-    </script> -->
   </body>
 </html>
