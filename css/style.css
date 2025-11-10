@@ -7328,9 +7328,6 @@ canvas {
   .meta_area.style_01 {
     display: none;
   }
-  /* .menu_toggle_bars {
-    display: none;
-  } */
 }
 
 .custom-select-wrapper > option {
@@ -7420,7 +7417,6 @@ canvas {
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   padding: 20px;
-  /* width: 500px; */
 }
 
 .chart-card_steps {
@@ -7449,7 +7445,7 @@ canvas {
 
 #chartContainer {
   position: relative;
-  height: 220px; /* Fixed height */
+  height: 220px;
   width: 100%;
 }
 
@@ -7463,7 +7459,6 @@ canvas {
   border-radius: 12px;
   text-align: center;
   padding: 20px;
-  /* width: 210px; */
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -7475,6 +7470,12 @@ canvas {
     width: 400px;
     margin-left: -95px !important;
   }
+}
+
+.sidebar-collapsed .progress-card,
+.sidebar-collapsed .chart-card {
+  width: 100% !important;
+  margin-left: 0 !important;
 }
 
 .progress-card h3 {
@@ -7563,7 +7564,6 @@ canvas {
   .gender_container {
     margin-left: 10px;
   }
-
   .chart_container {
     margin-right: 0px !important;
     margin-left: 1px;
@@ -7604,19 +7604,21 @@ canvas {
 }
 
 /* total crab, proteins and fat area */
-
 .cabs {
   border-left: 6px solid #c3e66e;
 }
 
 .total_cabs {
-  width: 100%; /* full width on small screens */
-  max-width: 400px;
+  width: 400px;
   height: 120px;
   background-color: var(--bs-dark);
   padding: 10px;
   border-radius: 10px;
   flex-shrink: 0;
+}
+
+.total_cabs_collapse .total_cabs {
+  width: 430px !important;
 }
 
 @media (min-width: 992px) {
@@ -8047,7 +8049,7 @@ canvas {
   width: 200px;
   border-radius: 8px;
   transition: all 0.3s ease;
-  margin: 0 auto 50px; /* Center horizontally */
+  margin: 0 auto 50px;
   display: block;
 }
 
@@ -8075,12 +8077,11 @@ canvas {
   padding-right: 15px !important;
 }
 
-/* alingment fixed between 769px to 1300px */
+/* alingment fixed for 769px to 1300px */
 @media (min-width: 769px) and (max-width: 1300px) {
   .gender_container {
     margin-left: 13px !important;
   }
-
   .chart_container {
     margin-left: 2px;
   }
@@ -8096,4 +8097,46 @@ canvas {
   .crab_area {
     margin-left: 10px;
   }
+}
+
+/* channerl style here */
+.cover-photo {
+  height: 200px;
+  border-radius: 10px;
+  background: url("https://images.unsplash.com/photo-1584467735871-d94d4d6e8e98")
+    center/cover no-repeat;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+  color: #000;
+  border-bottom: 3px solid #8dd44b;
+  background-color: transparent;
+}
+
+.btn-light.active {
+  background-color: #8dd44b !important;
+  color: white !important;
+}
+
+.video-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.video-card .card-body {
+  padding: 10px;
 }
