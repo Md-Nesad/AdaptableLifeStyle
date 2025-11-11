@@ -385,7 +385,6 @@
             </div>
             <div class="my-4 channel-page">
               <!-- Main Tabs -->
-
               <ul class="nav nav-tabs main-tabs account_tab_nav" id="mainTabs">
                 <li class="nav-item">
                   <button class="nav-link active" data-tab="your_programs">
@@ -1777,117 +1776,216 @@
                   </div>
                 </div>
 
-                <!-- About -->
+                <!-- Your Info -->
                 <div id="your_info" class="tab-pane">
-                  <div class="mb-5">
-                    <div class="row g-4">
-                      <!-- Description and Links -->
-                      <div class="col-md-9">
-                        <div class="channel-info">
-                          <div class="mb-3">
-                            <div class="section-title">Description</div>
-                            <p class="description">
-                              Welcome to the official Saturday Night Live
-                              channel on YouTube! Here you will find your
-                              favourite sketches, behind the scenes clips and
-                              web exclusives, featuring all your favourite hosts
-                              and cast members. Check out more SNL at
-                              http://www.nbc.com.
-                            </p>
-                          </div>
+                  <div class="py-5 info_container">
+                    <div class="admin-info-card mx-auto">
+                      <div class="d-flex gap-3 align-items-center mb-4">
+                        <img src="./images/account/info.png" alt="info_icon" />
+                        <h5 class="fw-semibold mb-0">Admin Golo’s Info</h5>
+                      </div>
 
-                          <div class="mb-3">
-                            <div class="section-title">Links</div>
-                            <div class="links">
-                              <a href="#"
-                                ><img
-                                  src="./images//channel_about/SNL.png"
-                                  alt=""
-                                />
-                                SNL on NBC</a
-                              >
-                              <a href="#"
-                                ><img
-                                  src="./images/channel_about/instagram.png"
-                                  alt=""
-                                />
-                                Instagram</a
-                              >
-                              <a href="#"
-                                ><img
-                                  src="./images/channel_about/facebook.png"
-                                  alt=""
-                                />
-                                Facebook</a
-                              >
-                              <a href="#"
-                                ><img
-                                  src="./images/channel_about/twitter.png"
-                                  alt=""
-                                />
-                                Twitter</a
-                              >
-                              <a href="#"
-                                ><img
-                                  src="./images/channel_about/google.png"
-                                  alt=""
-                                />
-                                Google+</a
-                              >
-                              <a href="#"
-                                ><img
-                                  src="./images/channel_about/SNL.png"
-                                  alt=""
-                                />
-                                Subscribe to SNL on Oren</a
-                              >
-                            </div>
-                          </div>
+                      <div class="text-center mb-4">
+                        <img
+                          src="./images/account/account_profile.png"
+                          alt="Profile"
+                          class="rounded-3 admin-avatar"
+                        />
+                      </div>
 
-                          <div>
-                            <div class="section-title">Business Enquiries</div>
-                            <div class="email-list">
-                              <a href="mailto:sample@sample.com"
-                                ><img
-                                  src="./images/channel_about/gmail.png"
-                                  alt="gmail"
-                                />
-                                sample@sample.com</a
-                              >
-                              <a href="mailto:sample@sampleae.com"
-                                ><img
-                                  src="./images/channel_about/gmail.png"
-                                  alt="gmail"
-                                />
-                                sample@sampleae.com</a
-                              >
-                            </div>
+                      <div
+                        class="d-flex justify-content-center align-items-center"
+                      >
+                        <div class="tab-box d-flex text-center">
+                          <div class="tab-item active flex-fill py-2">
+                            <span class="tab-number">5</span>
+                            <div class="tab-label">Programs</div>
+                          </div>
+                          <div class="tab-item flex-fill py-2">
+                            <span class="tab-number">10</span>
+                            <div class="tab-label">Channel Subscriptions</div>
                           </div>
                         </div>
                       </div>
 
-                      <!-- Stats -->
-                      <div
-                        class="col-md-3 stats_container d-flex flex-column justify-content-between"
-                      >
-                        <div class="stats-box">
-                          <h2 class="stats-title">Stats</h2>
-                          <div class="stats-content">
-                            <p>Joined Jul 2019</p>
-                            <p>3,741,400,119 views</p>
-                            <p>25,345,348 subscribers</p>
-                            <p>729 videos</p>
-                          </div>
+                      <div class="row g-3">
+                        <div class="col-md-6 d-flex flex-column">
+                          <label class="form-label">Email</label>
+                          <input
+                            type="email"
+                            class="info-input"
+                            placeholder="Enter Email"
+                            value="admin@gmail.com"
+                          />
+                        </div>
+                        <div class="col-md-6 d-flex flex-column">
+                          <label class="form-label">Phone Number</label>
+                          <input
+                            type="text"
+                            class="info-input"
+                            placeholder="Enter Phone Number"
+                            value="9135142322"
+                          />
+                        </div>
 
-                          <div class="channel_message">
-                            <img
-                              src="./images/channel_about/pinterest.png"
-                              alt=""
-                            />
-                            <img
-                              src="./images/channel_about/message.png"
-                              alt=""
-                            />
+                        <div class="col-md-6 d-flex flex-column">
+                          <label class="form-label">Address</label>
+                          <input
+                            type="text"
+                            class="info-input"
+                            placeholder="Enter Address"
+                            value="1023 owt grodon avo, 120"
+                          />
+                        </div>
+                        <div class="col-md-6 d-flex flex-column">
+                          <label class="form-label">City</label>
+                          <input
+                            type="text"
+                            class="info-input"
+                            placeholder="Enter City"
+                            value="Overland Park"
+                          />
+                        </div>
+
+                        <div class="col-md-6 d-flex flex-column">
+                          <label class="form-label">State</label>
+                          <input
+                            type="text"
+                            class="info-input"
+                            placeholder="Enter State"
+                            value="California"
+                          />
+                        </div>
+                        <div class="col-md-6 d-flex flex-column">
+                          <label class="form-label">Zip Code</label>
+                          <input
+                            type="text"
+                            class="info-input"
+                            placeholder="Enter Zip Code"
+                            value="66212"
+                          />
+                        </div>
+
+                        <div class="col-md-6 d-flex flex-column">
+                          <label class="form-label">Country</label>
+                          <input
+                            type="text"
+                            class="info-input"
+                            placeholder="Enter Country"
+                            value="Denmark"
+                          />
+                        </div>
+                        <div class="col-md-6 d-flex flex-column">
+                          <label class="form-label"
+                            >Account Activation Date</label
+                          >
+                          <input
+                            type="text"
+                            class="info-input"
+                            placeholder="Enter Account Activation Date"
+                            value="July 14, 2025"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Full body Images -->
+                    <div class="quick_view full_body_image">
+                      <div class="heading">
+                        <h2>
+                          <span
+                            ><img
+                              src="./images/account/info.png"
+                              alt="" /></span
+                          >Full Body Images
+                          <small
+                            >- Upload full body images overtime to track your
+                            progress</small
+                          >
+                        </h2>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-2">
+                          <div class="diet_card">
+                            <div class="diet_thum">
+                              <a href="#"
+                                ><img src="./images/video/diet1.png" alt=""
+                              /></a>
+                              <span>59s</span>
+                            </div>
+                            <div class="full_body_content">
+                              <h4><a href="#">Upload Date & Time</a></h4>
+                              <p>April 30, 2025 | 1:49 PM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="diet_card">
+                            <div class="diet_thum">
+                              <a href="#"
+                                ><img src="./images/video/diet1.png" alt=""
+                              /></a>
+                              <span>59s</span>
+                            </div>
+                            <div class="full_body_content">
+                              <h4><a href="#">Upload Date & Time</a></h4>
+                              <p>April 30, 2025 | 1:49 PM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="diet_card">
+                            <div class="diet_thum">
+                              <a href="#"
+                                ><img src="./images/video/diet1.png" alt=""
+                              /></a>
+                              <span>59s</span>
+                            </div>
+                            <div class="full_body_content">
+                              <h4><a href="#">Upload Date & Time</a></h4>
+                              <p>April 30, 2025 | 1:49 PM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="diet_card">
+                            <div class="diet_thum">
+                              <a href="#"
+                                ><img src="./images/video/diet1.png" alt=""
+                              /></a>
+                              <span>59s</span>
+                            </div>
+                            <div class="full_body_content">
+                              <h4><a href="#">Upload Date & Time</a></h4>
+                              <p>April 30, 2025 | 1:49 PM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="diet_card">
+                            <div class="diet_thum">
+                              <a href="#"
+                                ><img src="./images/video/diet1.png" alt=""
+                              /></a>
+                              <span>59s</span>
+                            </div>
+                            <div class="full_body_content mx-auto">
+                              <h4><a href="#">Upload Date & Time</a></h4>
+                              <p>April 30, 2025 | 1:49 PM</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="diet_card">
+                            <div class="diet_thum">
+                              <a href="#"
+                                ><img src="./images/video/diet1.png" alt=""
+                              /></a>
+                              <span>59s</span>
+                            </div>
+                            <div class="full_body_content">
+                              <h4><a href="#">Upload Date & Time</a></h4>
+                              <p>April 30, 2025 | 1:49 PM</p>
+                            </div>
                           </div>
                         </div>
                       </div>

@@ -8115,6 +8115,7 @@ canvas {
 
 .channel_profile {
   padding: 0px 8px;
+  margin-bottom: 50px;
 }
 
 .channel_profile h4 {
@@ -8143,6 +8144,21 @@ canvas {
   border-radius: 999px;
 }
 
+.subscribes {
+  background-color: #c3e66e;
+  color: #000;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 999px;
+  width: 100%;
+  display: none;
+  margin-bottom: 15px;
+  margin-top: -5px;
+}
+
 .channel_profile button:hover {
   background-color: #a9c862;
   transition: all 0.3s ease;
@@ -8153,6 +8169,28 @@ canvas {
 }
 .tab-pane.active {
   display: block;
+}
+
+.channel_search {
+  background-color: var(--bs-body-bg);
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  margin-left: 30px;
+  padding: 10px 10px 5px 20px;
+  margin-top: -10px;
+}
+
+.channel_search button {
+  border: none;
+  background-color: var(--bs-body-bg);
+}
+
+.channel_search input {
+  border: none;
+  background-color: var(--bs-body-bg);
+  outline: none;
+  color: var(--bs-primary);
+  opacity: 0.8;
 }
 
 /* Main Tabs Style */
@@ -8186,8 +8224,8 @@ canvas {
 
 /*  Video Sub Tabs Style */
 .video-tabs .nav-link {
-  background-color: #f2f2f2;
-  color: #272a33;
+  background-color: var(--bs-dark);
+  color: var(--bs-primary);
   font-weight: 500;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -8273,7 +8311,7 @@ canvas {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #333;
+  color: var(--bs-primary);
   font-weight: 600;
   margin-right: 20px;
   margin-top: 8px;
@@ -8295,7 +8333,7 @@ canvas {
 
 .email-list a {
   text-decoration: none;
-  color: #333;
+  color: var(--bs-primary);
   display: flex;
   align-items: center;
   font-size: 0.95rem;
@@ -8338,6 +8376,27 @@ canvas {
   }
   .stats_container {
     width: 100% !important;
+  }
+  .cover-photo img {
+    height: 130px;
+  }
+  .channel_profile button {
+    display: none;
+  }
+  .subscribes {
+    display: block !important;
+  }
+  .channel_profile {
+    margin-bottom: 30px;
+  }
+  .channel_search {
+    display: none;
+    margin-left: 5px;
+    padding: 5px 10px;
+    margin-top: 0;
+  }
+  .channel_search input {
+    width: 100px;
   }
 }
 
@@ -8433,4 +8492,129 @@ canvas {
   position: absolute;
   background-color: #768393;
   border-radius: 129px 141px 0px 0px;
+}
+/* Your info here */
+.info_container {
+  margin-top: -40px;
+  margin-left: -10px;
+  margin-right: -5px;
+}
+.admin-info-card h5 {
+  color: var(--bs-primary);
+  font-size: 16px;
+}
+
+.admin-info-card {
+  margin-left: 5px;
+  border-bottom: 01px solid #0000001a;
+  padding: 0px 20px 50px 20px;
+}
+
+.admin-avatar {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.tab-box {
+  border: 1px solid #bcbcbc;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 370px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.tab-item {
+  border-right: 1px solid #bcbcbc;
+  color: #6c757d;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.tab-item:last-child {
+  border-right: none;
+  padding: 20px 40px;
+}
+
+.tab-item.active .tab-number {
+  color: #ff8700;
+  font-weight: 600;
+}
+
+.tab-number {
+  display: block;
+  font-size: 16px;
+  color: #ff8700;
+}
+
+.tab-label {
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.info-input {
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: var(--bs-primary);
+  opacity: 0.8;
+  background-color: var(--bs-body-bg);
+  border: 1px solid #8a8c904d;
+}
+
+.info-input:focus {
+  border: 2px solid #ffdeb3;
+  outline: none;
+}
+
+.form-label {
+  color: #8a8c90;
+  font-weight: 500;
+}
+.full_body_image {
+  margin: 40px 25px 0px 25px;
+}
+
+.full_body_image h2 {
+  color: var(--bs-primary);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.full_body_image span {
+  margin-right: 10px;
+}
+.full_body_image small {
+  color: #8a8c90;
+  font-size: 16px;
+}
+.full_body_content h4 a {
+  color: var(--bs-primary);
+  font-size: 16px;
+  text-align: center !important;
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.full_body_content p {
+  color: #8a8c90;
+  font-size: 15px;
+  text-align: center;
+}
+@media (min-width: 0px) and (max-width: 1300px) {
+  .channel-page {
+    margin-left: 18px;
+  }
+}
+
+@media (max-width: 766px) {
+  .tab-content {
+    padding-top: 30px;
+  }
+  .admin-info-card {
+    margin-top: -34px;
+  }
 }
