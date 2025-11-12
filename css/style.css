@@ -8479,7 +8479,7 @@ canvas {
 }
 
 .playlist_thumb {
-  position: relative;
+  position: relative !important;
   width: 100%;
   margin: 0 auto;
 }
@@ -8628,5 +8628,256 @@ canvas {
   }
   .admin-info-card {
     margin-top: -34px;
+  }
+}
+
+/* edit channels start here */
+.edit_channels {
+  margin: -15px -13px 0px -15px;
+  border-bottom: 01px solid #0000001a;
+  padding-bottom: 40px;
+}
+
+.edit_videos {
+  margin: 25px -13px 0px -15px;
+  border-bottom: 01px solid #0000001a;
+  padding-bottom: 40px;
+}
+.account_setting_quick_videos {
+  margin: 25px -13px 0px -15px;
+  border-bottom: 01px solid #0000001a;
+  padding-bottom: 40px;
+}
+.account_setting_your_programs {
+  margin: 25px -13px 0px -15px;
+}
+/* .edit_toggle {
+  background-color: #ffffff;
+  padding: 7px 9px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 100px;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 500px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 1px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.option.edit {
+  color: #222;
+}
+
+.option.delete {
+  color: #ff8700;
+}
+
+.option:hover {
+  opacity: 0.8;
+} */
+
+/* .video_thum {
+  position: relative;
+  overflow: hidden;
+}
+
+.video_thum .time {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+} */
+
+.video_options button {
+  background-color: #ffffff;
+  padding: 7px 9px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Small modal (dropdown style) */
+.video_modal {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: var(--bs-dark);
+  border-radius: 6px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  min-width: 140px;
+  overflow: hidden;
+}
+
+.video_modal.show {
+  display: block;
+}
+
+.video_modal button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 8px 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.video_modal button:first-child i {
+  color: #afd25a;
+}
+
+.video_modal button:last-child {
+  color: #ff8700;
+}
+
+.video_modal button:hover {
+  background: var(--bs-body-bg);
+}
+
+/* Sidebar container */
+.account-sidebar {
+  margin-top: 30px;
+  background: var(--bs-dark);
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  padding: 15px;
+}
+
+.account_setting_video_area {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Section styling */
+.sidebar-section {
+  background-color: var(--bs-body-bg);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--bs-primary);
+  border-bottom: 02px solid #0000001a;
+  padding-bottom: 20px;
+  margin: 0 0 10px 0;
+}
+
+.sidebar-section .icon {
+  font-size: 18px;
+}
+
+.account_notification {
+  background-color: var(--bs-dark);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.account_notification h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--bs-primary);
+  border-top: 1px solid #0000001a;
+  border-bottom: 1px solid #0000001a;
+  padding: 20px 0;
+}
+
+.account_notification span {
+  margin-right: 5px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bs-dark);
+  border: 1px solid #c7c7c7;
+  border-radius: 10px;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: var(--bs-primary);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.02);
+}
+
+.sidebar-links a:hover {
+  background-color: #faf8f7;
+  border-color: #e3e0dd;
+  color: black;
+}
+
+.sidebar-links a span {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+@media (min-width: 1400px) {
+  .account-sidebar {
+    width: 370px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .account-sidebar {
+    margin-right: 10px;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1480px) {
+  .account-sidebar {
+    width: 335px;
+  }
+}
+@media (max-width: 992px) {
+  .account_setting_area {
+    margin-left: 5px;
+    margin-right: 25px;
+  }
+  .account-sidebar {
+    display: none;
   }
 }

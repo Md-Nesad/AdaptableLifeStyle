@@ -369,3 +369,24 @@ document.querySelectorAll(".nav-tabs").forEach((tabGroup) => {
     });
   });
 });
+// edit and delete modal toggle
+document.querySelectorAll(".optionBtn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    // Close other modals
+    document.querySelectorAll(".video_modal").forEach((modal) => {
+      if (modal !== btn.nextElementSibling) modal.classList.remove("show");
+    });
+
+    // Toggle this modal
+    const modal = btn.nextElementSibling;
+    modal.classList.toggle("show");
+  });
+});
+
+document.addEventListener("click", () => {
+  document
+    .querySelectorAll(".video_modal")
+    .forEach((modal) => modal.classList.remove("show"));
+});
