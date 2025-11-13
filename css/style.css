@@ -9283,6 +9283,39 @@ img.preview {
   padding: 12px 10px;
   border-radius: 10px;
   width: 100% !important;
-  border: none;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  position: relative;
+}
+
+/* Remove the default calendar icon (on Chrome, Edge, etc.) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
   cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+/* For Firefox */
+input[type="date"]::-moz-focus-inner {
+  border: 0;
+}
+
+/* custom icon */
+input[type="date"]::after {
+  content: "📅";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Show placeholder-like text when empty */
+input[type="date"]:not(:valid):before {
+  content: attr(placeholder);
+  color: #999;
+  position: absolute;
+  left: 12px;
 }
