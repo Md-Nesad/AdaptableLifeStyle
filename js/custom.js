@@ -446,10 +446,10 @@ const myBtn = document.getElementById("select_page");
 const pages = document.getElementById("pages");
 
 myBtn.addEventListener("click", () => {
-  if (pages.style.display === "none") {
-    pages.style.display = "block";
-  } else {
+  if (pages.style.display === "block") {
     pages.style.display = "none";
+  } else {
+    pages.style.display = "block";
   }
 });
 
