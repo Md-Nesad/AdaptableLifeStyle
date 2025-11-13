@@ -8972,9 +8972,9 @@ canvas {
   left: 0%;
   transform: translateY(-50%);
   height: 1px;
-  width: 95%;
+  width: 100%;
   background-color: #ddd;
-  z-index: 0;
+  z-index: 1;
 }
 
 .progress {
@@ -8982,10 +8982,33 @@ canvas {
   top: 50%;
   left: 0%;
   transform: translateY(-50%);
-  height: 4px;
+  height: 2px;
   background-color: #ffa500;
   z-index: 1;
   transition: 0.4s ease;
+}
+
+.step {
+  z-index: 2;
+  background: #fff;
+  border: 2px solid #ffa500;
+  color: #ffa500;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  box-sizing: border-box;
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.step.active {
+  background-color: #ffa500;
+  border-color: #ffa500;
+  color: #fff;
+  box-sizing: border-box;
 }
 .first_step {
   margin-left: -20px;
@@ -9069,26 +9092,6 @@ canvas {
 .select_country:focus {
   border: 01px solid #8a8c90;
   outline: none;
-}
-
-.step {
-  z-index: 2;
-  background: #fff;
-  border: 2px solid #ffa500;
-  color: #ffa500;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
-  transition: 0.4s;
-}
-
-.step.active {
-  background-color: #ffa500;
-  color: #fff;
 }
 
 .form-step {

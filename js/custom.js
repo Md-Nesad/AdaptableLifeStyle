@@ -426,7 +426,7 @@ function updateProgressbar() {
     step.classList.toggle("active", index <= formStepsNum);
   });
 
-  formProgress.style.width = (formStepsNum / (steps.length - 1)) * 95 + "%";
+  formProgress.style.width = (formStepsNum / (steps.length - 1)) * 100 + "%";
 }
 
 // sidebar active links
@@ -441,7 +441,7 @@ links.forEach((link) => {
     link.classList.remove("active");
   }
 });
-
+// mobile menu
 const myBtn = document.getElementById("select_page");
 const pages = document.getElementById("pages");
 
