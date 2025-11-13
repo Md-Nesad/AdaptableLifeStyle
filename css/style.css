@@ -9279,14 +9279,10 @@ img.preview {
 
 /* General styling */
 .date_input {
-  background-color: red !important;
   color: var(--bs-dark);
   padding: 12px 10px;
   border-radius: 10px;
   width: 100% !important;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   border: none;
   cursor: pointer;
 }
