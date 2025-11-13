@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     });
   }
-  if ($.fn.niceSelect) {
-    $("select").niceSelect();
-  }
+  // if ($.fn.niceSelect) {
+  //   $("select").niceSelect();
+  // }
 
   const menuBars = document.querySelectorAll(".menubar");
   const cross = document.querySelector(".cross_btn");
@@ -389,4 +389,78 @@ document.addEventListener("click", () => {
   document
     .querySelectorAll(".video_modal")
     .forEach((modal) => modal.classList.remove("show"));
+});
+// multi step form
+const nextBtns = document.querySelectorAll(".btn-next");
+const prevBtns = document.querySelectorAll(".btn-prev");
+const formSteps = document.querySelectorAll(".form-step");
+const formProgress = document.getElementById("progress");
+const steps = document.querySelectorAll(".step");
+
+let formStepsNum = 0;
+
+nextBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum++;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+prevBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum--;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+function updateFormSteps() {
+  formSteps.forEach((formStep, index) => {
+    formStep.classList.toggle("active", index === formStepsNum);
+  });
+}
+
+function updateProgressbar() {
+  steps.forEach((step, index) => {
+    step.classList.toggle("active", index <= formStepsNum);
+  });
+
+  formProgress.style.width = (formStepsNum / (steps.length - 1)) * 95 + "%";
+}
+
+// sidebar active links
+const links = document.querySelectorAll(".admin_nav a");
+const current = window.location.pathname.split("/").pop(); // শুধুমাত্র filename নেবে, যেমন "admin_page.html"
+
+links.forEach((link) => {
+  const linkPath = link.getAttribute("href");
+  if (linkPath && linkPath.includes(current) && linkPath !== "#") {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+
+const myBtn = document.getElementById("select_page");
+const pages = document.getElementById("pages");
+
+myBtn.addEventListener("click", () => {
+  if (pages.style.display === "none") {
+    pages.style.display = "block";
+  } else {
+    pages.style.display = "none";
+  }
+});
+
+const mobile_links = document.querySelectorAll("#pages a");
+const currents = window.location.pathname.split("/").pop();
+
+mobile_links.forEach((link) => {
+  const linkPath = link.getAttribute("href");
+  if (linkPath && linkPath.includes(currents) && linkPath !== "#") {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
 });
