@@ -8776,11 +8776,6 @@ canvas {
   padding: 15px;
 }
 
-.account_setting_video_area {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
 /* Section styling */
 .sidebar-section {
   background-color: var(--bs-body-bg);
@@ -8796,7 +8791,7 @@ canvas {
   align-items: center;
   gap: 8px;
   color: var(--bs-primary);
-  border-bottom: 02px solid #0000001a;
+  border-bottom: 02px solid #c7c7c74d;
   padding-bottom: 20px;
   margin: 0 0 10px 0;
 }
@@ -8816,8 +8811,8 @@ canvas {
   font-size: 16px;
   font-weight: 600;
   color: var(--bs-primary);
-  border-top: 1px solid #0000001a;
-  border-bottom: 1px solid #0000001a;
+  border-top: 1px solid #c7c7c74d;
+  border-bottom: 1px solid #c7c7c74d;
   padding: 20px 0;
 }
 
@@ -8836,7 +8831,7 @@ canvas {
   justify-content: space-between;
   align-items: center;
   background: var(--bs-dark);
-  border: 1px solid #c7c7c7;
+  border: 1px solid #c7c7c74d;
   border-radius: 10px;
   padding: 10px 14px;
   text-decoration: none;
@@ -8858,26 +8853,27 @@ canvas {
   opacity: 0.7;
 }
 
-@media (min-width: 1400px) {
-  .account-sidebar {
-    width: 370px;
-    margin-left: 10px;
+@media (min-width: 1300px) {
+  .account_setting_container {
+    margin-left: 0px;
+    margin-right: 30px !important;
   }
 }
 @media (min-width: 992px) and (max-width: 1300px) {
-  .account-sidebar {
-    margin-right: 10px;
+  .account_setting_container {
+    margin-left: 15px;
+    margin-right: 30px !important;
   }
 }
-@media (min-width: 1301px) and (max-width: 1480px) {
+/* @media (min-width: 1301px) and (max-width: 1480px) {
   .account-sidebar {
     width: 335px;
   }
-}
+} */
 @media (max-width: 992px) {
-  .account_setting_area {
-    margin-left: 5px;
-    margin-right: 25px;
+  .account_setting_video_area {
+    margin-left: 15px;
+    margin-right: -5px;
   }
   .account-sidebar {
     display: none;
@@ -9276,4 +9272,7 @@ img.preview {
   .admin_sidebar {
     margin-left: 10px;
   }
+}
+.account_setting_container {
+  margin-right: 20px;
 }
