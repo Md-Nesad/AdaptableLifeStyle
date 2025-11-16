@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     });
   }
-  // if ($.fn.niceSelect) {
-  //   $("select").niceSelect();
-  // }
+  if ($.fn.niceSelect) {
+    $("select.nice").niceSelect();
+  }
 
   const menuBars = document.querySelectorAll(".menubar");
   const cross = document.querySelector(".cross_btn");
@@ -429,38 +429,104 @@ function updateProgressbar() {
   formProgress.style.width = (formStepsNum / (steps.length - 1)) * 100 + "%";
 }
 
-// sidebar active links
-const links = document.querySelectorAll(".admin_nav a");
-const current = window.location.pathname.split("/").pop(); // শুধুমাত্র filename নেবে, যেমন "admin_page.html"
+// admin navbar active links
+const allLinks = document.querySelectorAll(".admin_nav a, #pages a");
+const currentPage = window.location.pathname.split("/").pop();
 
-links.forEach((link) => {
+allLinks.forEach((link) => {
   const linkPath = link.getAttribute("href");
-  if (linkPath && linkPath.includes(current) && linkPath !== "#") {
+  if (linkPath && linkPath.includes(currentPage) && linkPath !== "#") {
     link.classList.add("active");
   } else {
     link.classList.remove("active");
   }
-});
-// mobile menu
-const myBtn = document.getElementById("select_page");
-const pages = document.getElementById("pages");
 
-myBtn.addEventListener("click", () => {
-  if (pages.style.display === "block") {
-    pages.style.display = "none";
-  } else {
-    pages.style.display = "block";
-  }
-});
-
-const mobile_links = document.querySelectorAll("#pages a");
-const currents = window.location.pathname.split("/").pop();
-
-mobile_links.forEach((link) => {
-  const linkPath = link.getAttribute("href");
-  if (linkPath && linkPath.includes(currents) && linkPath !== "#") {
+  link.addEventListener("click", (e) => {
+    allLinks.forEach((l) => l.classList.remove("active"));
     link.classList.add("active");
-  } else {
-    link.classList.remove("active");
-  }
+
+    e.stopPropagation();
+  });
+});
+
+//mobile toggle
+
+function toggleAdminMobileNav() {
+  const myBtn = document.getElementById("select_page");
+  const pages = document.getElementById("pages");
+  pages.style.display = pages.style.display === "block" ? "none" : "block";
+  return;
+}
+
+function toggleMobileAdminNav() {}
+// modal open and close
+function openModal() {
+  document.getElementById("creatorModal").style.display = "flex";
+}
+
+function openModalTwo() {
+  document.getElementById("creatorModalTwo").style.display = "flex";
+}
+
+function openModalThree() {
+  document.getElementById("creatorModalThree").style.display = "flex";
+}
+function closeModal() {
+  document.getElementById("creatorModal").style.display = "none";
+}
+
+function closeModalTwo() {
+  document.getElementById("creatorModalTwo").style.display = "none";
+}
+
+function closeModalThree() {
+  document.getElementById("creatorModalThree").style.display = "none";
+}
+
+function toggleMenu() {
+  const toggle = document.getElementById("toggle");
+  toggle.classList.toggle("active");
+}
+// read more and less
+const dots = document.getElementById("dots");
+const moreText = document.getElementById("more");
+const lessBtn = document.getElementById("lessBtn");
+const sessionDesc = document.getElementById("sessionDesc");
+
+dots.addEventListener("click", () => {
+  moreText.style.display = "block";
+  dots.style.display = "none";
+  lessBtn.style.display = "block";
+  sessionDesc.style.display = "inline";
+});
+
+lessBtn.addEventListener("click", () => {
+  moreText.style.display = "none";
+  dots.style.display = "inline";
+  sessionDesc.style.display = "none";
+});
+// comment logic
+document.querySelectorAll(".comment-box").forEach((box) => {
+  const deleteBtn = box.querySelector(".delete");
+  const warningBox = box.querySelector(".delete-warning");
+  const confirmBox = box.querySelector(".confirm-box");
+  const confirmDelete = box.querySelector(".confirm");
+  const cancelDelete = box.querySelector(".cancel");
+  const actions = box.querySelector(".comment_actions");
+
+  deleteBtn.onclick = () => {
+    warningBox.classList.remove("hidden");
+    confirmBox.classList.remove("hidden");
+    actions.style.display = "none";
+  };
+
+  cancelDelete.onclick = () => {
+    warningBox.classList.add("hidden");
+    confirmBox.classList.add("hidden");
+    actions.style.display = "flex";
+  };
+
+  confirmDelete.onclick = () => {
+    box.remove(); // comment remove hoye jabe
+  };
 });
