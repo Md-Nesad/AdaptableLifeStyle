@@ -8975,10 +8975,9 @@ canvas {
   color: #fff;
   box-sizing: border-box;
 }
-.first_step {
-  margin-left: -20px;
-  margin-right: -20px;
-}
+/* .first_step {
+  
+} */
 .first_step label {
   margin-bottom: 5px;
   color: var(--bs-primary);
@@ -9062,6 +9061,8 @@ canvas {
 .form-step {
   display: none;
   animation: fadeEffect 0.5s;
+  margin-left: -25px;
+  margin-right: -25px;
 }
 
 .form-step.active {
@@ -9638,7 +9639,7 @@ input[type="date"]:not(:valid):before {
   margin-top: 20px;
 }
 .delete_details_modal p {
-  font-size: 10px;
+  font-size: 11px;
   text-align: center;
   color: #01213566;
   font-weight: 500;
@@ -9646,19 +9647,19 @@ input[type="date"]:not(:valid):before {
 }
 @media (max-width: 576px) {
   .delete_details_modal {
-    width: 100%;     
-    max-width: 95%;   
-    padding: 0 20px; 
+    width: 100%;
+    max-width: 95%;
+    padding: 0 20px;
   }
 
   .delete_details_modal h3 {
-    font-size: 15px;     /* stop overflow */
+    font-size: 15px;
   }
 
   .delete_details_modal p {
-    font-size: 12px;     /* readable on mobile */
+    font-size: 12px;
     line-height: 1.4;
-    word-break: break-word; /* FORCE long text to wrap */
+    word-break: break-word;
   }
 }
 .modal_delete_button {
@@ -9680,7 +9681,6 @@ input[type="date"]:not(:valid):before {
   background-color: #d6fd7a;
 }
 
-/* Mobile Size (max 576px) */
 @media (max-width: 768px) {
   .custom-modal {
     width: 100%;
@@ -9744,7 +9744,7 @@ input[type="date"]:not(:valid):before {
   width: 100%;
   background-color: #ffffff99;
   border-radius: 4px;
-  height: 2px; /* increase height */
+  height: 2px;
   overflow: hidden;
 }
 
@@ -9764,7 +9764,6 @@ input[type="date"]:not(:valid):before {
   border-radius: 4px 0 0 4px;
 }
 
-/* -------- Controls ---------- */
 .controls {
   padding: 12px 16px;
   display: flex;
@@ -9848,7 +9847,6 @@ input[type="date"]:not(:valid):before {
   transition: transform 0.3s;
 }
 
-/* When active (ON) */
 .toggle.active .circle {
   transform: translateX(13px);
 }
