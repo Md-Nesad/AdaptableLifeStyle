@@ -9664,9 +9664,7 @@ input[type="date"]:not(:valid):before {
 /* Mobile Size (max 576px) */
 @media (max-width: 768px) {
   .custom-modal {
-    width: 90%;
-    max-width: 95%;
-    margin: auto;
+    width: 100%;
     margin-top: 40px;
     margin-bottom: 40px;
     border-radius: 10px;
@@ -9674,6 +9672,20 @@ input[type="date"]:not(:valid):before {
     overflow-y: auto;
     overflow-x: hidden;
     overscroll-behavior: contain;
+  }
+  .modal-header-text {
+    font-size: 15px;
+    padding: 12px 10px;
+    width: 250px;
+  }
+
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-name {
+    font-size: 16px;
   }
   .custom-modal::-webkit-scrollbar {
     display: none;
