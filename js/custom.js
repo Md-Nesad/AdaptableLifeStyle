@@ -452,13 +452,11 @@ allLinks.forEach((link) => {
 //mobile toggle
 
 function toggleAdminMobileNav() {
-  const myBtn = document.getElementById("select_page");
   const pages = document.getElementById("pages");
   pages.style.display = pages.style.display === "block" ? "none" : "block";
   return;
 }
 
-function toggleMobileAdminNav() {}
 // modal open and close
 function openModal() {
   document.getElementById("creatorModal").style.display = "flex";
@@ -470,6 +468,10 @@ function openModalTwo() {
 
 function openModalThree() {
   document.getElementById("creatorModalThree").style.display = "flex";
+}
+
+function openShareModal() {
+  document.getElementById("shareModal").style.display = "flex";
 }
 function closeModal() {
   document.getElementById("creatorModal").style.display = "none";
@@ -483,6 +485,10 @@ function closeModalThree() {
   document.getElementById("creatorModalThree").style.display = "none";
 }
 
+function closeShareModal() {
+  document.getElementById("shareModal").style.display = "none";
+}
+
 function toggleMenu() {
   const toggle = document.getElementById("toggle");
   toggle.classList.toggle("active");
@@ -493,18 +499,18 @@ const moreText = document.getElementById("more");
 const lessBtn = document.getElementById("lessBtn");
 const sessionDesc = document.getElementById("sessionDesc");
 
-dots.addEventListener("click", () => {
+function readMore() {
   moreText.style.display = "block";
   dots.style.display = "none";
   lessBtn.style.display = "block";
   sessionDesc.style.display = "inline";
-});
+}
 
-lessBtn.addEventListener("click", () => {
+function readLess() {
   moreText.style.display = "none";
   dots.style.display = "inline";
   sessionDesc.style.display = "none";
-});
+}
 // comment logic
 document.querySelectorAll(".comment-box").forEach((box) => {
   const deleteBtn = box.querySelector(".delete");

@@ -446,6 +446,38 @@
                       </div>
 
                       <h3 class="video-title">30 Minutes Cardio Session</h3>
+                      <!-- share modal -->
+                      <div class="share-modal" id="shareModal">
+                        <div class="modal-content">
+                          <button class="close-btn" onclick="closeShareModal()">
+                            ✕
+                          </button>
+
+                          <h2>Share with Family & Friends</h2>
+
+                          <p class="share-title">Share this link via:</p>
+
+                          <div class="share-icons">
+                            <div class="icon fb">f</div>
+                            <div class="icon x">X</div>
+                            <div class="icon wa">💬</div>
+                            <div class="icon rd">👽</div>
+                            <div class="icon pn">P</div>
+                          </div>
+
+                          <p class="copy-title">Or copy link:</p>
+
+                          <div class="copy-box">
+                            <input
+                              type="text"
+                              value="example.com/share-link"
+                              readonly
+                            />
+                            <button class="copy-btn">Copy</button>
+                          </div>
+                        </div>
+                      </div>
+
                       <!-- channel info -->
                       <div class="video_details_header">
                         <div class="video_channel_info">
@@ -469,7 +501,7 @@
                             <i class="fa-regular fa-thumbs-down"></i>
                           </div>
 
-                          <button class="icon-btn">
+                          <button onclick="openShareModal()" class="icon-btn">
                             <i class="fa-solid fa-share"></i> Share
                           </button>
                           <button class="icon-btn">
@@ -494,7 +526,8 @@
                             A fast-paced 30-minute cardio session designed to
                             boost your heart rate, burn calories, and increase
                             overall stamina. Perfect for a quick, energizing
-                            workout. <span id="dots">...more</span>
+                            workout.
+                            <span id="dots" onclick="readMore()">...more</span>
                             <span id="sessionDesc">
                               A fast-paced 30-minute cardio session designed to
                               boost your heart rate.
@@ -576,7 +609,9 @@
                               </div>
                             </div>
 
-                            <span id="lessBtn">Show less</span>
+                            <span id="lessBtn" onclick="readLess()"
+                              >Show less</span
+                            >
                           </div>
                         </div>
                       </div>
