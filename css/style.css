@@ -9402,11 +9402,13 @@ input[type="date"]:not(:valid):before {
   border: none;
   outline: none;
   margin: 1px;
+  opacity: 1;
 }
 
 .pencil_action_btn {
   background-color: #f6fbe9;
   padding: 5px;
+  color: #afd25a;
   border-radius: 2px;
   font-weight: bold;
   border: none;
@@ -9416,6 +9418,7 @@ input[type="date"]:not(:valid):before {
 
 .delete_action_btn {
   background-color: #fff1e5;
+  color: #ff8700;
   padding: 5px;
   border-radius: 2px;
   font-weight: bold;
@@ -9442,7 +9445,6 @@ input[type="date"]:not(:valid):before {
   padding-left: 10px !important;
 }
 /* modals style here */
-/* ------------------ Modal Overlay ------------------ */
 .custom-modal-overlay {
   position: fixed;
   inset: 0;
@@ -9453,6 +9455,7 @@ input[type="date"]:not(:valid):before {
   z-index: 999;
   overflow: auto;
   transition: all 0.5s ease-in-out;
+  padding: 40px 15px;
 }
 
 @keyframes fadeEffect {
@@ -9466,9 +9469,9 @@ input[type="date"]:not(:valid):before {
   }
 }
 
-/* ------------------ Modal Box ------------------ */
 .custom-modal {
-  width: 750px;
+  width: 90%;
+  max-width: 650px;
   background: var(--bs-dark);
   border-radius: 10px;
   position: relative;
@@ -9501,7 +9504,6 @@ input[type="date"]:not(:valid):before {
   background-color: #e0e0e0;
 }
 
-/* ------------------ Profile Section ------------------ */
 .profile-img {
   width: 125px;
   height: 125px;
@@ -9564,7 +9566,6 @@ input[type="date"]:not(:valid):before {
   padding: 0px 20px;
 }
 
-/* ------------------ Input Boxes ------------------ */
 .info-label {
   font-size: 12px;
   margin-bottom: 5px;
@@ -9659,6 +9660,30 @@ input[type="date"]:not(:valid):before {
 .modal_delete_button:hover {
   background-color: #d6fd7a;
 }
+
+/* Mobile Size (max 576px) */
+@media (max-width: 768px) {
+  .custom-modal {
+    width: 90%;
+    max-width: 95%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+  }
+  .custom-modal::-webkit-scrollbar {
+    display: none;
+  }
+  .custom-modal::-webkit-scrollbar-thumb {
+    background: var(--bs-dark);
+    border-radius: 10px;
+  }
+}
+
 /* video details style here */
 .video-card {
   margin: 20px auto;
