@@ -9627,6 +9627,8 @@ input[type="date"]:not(:valid):before {
   width: 500px;
   text-align: center;
   margin: auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 .delete_details_modal h3 {
   font-size: 17px;
@@ -9641,6 +9643,23 @@ input[type="date"]:not(:valid):before {
   color: #01213566;
   font-weight: 500;
   margin-top: 5px;
+}
+@media (max-width: 576px) {
+  .delete_details_modal {
+    width: 100%;     
+    max-width: 95%;   
+    padding: 0 20px; 
+  }
+
+  .delete_details_modal h3 {
+    font-size: 15px;     /* stop overflow */
+  }
+
+  .delete_details_modal p {
+    font-size: 12px;     /* readable on mobile */
+    line-height: 1.4;
+    word-break: break-word; /* FORCE long text to wrap */
+  }
 }
 .modal_delete_button {
   width: 230px;
