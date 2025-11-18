@@ -6837,6 +6837,19 @@ canvas {
   transition: all 0.3s ease;
 }
 
+@media (min-width: 1300px) and (max-width: 1455px) {
+  .filter-btn-group button {
+    padding: 12px 10px !important;
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1320px) {
+  .filter-btn-group button {
+    padding: 12px 10px !important;
+    font-size: 11px;
+  }
+}
+
 /* Filter Buttons */
 .filter-btn-group button.active,
 .filter-btn-group button:hover {
@@ -6881,6 +6894,7 @@ canvas {
 .workout-info strong {
   color: var(--bs-primary);
   opacity: 0.7;
+  font-size: 12px;
 }
 
 .add-btn {
@@ -6889,8 +6903,8 @@ canvas {
   border: none;
   border-radius: 6px;
   font-weight: 600;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 8px 15px;
+  font-size: 13px;
   transition: 0.3s;
 }
 
@@ -7125,11 +7139,14 @@ canvas {
     margin: 10px;
   }
   .workout_sidebar {
-    display: block;
+    display: none;
   }
 
   .header-box {
     margin-top: 20px;
+  }
+  .workout_content {
+    width: 100%;
   }
 
   .workout-card img {
@@ -7307,6 +7324,7 @@ canvas {
   align-items: center;
   gap: 10px;
   margin-left: 12px;
+  width: 160px;
 }
 
 .profile img {
@@ -8270,10 +8288,17 @@ canvas {
   margin-left: -10px;
 }
 
+.features_video h2 {
+  border-bottom: none;
+}
+
 .recent_uploads {
   border-bottom: 02px solid #0000001a;
   padding-bottom: 40px;
   margin-left: -10px;
+}
+.recent_uploads h2 {
+  border-bottom: none;
 }
 .popular_videos {
   border-bottom: 02px solid #0000001a;
@@ -8281,9 +8306,14 @@ canvas {
   margin-left: -10px;
   margin-top: 40px;
 }
-
+.popular_videos h2 {
+  border-bottom: none;
+}
 .similar_channels {
   margin-left: -10px;
+}
+.similar_channels h2 {
+  border-bottom: none;
 }
 .latest_video {
   margin-right: 10px;
@@ -8446,8 +8476,11 @@ canvas {
   margin-left: -19px;
   margin-right: -17px;
 }
+
 .programs_you_created h2 {
   margin-left: -10px;
+  border-bottom: none;
+  margin-bottom: -10px;
 }
 
 .account_recomended_programs {
@@ -8458,6 +8491,13 @@ canvas {
 
 .account_recomended_programs h2 {
   margin-left: -15px;
+  border-bottom: none;
+}
+
+.your_uploaded_videos_style h2 {
+  margin-left: -15px;
+  border-bottom: none;
+  margin-bottom: -10px;
 }
 
 .your_uploaded_videos_style {
@@ -8465,10 +8505,27 @@ canvas {
   border-bottom: 01px solid #0000001a;
   padding-bottom: 40px;
 }
+@media (min-width: 1300px) and (max-width: 1520px) {
+  .programs_you_created {
+    margin-top: -50px;
+  }
+  .your_uploaded_videos_style {
+    margin-top: -50px;
+  }
+}
 .account_uploaded_quicks {
   margin: 31px -13px 0px -13px;
   border-bottom: 01px solid #0000001a;
   padding-bottom: 40px;
+}
+.account_uploaded_quicks h2 {
+  margin-left: -15px;
+  border-bottom: none;
+}
+.account_saved_videos h2 {
+  margin-left: -15px;
+  border-bottom: none;
+  margin-bottom: -10px;
 }
 .account_saved_videos {
   margin: 31px -17px 0px -19px;
@@ -8480,8 +8537,18 @@ canvas {
   border-bottom: 01px solid #0000001a;
   padding-bottom: 40px;
 }
+.account_recomended_channels h2 {
+  margin-left: -15px;
+  border-bottom: none;
+  margin-bottom: -10px;
+}
 .full_video_playlist {
   margin: 42px -17px 0px -19px !important;
+}
+.full_video_playlist h2 {
+  margin-left: -15px;
+  border-bottom: none;
+  margin-bottom: -10px;
 }
 
 .playlist_thumb {
@@ -8646,25 +8713,43 @@ canvas {
   padding-bottom: 40px;
 }
 
+.edit_channels h2 {
+  border-bottom: none;
+  margin-bottom: -5px;
+}
+
 .edit_videos {
   margin: 25px -13px 0px -15px;
   border-bottom: 01px solid #0000001a;
   padding-bottom: 40px;
+}
+.edit_videos h2 {
+  border-bottom: none;
+  margin-bottom: -5px;
 }
 .account_setting_quick_videos {
   margin: 25px -13px 0px -15px;
   border-bottom: 01px solid #0000001a;
   padding-bottom: 40px;
 }
+.account_setting_quick_videos h2 {
+  border-bottom: none;
+  margin-bottom: -5px;
+}
 .account_setting_your_programs {
   margin: 25px -13px 0px -15px;
 }
+.account_setting_your_programs h2 {
+  border-bottom: none;
+  margin-bottom: -5px;
+}
 .video_options button {
-  background-color: #ffffff;
+  background-color: var(--bs-dark);
   padding: 7px 9px;
   border-radius: 4px;
   cursor: pointer;
-  border: none;
+  border: 01px solid #ffffff4d;
+  color: var(--bs-primary);
   outline: none;
 }
 
@@ -8674,6 +8759,7 @@ canvas {
   position: absolute;
   top: 45px;
   right: 0;
+  border: 02px solid #ffffff4d;
   background: var(--bs-dark);
   border-radius: 6px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
@@ -8691,7 +8777,7 @@ canvas {
   background: none;
   border: none;
   text-align: left;
-  padding: 8px 10px;
+  padding: 5px 6px;
   font-size: 13px;
   display: flex;
   align-items: center;
@@ -8702,10 +8788,17 @@ canvas {
 
 .video_modal button:first-child i {
   color: #afd25a;
+  background-color: #f6fbe9;
+  padding: 5px;
+  border-radius: 3px;
 }
 
-.video_modal button:last-child {
+.video_modal button:last-child i {
   color: #ff8700;
+  background-color: #fff1e5;
+  font-size: 13px;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 .video_modal button:hover {
@@ -8810,15 +8903,11 @@ canvas {
     margin-right: 30px !important;
   }
 }
-/* @media (min-width: 1301px) and (max-width: 1480px) {
-  .account-sidebar {
-    width: 335px;
-  }
-} */
 @media (max-width: 992px) {
   .account_setting_video_area {
     margin-left: 10px;
     margin-right: -8px;
+    width: 100%;
   }
   .account-sidebar {
     display: none;
@@ -9873,19 +9962,11 @@ input[type="date"]:not(:valid):before {
   width: 100%;
 }
 
-@media (max-width: 1100px) {
-  .video_details_header {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
-}
-
 .video_channel_info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 10px;
 }
 
 .avatar {
@@ -9911,9 +9992,9 @@ input[type="date"]:not(:valid):before {
 .video_subscribe_btn {
   background: #c3e66e;
   border: none;
-  padding: 10px 25px;
+  padding: 8px 25px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 13px;
   margin-left: 10px;
   font-weight: 600;
   cursor: pointer;
@@ -9926,20 +10007,19 @@ input[type="date"]:not(:valid):before {
 .actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .like-dislike {
   display: flex;
   align-items: center;
   gap: 8px;
-  border: 01px solid var(--bs-primary);
   background: var(--bs-body-bg);
   color: var(--bs-primary);
   opacity: 0.9;
-  padding: 8px 15px;
+  padding: 9px 15px;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   cursor: pointer;
 }
@@ -9954,15 +10034,117 @@ input[type="date"]:not(:valid):before {
   background: var(--bs-body-bg);
   color: var(--bs-primary);
   opacity: 0.9;
-  border: 01px solid var(--bs-primary);
-  padding: 8px 18px;
+  border: none;
+  padding: 9px 18px;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   font-weight: 500;
   gap: 8px;
   cursor: pointer;
+}
+
+@media (min-width: 1300px) and (max-width: 1450px) {
+  .video_channel_info {
+    gap: 8px;
+  }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: -5px;
+  }
+
+  .video_channel_info h4 {
+    font-size: 14spx;
+  }
+
+  .video_channel_info p {
+    font-size: 11px;
+  }
+
+  .video_subscribe_btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+  .actions {
+    gap: 8px;
+  }
+
+  .like-dislike {
+    gap: 8px;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .like-dislike .divider {
+    width: 2px;
+    height: 18px;
+    background: #929191;
+  }
+
+  .icon-btn {
+    padding: 8px 13px;
+    font-size: 11px;
+    gap: 8px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .video_channel_info {
+    gap: 5px;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: -5px;
+  }
+
+  .video_channel_info h4 {
+    font-size: 12spx;
+  }
+
+  .video_channel_info p {
+    font-size: 10px;
+  }
+
+  .video_subscribe_btn {
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+  .actions {
+    gap: 6px;
+  }
+
+  .like-dislike {
+    gap: 6px;
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .like-dislike .divider {
+    width: 2px;
+    height: 18px;
+    background: #929191;
+  }
+
+  .icon-btn {
+    padding: 8px 10px;
+    font-size: 10px;
+    gap: 6px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .video_details_header {
+    flex-direction: column !important;
+    gap: 10px;
+    align-items: flex-start;
+  }
 }
 
 /* channel description here */
@@ -10232,8 +10414,24 @@ input[type="date"]:not(:valid):before {
   margin-bottom: 35px;
   text-align: center;
 }
-.border_box {
-  color: black;
+@media (min-width: 1300px) and (max-width: 1385px) {
+  .ad_box_area p {
+    font-size: 14px;
+  }
+  .ad_box_area h4 {
+    font-size: 15px;
+  }
+  .details-meta {
+    font-size: 12px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1145px) {
+  .ad_box_area p {
+    font-size: 12.5px;
+  }
+  .ad_box_area h4 {
+    font-size: 13.5px;
+  }
 }
 /* details video card */
 .details-video-card {
@@ -10314,17 +10512,25 @@ input[type="date"]:not(:valid):before {
   padding-bottom: 20px;
 }
 
+/* .scroll-wrapper {
+  display: flex;
+  gap: 15px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+} */
+
 .scroll-wrapper {
   display: flex;
   gap: 15px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding-bottom: 10px;
+  padding: 0 10px 10px 10px;
 }
 
 .scroll-wrapper::-webkit-scrollbar {
-  height: 6px;
-  display: none;
+  height: 3px;
+  display: block;
 }
 
 .scroll-wrapper::-webkit-scrollbar-thumb {
@@ -10332,8 +10538,15 @@ input[type="date"]:not(:valid):before {
   border-radius: 10px;
 }
 
-.diet_card {
+/* .diet_card {
   min-width: 48%;
+  background: var(--bs-dark);
+  border-radius: 10px;
+  flex-shrink: 0;
+} */
+
+.details_quick_video .diet_card {
+  width: 40% !important;
   background: var(--bs-dark);
   border-radius: 10px;
   flex-shrink: 0;
@@ -10355,16 +10568,41 @@ input[type="date"]:not(:valid):before {
   color: #8a8c90;
 }
 @media (max-width: 576px) {
+  .video_details_header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* .video_channel_info {
+    width: 100%;
+    justify-content: space-between;
+  } */
+
+  .actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .actions .icon-btn,
+  .like-dislike {
+    flex-shrink: 0;
+  }
   .like-dislike {
     font-size: 11px !important;
     padding: 8px 10px;
     border-radius: 10px;
+    border: none;
+    margin-top: 5px;
   }
   .icon-btn {
     font-size: 11px !important;
     padding: 8px 10px;
     border-radius: 10px;
     gap: 6px;
+    border: none;
+    margin-top: 5px;
   }
   .actions {
     gap: 3px;
@@ -10459,27 +10697,6 @@ input[type="date"]:not(:valid):before {
   }
 }
 @media (max-width: 768px) {
-  .video_details_header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .video_channel_info {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .actions {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-
-  .actions .icon-btn,
-  .like-dislike {
-    flex-shrink: 0;
-  }
   .ad_box_area {
     display: none;
   }
@@ -10692,5 +10909,52 @@ h2 {
   .creators_table th:nth-child(6),
   .creators_table th:nth-child(7) {
     display: none !important;
+  }
+}
+/* responsive fixed */
+@media (min-width: 992px) and (max-width: 1131px) {
+  .setting_video_content h4 a {
+    font-size: 13px !important;
+    line-height: 10px;
+  }
+  .setting_views p {
+    font-size: 10px !important;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1520px) {
+  .setting_video_row {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .workout_time {
+    font-size: 9px;
+  }
+}
+@media (max-width: 576px) {
+  .full_body_content p {
+    font-size: 10px;
+  }
+  .full_body_content h4 a {
+    font-size: 13.5px;
+  }
+  .full_body_image h2 {
+    font-size: 15px;
+  }
+  .full_body_image small {
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1358px) {
+  .full_body_content p {
+    font-size: 12px;
+  }
+}
+.admin_page_nav a {
+  font-size: 15px;
+}
+
+@media (min-width: 1150px) and (max-width: 1368px) {
+  .content_admin_sidebar a {
+    font-size: 12px;
   }
 }
