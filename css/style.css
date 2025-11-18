@@ -10575,19 +10575,19 @@ h2 {
 }
 
 .x {
-  color: white;
+  color: var(--bs-primary);
 }
 
 .wa {
-  color: white;
+  color: var(--bs-primary);
 }
 
 .rd {
-  color: white;
+  color: var(--bs-primary);
 }
 
 .pn {
-  color: white;
+  color: var(--bs-primary);
 }
 
 .copy-box {
@@ -10612,7 +10612,7 @@ h2 {
   border: none;
   cursor: pointer;
   font-weight: 600;
-  color: #272A33;
+  color: #272a33;
 }
 
 @media (max-width: 768px) {
