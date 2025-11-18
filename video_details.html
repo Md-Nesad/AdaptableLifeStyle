@@ -458,11 +458,21 @@
                           <p class="share-title">Share this link via:</p>
 
                           <div class="share-icons">
-                            <div class="icon fb">f</div>
-                            <div class="icon x">X</div>
-                            <div class="icon wa">💬</div>
-                            <div class="icon rd">👽</div>
-                            <div class="icon pn">P</div>
+                            <div class="s_icons fb">
+                              <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="s_icons x">
+                              <i class="fa-brands fa-x-twitter"></i>
+                            </div>
+                            <div class="s_icons wa">
+                              <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="s_icons rd">
+                              <i class="fa-brands fa-reddit-alien"></i>
+                            </div>
+                            <div class="s_icons pn">
+                              <i class="fa-brands fa-pinterest-p"></i>
+                            </div>
                           </div>
 
                           <p class="copy-title">Or copy link:</p>
@@ -640,7 +650,111 @@
                           <div class="content">
                             <div class="header">
                               <span class="username">@jhonsmith254</span>
-                              <span class="time">22 minutes ago</span>
+                              <span class="time_ago">22 minutes ago</span>
+                            </div>
+
+                            <p class="text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+
+                            <!-- Delete warning -->
+                            <div
+                              class="delete-warning hidden"
+                              class="warningBox"
+                            >
+                              You are about to delete your comment
+                            </div>
+
+                            <div class="comment_actions mt-2">
+                              <span class="likes">
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <span>250</span>
+
+                                <i class="fa-regular fa-thumbs-down"></i>
+                              </span>
+                              <button class="cmt_reply">Reply</button>
+                              <button class="edit">
+                                <i class="fa-solid fa-pen"></i> Edit
+                              </button>
+                              <button class="delete" id="deleteBtn">
+                                <i class="fa-regular fa-trash-can"></i> Delete
+                              </button>
+                            </div>
+
+                            <!-- Confirm cancel buttons -->
+                            <div class="confirm-box hidden" class="confirmBox">
+                              <button class="confirm" class="confirmDelete">
+                                Confirm
+                              </button>
+                              <button class="cancel" class="cancelDelete">
+                                Cancel
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment-box">
+                          <img
+                            src="./images/video/comment_logo.png"
+                            class="avatar"
+                          />
+                          <div class="content">
+                            <div class="header">
+                              <span class="username">@jhonsmith254</span>
+                              <span class="time_ago">22 minutes ago</span>
+                            </div>
+
+                            <p class="text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+
+                            <!-- Delete warning -->
+                            <div
+                              class="delete-warning hidden"
+                              class="warningBox"
+                            >
+                              You are about to delete your comment
+                            </div>
+
+                            <div class="comment_actions mt-2">
+                              <span class="likes">
+                                <i class="fa-regular fa-thumbs-up"></i>
+                                <span>250</span>
+
+                                <i class="fa-regular fa-thumbs-down"></i>
+                              </span>
+                              <button class="cmt_reply">Reply</button>
+                              <button class="edit">
+                                <i class="fa-solid fa-pen"></i> Edit
+                              </button>
+                              <button class="delete" id="deleteBtn">
+                                <i class="fa-regular fa-trash-can"></i> Delete
+                              </button>
+                            </div>
+
+                            <!-- Confirm cancel buttons -->
+                            <div class="confirm-box hidden" class="confirmBox">
+                              <button class="confirm" class="confirmDelete">
+                                Confirm
+                              </button>
+                              <button class="cancel" class="cancelDelete">
+                                Cancel
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment-box">
+                          <img
+                            src="./images/video/comment_logo.png"
+                            class="avatar"
+                          />
+                          <div class="content">
+                            <div class="header">
+                              <span class="username">@jhonsmith254</span>
+                              <span class="time_ago">22 minutes ago</span>
                             </div>
 
                             <p class="text">
@@ -1177,6 +1291,48 @@
                         </div>
                       </div>
                       <!-- 7 -->
+                      <div class="details-video-card mt-4">
+                        <div class="details-thumbnail position-relative">
+                          <a href="#">
+                            <img
+                              src="./images/video/detailsThumnail.png"
+                              alt="thumbnail"
+                            />
+                          </a>
+                          <span class="details-time-badge">0:11:46</span>
+                          <div
+                            class="video_options position-absolute top-0 end-0 m-2"
+                          >
+                            <button class="optionBtn">
+                              <img
+                                src="./images/account_setting/three_dot.png"
+                                alt=""
+                              />
+                            </button>
+
+                            <!-- edit and delete modal -->
+                            <div class="video_modal" id="videoModal">
+                              <button>
+                                <i class="fa-solid fa-pen"></i> Edit info
+                              </button>
+                              <button>
+                                <i class="fa-solid fa-trash"></i> Delete channel
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="details-video-info">
+                          <a href="#">
+                            <h4 class="details-title">
+                              5 MIN LOWER ABS _ LOWER ABS WORKOUT
+                            </h4>
+                          </a>
+                          <p class="details-channel">First Channel</p>
+                          <p class="details-meta">248 Views • 1 year ago</p>
+                        </div>
+                      </div>
+                      <!-- 8 -->
                       <div class="details-video-card mt-4">
                         <div class="details-thumbnail position-relative">
                           <a href="#">
