@@ -7440,6 +7440,8 @@ canvas {
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   padding: 20px;
+  width: 100%;
+  margin-left: 12px;
 }
 
 .chart-card_steps {
@@ -7453,7 +7455,7 @@ canvas {
 .chart-card_steps h2 {
   color: var(--bs-primary);
   opacity: 0.8;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   margin-bottom: 15px;
 }
@@ -7483,16 +7485,7 @@ canvas {
   text-align: center;
   padding: 20px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-}
-
-@media (min-width: 1301px) {
-  .progress-card {
-    width: 210px;
-  }
-  .chart-card {
-    width: 400px;
-    margin-left: -95px !important;
-  }
+  width: 115%;
 }
 
 .sidebar-collapsed .progress-card,
@@ -7504,7 +7497,7 @@ canvas {
 
 .progress-card h3 {
   text-align: left;
-  font-size: 18px;
+  font-size: 17px;
   color: var(--bs-primary);
   margin-bottom: 16px;
   opacity: 0.8;
@@ -7520,6 +7513,19 @@ canvas {
   margin: 10px 10px 10px 10px;
 }
 
+@media (max-width: 768px) {
+  .chart-card {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1085px) {
+  .chart_container .col-md-2,
+  .chart_container .col-md-4 {
+    flex: 0 0 48% !important; /* width: 50% */
+    max-width: 48% !important;
+  }
+}
 .chart-container span {
   position: absolute;
   top: 50%;
@@ -7633,37 +7639,45 @@ canvas {
 }
 
 .total_cabs {
-  width: 400px;
+  width: 33%;
+  max-width: 100%;
   height: 120px;
   background-color: var(--bs-dark);
   padding: 10px;
   border-radius: 10px;
-  flex-shrink: 0;
+  flex-shrink: 1;
 }
 
 .total_cabs_collapse .total_cabs {
-  width: 439.8px !important;
+  width: 34.5% !important;
 }
 
 @media (min-width: 992px) {
   .crab_area {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 1rem;
   }
+  .total_cabs {
+  width: 33%;
+  max-width: 100%;
+  height: 120px;
+  background-color: var(--bs-dark);
+  padding: 10px;
+  border-radius: 10px;
+  flex-shrink: 1;
+}
 }
 
 /* For medium screens (tablets) */
-@media (max-width: 991px) {
-  .total_cabs {
-    max-width: 48%;
-    margin-bottom: 15px;
+@media (max-width: 1030px) {
+  .crab_area {
+    display: none !important;
   }
-}
-
-.protein {
-  border-left: 06px solid #ff8700;
+  .steps_cnontainer {
+    margin-top: -10px !important;
+  }
 }
 
 .protein .icon_span {
@@ -7671,15 +7685,7 @@ canvas {
   padding: 7px;
   border: 02px solid #ff8700;
   border-radius: 10%;
-  margin-right: 20px;
-}
-
-.protein .icon_span span {
-  padding: 4px;
-}
-
-.fats {
-  border-left: 06px solid #a02cfa;
+  margin-right: 10px;
 }
 
 .fats .icon_span {
@@ -7687,11 +7693,7 @@ canvas {
   padding: 7px;
   border: 02px solid #a02cfa;
   border-radius: 10%;
-  margin-right: 15px;
-}
-
-.fats .icon_span span {
-  padding: 6px;
+  margin-right: 10px;
 }
 
 .cabs .icon_span {
@@ -7701,6 +7703,16 @@ canvas {
   border-radius: 10%;
   margin-right: 10px;
 }
+
+
+.fats {
+  border-left: 06px solid #a02cfa;
+}
+
+.protein {
+  border-left: 06px solid #ff8700;
+}
+
 .total_crab p {
   color: #8a8c90;
   font-size: 12px;
@@ -7794,6 +7806,118 @@ canvas {
   background-color: #a02cfa;
 }
 
+.cabs_align {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (min-width:1400px) and (max-width:1490px) {
+  .cabs_align {
+  gap: 18px;
+}}
+
+@media (min-width:1300px) and (max-width:1410px) {
+  .cabs_align {
+  gap: 16px;
+}
+  .total_crab p {
+  font-size: 10px;
+}
+.total_crab h2 {
+  font-size: 15px;
+}
+.progress-container {
+  width: 100px;
+}
+
+/* Inner bar */
+.progress-bar {
+  width: 60%;
+}
+.cabs_btn {
+  font-size: 11px;
+}
+.gram {
+  font-size: 9px;
+}
+.crablastbtn2 {
+  padding: 4px 12px;
+  width: 70px;
+  font-size: 10px;
+}
+}
+
+@media (min-width:1089px) and (max-width:1250px) {
+  .cabs_align {
+  gap: 16px;
+}
+  .total_crab p {
+  font-size: 10px;
+}
+.total_crab h2 {
+  font-size: 15px;
+}
+.progress-container {
+  width: 100px;
+}
+
+/* Inner bar */
+.progress-bar {
+  width: 60%;
+}
+.cabs_btn {
+  font-size: 11px;
+}
+.gram {
+  font-size: 9px;
+}
+.crablastbtn2 {
+  padding: 4px 12px;
+  width: 70px;
+  font-size: 10px;
+}
+}
+
+@media (min-width:1030px) and (max-width:1089px) {
+  .cabs_align {
+  gap: 14px;
+}
+  .total_crab p {
+  font-size: 9px;
+}
+.total_crab h2 {
+  font-size: 14px;
+}
+.progress-container {
+  width: 90px;
+}
+
+/* Inner bar */
+.progress-bar {
+  width: 50%;
+}
+.cabs_btn {
+  font-size: 10px;
+}
+
+.gram {
+  font-size: 8px;
+}
+.crablastbtn2 {
+  padding: 4px 10px;
+  width: 70px;
+  font-size: 9px;
+}
+.protine_btn {
+  font-size: 10px;
+}
+
+.fats_btn {
+  font-size: 10px;
+}
+}
+
 /* workout progress tacker */
 .card {
   background-color: var(--bs-dark);
@@ -7850,7 +7974,7 @@ canvas {
 
 .tracker-table thead {
   color: var(--bs-primary);
-  font-size: 17px;
+  font-size: 15px;
 }
 .tracker-table tbody {
   font-size: 15px;
@@ -7859,6 +7983,19 @@ canvas {
 .tracker-table td {
   text-align: left;
   padding: 12px 16px;
+}
+
+@media (min-width: 1052px) and (max-width: 1443px) {
+  .tracker-table thead {
+    font-size: 15px;
+  }
+  .tracker-table tbody {
+    font-size: 14px;
+  }
+  .tracker-table th,
+  .tracker-table td {
+    padding: 12px 5px;
+  }
 }
 
 .tracker-table thead {
@@ -7894,18 +8031,18 @@ canvas {
 }
 
 .status.completed {
-  background-color: #d4fcd2;
-  color: #1b8a1b;
+  background-color: #e5ffe5;
+  color: #00c700;
 }
 
 .status.inprogress {
-  background-color: #ffe9d1;
-  color: #d47b00;
+  background-color: #fff3e5;
+  color: #ff8700;
 }
 
 .status.notstarted {
-  background-color: #e9ecef;
-  color: #555;
+  background-color: #f1f3f4;
+  color: #677a86;
 }
 
 /* Percentage badge */
@@ -7989,8 +8126,23 @@ canvas {
   font-weight: 600;
   color: var(--bs-primary);
   opacity: 0.8;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
+}
+
+@media (min-width: 1100px) and (max-width: 1400px) {
+  .trainer-header h4 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+  .trainer-header h4 {
+    font-size: 15px;
+  }
+  .view-more-btn {
+    font-size: 12px;
+  }
 }
 
 .view-more-btn {
@@ -8012,7 +8164,6 @@ canvas {
   border-radius: 14px;
   text-align: center;
   padding: 25px 10px;
-  width: 120px;
   min-width: 100%;
   transition: all 0.3s ease;
 }
@@ -8095,14 +8246,39 @@ canvas {
   .trainer_card_mobile {
     display: block;
   }
-  .recomended_parent {
+  .recomended_section {
     display: none;
   }
+  .recommnd {
+  margin-bottom: 0 !important;
+}
 }
 
-.recomended_parent {
-  padding-right: 20px !important;
+@media (max-width:512px) {
+  .trainer-header_mobile h4 {
+    font-size: 13.8px;
+    margin-top: 5px;
+  }
+  .tracker-title {
+  font-size: 17px;
 }
+.tracker-table thead {
+  font-size: 13px;
+}
+.tracker-table tbody {
+  font-size: 13px;
+}
+.tracker-table th,
+.tracker-table td {
+  padding: 12px 8px;
+}
+}
+
+.recommnd {
+  padding-right: 30px !important;
+  margin-bottom: 40px;
+}
+
 
 /* alingment fixed for 769px to 1300px */
 @media (min-width: 769px) and (max-width: 1300px) {
@@ -8118,11 +8294,11 @@ canvas {
   .tracker-container {
     margin-left: 15px;
   }
-  .recomended_parent {
-    padding-left: 10px;
+  .recommnd {
+    padding-left: 12px;
   }
   .crab_area {
-    margin-left: 10px;
+    margin-left: 13px;
   }
 }
 
@@ -10066,7 +10242,7 @@ input[type="date"]:not(:valid):before {
   }
 
   .video_subscribe_btn {
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-size: 12px;
   }
   .actions {
@@ -10109,21 +10285,21 @@ input[type="date"]:not(:valid):before {
   }
 
   .video_channel_info p {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .video_subscribe_btn {
-    padding: 10px 15px;
+    padding: 8px 15px;
     font-size: 10px;
   }
   .actions {
-    gap: 6px;
+    gap: 8px;
   }
 
   .like-dislike {
     gap: 6px;
-    padding: 8px 10px;
-    font-size: 10px;
+    padding: 8px 12px;
+    font-size: 11px;
   }
 
   .like-dislike .divider {
@@ -10133,9 +10309,9 @@ input[type="date"]:not(:valid):before {
   }
 
   .icon-btn {
-    padding: 8px 10px;
-    font-size: 10px;
-    gap: 6px;
+    padding: 8px 12px;
+    font-size: 11px;
+    gap: 8px;
   }
 }
 
@@ -10577,6 +10753,10 @@ input[type="date"]:not(:valid):before {
     width: 100%;
     justify-content: space-between;
   } */
+  .scroll-wrapper::-webkit-scrollbar {
+    height: 3px;
+    display: none;
+  }
 
   .actions {
     width: 100%;
@@ -10750,7 +10930,7 @@ input[type="date"]:not(:valid):before {
   background-color: #e0e0e0;
 }
 
-h2 {
+.modal-content h2 {
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 600;
@@ -10850,18 +11030,18 @@ h2 {
   }
 }
 /* table responsive */
-@media (min-width: 1300px) and (max-width: 1495px) {
-  .creators_table td:nth-child(4),
-  th:nth-child(4) {
+@media (min-width: 1300px) and (max-width: 1510px) {
+  .creators_table th:nth-child(4),
+  .creators_table td:nth-child(4) {
     display: none !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
   .creators_table td:nth-child(4),
-  th:nth-child(4),
-  td:nth-child(7),
-  th:nth-child(7) {
+  .creators_table th:nth-child(4),
+  .creators_table td:nth-child(7),
+  .creators_table th:nth-child(7) {
     display: none !important;
   }
 }
@@ -10956,5 +11136,11 @@ h2 {
 @media (min-width: 1150px) and (max-width: 1368px) {
   .content_admin_sidebar a {
     font-size: 12px;
+  }
+}
+/* sidebar about responsive */
+@media (min-width: 1300px) and (max-width: 1509px) {
+  .btn-custom {
+    font-size: 11px;
   }
 }

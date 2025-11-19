@@ -481,14 +481,14 @@
                 class="row chart_container align-items-stretch justify-content-between mt-4"
               >
                 <!-- Weekly Progress Doughnut Chart -->
-                <div class="col-12 col-sm-12 col-md-3">
+                <div class="col-12 col-md-2">
                   <div
                     class="progress-card mb-4 text-center p-3 border rounded shadow-sm"
                   >
                     <h3>Weekly Progress</h3>
                     <div
                       class="chart-container position-relative mx-auto"
-                      style="max-width: 180px"
+                      style="max-width: 160px"
                     >
                       <canvas id="progressChartCanvas"></canvas>
                       <span
@@ -505,7 +505,7 @@
                 </div>
 
                 <!-- Weekly Challenge Line Chart -->
-                <div class="col-12 col-12-6 col-md-3">
+                <div class="col-12 col-md-4">
                   <div class="chart-card mb-4 p-3 border rounded shadow-sm">
                     <div class="chart-title fw-semibold mb-2">
                       Weekly Challenge
@@ -517,7 +517,7 @@
                 </div>
 
                 <!-- Monthly Progress Doughnut Chart -->
-                <div class="col-12 col-sm-12 col-md-3">
+                <div class="col-12 col-md-2">
                   <div
                     class="progress-card mb-4 text-center p-3 border rounded shadow-sm"
                   >
@@ -541,7 +541,7 @@
                 </div>
 
                 <!-- Monthly Challenge Line Chart -->
-                <div class="col-12 col-sm-12 col-md-3">
+                <div class="col-12 col-md-4">
                   <div class="chart-card mb-4 p-3 border rounded shadow-sm">
                     <div class="chart-title fw-semibold mb-2">
                       Total Calories
@@ -554,8 +554,8 @@
               </div>
 
               <!-- total crab, proteins and fat area -->
-              <div class="d-flex align-items-center gap-4 crab_area">
-                <div class="total_cabs d-flex align-items-center gap-4 cabs">
+              <div class="d-flex align-items-center crab_area">
+                <div class="total_cabs d-flex align-items-center gap-2 cabs">
                   <div class="icon_span">
                     <span>
                       <img
@@ -565,7 +565,7 @@
                     </span>
                   </div>
 
-                  <div class="d-flex gap-3 align-items-center">
+                  <div class="cabs_align">
                     <div class="total_crab">
                       <p class="mb-1">Total Crab</p>
                       <h2>2100 gr</h2>
@@ -585,7 +585,7 @@
                   </div>
                 </div>
                 <!-- protine -->
-                <div class="total_cabs d-flex align-items-center gap-3 protein">
+                <div class="total_cabs d-flex align-items-center gap-2 protein">
                   <div class="icon_span">
                     <span>
                       <img
@@ -595,7 +595,7 @@
                     </span>
                   </div>
 
-                  <div class="d-flex gap-2 align-items-center">
+                  <div class="cabs_align">
                     <div class="total_crab">
                       <p class="mb-1">Total Proteins</p>
                       <h2>460 gr gr</h2>
@@ -615,7 +615,7 @@
                   </div>
                 </div>
                 <!-- fats -->
-                <div class="total_cabs d-flex align-items-center gap-3 fats">
+                <div class="total_cabs d-flex align-items-center gap-2 fats">
                   <div class="icon_span">
                     <span>
                       <img
@@ -625,7 +625,7 @@
                     </span>
                   </div>
 
-                  <div class="d-flex gap-2 align-items-center">
+                  <div class="cabs_align">
                     <div class="total_crab">
                       <p class="mb-1">Total Fats</p>
                       <h2>364 gr</h2>
@@ -977,17 +977,15 @@
                 </div>
               </div>
 
-              <div
-                class="d-flex flex-column flex-lg-row gap-2 recomended_parent"
-              >
+              <div class="d-flex flex-column flex-lg-row gap-3 recommnd">
                 <!-- recomended trainers area -->
-                <div class="trainer-section col-12 col-lg-6 recomended_parent">
+                <div class="trainer-section col-12 col-lg-6 recomended_section">
                   <div class="trainer-header">
                     <h4>Recommend Trainers For You</h4>
                     <button class="view-more-btn">View More</button>
                   </div>
 
-                  <div class="row text-center">
+                  <div class="row g-3 text-center">
                     <!-- Trainer Card -->
                     <div class="col-6 col-md-3 mb-4">
                       <div class="trainer-card">
@@ -1073,15 +1071,13 @@
                 </div>
 
                 <!-- recomended diet section -->
-                <div
-                  class="trainer-section col-12 col-lg-6 recomended_parent recomended_diet"
-                >
+                <div class="trainer-section col-12 col-lg-6 recomended_section">
                   <div class="trainer-header">
                     <h4>Recommend Dietitians and Nutritionists For You</h4>
                     <button class="view-more-btn">View More</button>
                   </div>
 
-                  <div class="row text-center">
+                  <div class="row g-3 text-center">
                     <!-- Trainer Card -->
                     <div class="col-6 col-md-3 mb-4">
                       <div class="trainer-card">
