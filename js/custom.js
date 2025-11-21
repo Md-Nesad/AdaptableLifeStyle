@@ -633,6 +633,14 @@ function initVideoPlayer(containerSelector) {
   fullscreenBtn?.addEventListener("click", () => {
     if (video.requestFullscreen) video.requestFullscreen();
   });
+
+  document.addEventListener("fullscreenchange", () => {
+    if (video.paused) {
+      playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`;
+    } else {
+      playBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+    }
+  });
 }
 
 initVideoPlayer("#video_container");
