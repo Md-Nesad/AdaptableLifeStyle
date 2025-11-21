@@ -397,34 +397,54 @@
                 <div class="row">
                   <!-- heading -->
                   <div class="col-lg-8 col-md-8 mt-1">
-                    <div class="video-card">
+                    <div class="video-card" id="video_container">
                       <div class="video-wrapper">
-                        <img
-                          src="./images/video/video_thumbnail.png"
-                          class="video-thumbnail"
-                          alt="Workout session"
-                        />
+                        <video id="video" class="video-thumbnail">
+                          <source
+                            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                            type="video/mp4"
+                          />
+                        </video>
 
                         <!-- Progress Bar -->
-                        <div class="video_progress_container">
-                          <div class="video_progress_buffer">
-                            <div class="video_progress_bar"></div>
-                          </div>
+                        <!-- Progress Bar (3 layers + click seek) -->
+                        <div
+                          class="video_progress_container"
+                          id="progressContainer"
+                        >
+                          <div class="buffered_bar" id="bufferedBar"></div>
+                          <div class="loaded_bar" id="loadedBar"></div>
+                          <div class="played_bar" id="playedBar"></div>
                         </div>
+
+                        <!-- Forward text -->
+                        <div id="forwardText" class="forward-text">+10s</div>
+
+                        <!-- loading spinner -->
+                        <div id="loadingSpinner" class="loading-spinner"></div>
 
                         <!-- Controls -->
                         <div class="controls">
                           <div class="controls-left">
-                            <button class="control-btn">
+                            <button
+                              onclick="playButton()"
+                              class="control-btn"
+                              id="playBtn"
+                            >
                               <i class="fa-solid fa-play"></i>
                             </button>
-                            <button class="control-btn">
+
+                            <button class="control-btn" id="forwardBtn">
                               <i class="fa-solid fa-forward"></i>
                             </button>
-                            <button class="control-btn">
+
+                            <button class="control-btn" id="volumeBtn">
                               <i class="fa-solid fa-volume-high"></i>
                             </button>
-                            <span class="time">01:25 / 6:45</span>
+
+                            <span class="time" id="timeDisplay"
+                              >00:00 / 00:00</span
+                            >
                           </div>
 
                           <div class="controls-right">
@@ -435,10 +455,12 @@
                             >
                               <div class="circle"></div>
                             </div>
+
                             <button class="control-btn">
                               <i class="fa-solid fa-gear"></i>
                             </button>
-                            <button class="control-btn">
+
+                            <button class="control-btn" id="fullscreenBtn">
                               <i class="fa-solid fa-expand"></i>
                             </button>
                           </div>
