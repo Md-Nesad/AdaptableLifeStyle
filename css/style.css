@@ -10014,7 +10014,7 @@ input[type="date"]:not(:valid):before {
   width: 100%;
   background-color: #ffffff99;
   border-radius: 4px;
-  height: 1.8px;
+  height: 2px;
   overflow: hidden;
   cursor: pointer;
 }
