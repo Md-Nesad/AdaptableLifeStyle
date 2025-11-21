@@ -554,6 +554,8 @@ function initVideoPlayer(containerSelector) {
   const progressContainer = container.querySelector("#progressContainer");
   const forwardText = container.querySelector("#forwardText");
   const loadingSpinner = container.querySelector("#loadingSpinner");
+  const contrls = container.querySelector(".controls");
+  const progress = container.querySelector(".video_progress_container");
 
   if (!video) return;
 
@@ -571,6 +573,16 @@ function initVideoPlayer(containerSelector) {
     } else {
       video.pause();
       playBtn.innerHTML = `<i class="fa-solid fa-play"></i>`;
+    }
+  });
+
+  video.addEventListener("click", () => {
+    if (contrls.style.display === "none" && progress.style.display === "none") {
+      contrls.style.display = "flex";
+      progress.style.display = "block";
+    } else {
+      contrls.style.display = "none";
+      progress.style.display = "none";
     }
   });
 
