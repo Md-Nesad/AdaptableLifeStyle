@@ -33,6 +33,19 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
     });
   }
+  if ($.fn.slick) {
+    $(".scroll-wrapper").slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: false,
+      dots: false,
+      infinite: true,
+      centerMode: false, // important
+    });
+  }
+
   if ($.fn.niceSelect) {
     $("select.nice").niceSelect();
   }
@@ -653,62 +666,6 @@ function initVideoPlayer(containerSelector) {
       playBtn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
     }
   });
-
-  //custom scroll bar
-  const slider = document.querySelector(".details_quick_video .scroll-wrapper");
-
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-  let stopAutoScroll = false;
-
-  // STOP auto scroll when mouse enters
-  slider.addEventListener("mouseenter", () => {
-    stopAutoScroll = true;
-  });
-
-  // RESUME auto scroll when mouse leaves
-  slider.addEventListener("mouseleave", () => {
-    stopAutoScroll = false;
-  });
-
-  // Mouse drag start
-  slider.addEventListener("mousedown", (e) => {
-    if (e.target.closest(".diet_card") || e.target.closest(".diet_thum"))
-      return;
-    isDown = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
-
-  // Drag end
-  slider.addEventListener("mouseup", () => {
-    isDown = false;
-  });
-
-  // Drag move
-  slider.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 1;
-    slider.scrollLeft = scrollLeft - walk;
-  });
-
-  // Auto scroll loop
-  function autoScroll() {
-    if (!stopAutoScroll) {
-      slider.scrollLeft += 1;
-
-      if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
-        slider.scrollLeft = 0;
-      }
-    }
-
-    requestAnimationFrame(autoScroll);
-  }
-
-  autoScroll();
 }
 
 initVideoPlayer("#video_container");
