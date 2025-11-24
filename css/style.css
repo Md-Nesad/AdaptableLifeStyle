@@ -7489,8 +7489,7 @@ canvas {
   width: 112%;
 }
 
-.sidebar-collapsed .progress-card
- {
+.sidebar-collapsed .progress-card {
   width: 111% !important;
   margin-left: 0px !important;
   margin-right: 0 !important;
@@ -11381,4 +11380,13 @@ input[type="date"]:not(:valid):before {
   .btn-custom {
     font-size: 11px;
   }
+}
+
+svg {
+  fill: var(--bs-primary);
+  margin-right: 10px; }
+
+.svg_sidebar svg {
+  fill: var(--bs-primary);
+  margin-right: 7px;
 }
