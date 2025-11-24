@@ -11388,5 +11388,8 @@ svg {
 
 .svg_sidebar svg {
   fill: var(--bs-primary);
-  margin-right: 7px;
+}
+
+.svg_sidebar span {
+  font-size: 6px;
 }
