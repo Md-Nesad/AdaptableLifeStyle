@@ -10734,25 +10734,22 @@ input[type="date"]:not(:valid):before {
   padding-bottom: 20px;
 }
 
-/* .scroll-wrapper {
-  display: flex;
-  gap: 15px;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  padding-bottom: 10px;
-} */
-
-.scroll-wrapper {
+.details_quick_video .scroll-wrapper {
   display: flex;
   gap: 15px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 0 10px 10px 10px;
+  cursor: grab;
+}
+
+.details_quick_video .diet_card:active {
+  cursor: grabbing;
 }
 
 .scroll-wrapper::-webkit-scrollbar {
   height: 3px;
-  display: block;
+  display: none;
 }
 
 .scroll-wrapper::-webkit-scrollbar-thumb {
