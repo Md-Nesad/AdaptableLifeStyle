@@ -3563,7 +3563,7 @@
   -o-border-radius: 8px;
   padding: 5px 9px;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--bs-dark);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3590,7 +3590,7 @@
 .card_item_tag span {
   font-weight: 600;
   font-size: 8px;
-  color: #272a33;
+  color: var(--bs-primary) !important;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3782,7 +3782,7 @@
   flex-wrap: nowrap;
   overflow-x: scroll;
   padding: 0px;
-  background-color: white;
+  background-color: var(--bs-dark);
   border-radius: 12px 12px 0px 0px;
   -moz-border-radius: 12px 12px 0px 0px;
   -webkit-border-radius: 12px 12px 0px 0px;
@@ -7486,13 +7486,13 @@ canvas {
   text-align: center;
   padding: 20px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-  width: 115%;
+  width: 112%;
 }
 
-.sidebar-collapsed .progress-card,
-.sidebar-collapsed .chart-card {
-  width: 100% !important;
-  margin-left: 0 !important;
+.sidebar-collapsed .progress-card
+ {
+  width: 111% !important;
+  margin-left: 0px !important;
   margin-right: 0 !important;
 }
 
@@ -7683,7 +7683,7 @@ canvas {
 
 .protein .icon_span {
   background-color: #fff1e5;
-  padding: 7px;
+  padding: 7px 10px;
   border: 02px solid #ff8700;
   border-radius: 10%;
   margin-right: 10px;
@@ -7691,7 +7691,7 @@ canvas {
 
 .fats .icon_span {
   background-color: #f4e9ff;
-  padding: 7px;
+  padding: 4px 11px;
   border: 02px solid #a02cfa;
   border-radius: 10%;
   margin-right: 10px;
@@ -7916,6 +7916,196 @@ canvas {
 
   .fats_btn {
     font-size: 10px;
+  }
+}
+
+@media (min-width: 1570px) and (max-width: 1631px) {
+  .cabs_align {
+    gap: 38px;
+  }
+  .total_crab p {
+    font-size: 11px;
+  }
+  .total_crab h2 {
+    font-size: 15px;
+  }
+  .progress-container {
+    width: 140px;
+  }
+
+  /* Inner bar */
+  .progress-bar {
+    width: 80%;
+  }
+  .cabs_btn {
+    font-size: 12px;
+  }
+  .gram {
+    font-size: 10px;
+  }
+  .crablastbtn2 {
+    padding: 4px 14px;
+    width: 70px;
+    font-size: 10px;
+  }
+  .protine_btn {
+    font-size: 12px;
+  }
+
+  .fats_btn {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1730px) and (max-width: 1830px) {
+  .cabs_align {
+    gap: 60px;
+  }
+  .total_crab p {
+    font-size: 13px;
+  }
+  .total_crab h2 {
+    font-size: 16px;
+  }
+  .progress-container {
+    width: 160px;
+  }
+
+  /* Inner bar */
+  .progress-bar {
+    width: 90%;
+  }
+  .cabs_btn {
+    font-size: 13px;
+  }
+  .gram {
+    font-size: 11px;
+  }
+  .crablastbtn2 {
+    padding: 4px 15px;
+    width: 70px;
+    font-size: 10px;
+  }
+  .protine_btn {
+    font-size: 13px;
+  }
+
+  .fats_btn {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1830px) and (max-width: 1930px) {
+  .cabs_align {
+    gap: 75px;
+  }
+  .total_crab p {
+    font-size: 13px;
+  }
+  .total_crab h2 {
+    font-size: 16px;
+  }
+  .progress-container {
+    width: 170px;
+  }
+
+  /* Inner bar */
+  .progress-bar {
+    width: 90%;
+  }
+  .cabs_btn {
+    font-size: 13px;
+  }
+  .gram {
+    font-size: 11px;
+  }
+  .crablastbtn2 {
+    padding: 4px 15px;
+    width: 70px;
+    font-size: 10px;
+  }
+  .protine_btn {
+    font-size: 13px;
+  }
+
+  .fats_btn {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1632px) and (max-width: 1730px) {
+  .cabs_align {
+    gap: 51px;
+  }
+  .total_crab p {
+    font-size: 12px;
+  }
+  .total_crab h2 {
+    font-size: 16px;
+  }
+  .progress-container {
+    width: 150px;
+  }
+
+  /* Inner bar */
+  .progress-bar {
+    width: 90%;
+  }
+  .cabs_btn {
+    font-size: 13px;
+  }
+  .gram {
+    font-size: 11px;
+  }
+  .crablastbtn2 {
+    padding: 4px 15px;
+    width: 70px;
+    font-size: 10px;
+  }
+  .protine_btn {
+    font-size: 13px;
+  }
+
+  .fats_btn {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 1570px) and (max-width: 1670px) {
+  .cabs_align {
+    gap: 38px;
+  }
+  .total_crab p {
+    font-size: 11px;
+  }
+  .total_crab h2 {
+    font-size: 15px;
+  }
+  .progress-container {
+    width: 140px;
+  }
+
+  /* Inner bar */
+  .progress-bar {
+    width: 80%;
+  }
+  .cabs_btn {
+    font-size: 12px;
+  }
+  .gram {
+    font-size: 10px;
+  }
+  .crablastbtn2 {
+    padding: 4px 14px;
+    width: 70px;
+    font-size: 10px;
+  }
+  .protine_btn {
+    font-size: 12px;
+  }
+
+  .fats_btn {
+    font-size: 12px;
   }
 }
 
@@ -8183,7 +8373,7 @@ canvas {
 
 .trainer-card h6 {
   font-weight: 600;
-  color: #333;
+  color: var(--bs-primary);
   margin-bottom: 8px;
 }
 
@@ -10747,7 +10937,6 @@ input[type="date"]:not(:valid):before {
   padding-right: 60px; /* adjust width of peek */
   margin-left: -8px;
 }
-
 
 .details_quick_video .scroll-wrapper:active {
   cursor: grabbing;
