@@ -669,3 +669,118 @@ function initVideoPlayer(containerSelector) {
 }
 
 initVideoPlayer("#video_container");
+// modal open and close
+const modalParent = document.querySelector(".note-chat_modal_parent");
+const chatModal = document.querySelector("#chatModal");
+
+// Open modal function
+function openChatModal() {
+  chatModal.classList.remove("noteFadeDown");
+  modalParent.style.display = "flex";
+  chatModal.classList.add("noteFadeUp");
+}
+
+// Close modal function with reverse animation
+function closeChatModal() {
+  chatModal.classList.remove("noteFadeUp");
+  chatModal.classList.add("noteFadeDown");
+
+  chatModal.addEventListener(
+    "animationend",
+    () => {
+      modalParent.style.display = "none";
+    },
+    { once: true }
+  );
+}
+
+// Toggle modal
+function toggleChatModal() {
+  if (
+    modalParent.style.display === "none" ||
+    modalParent.style.display === ""
+  ) {
+    openChatModal();
+  } else {
+    closeChatModal();
+  }
+}
+
+// Close modal when clicking outside
+modalParent.addEventListener("click", function (e) {
+  if (!chatModal.contains(e.target)) {
+    closeChatModal();
+  }
+});
+
+// chat tabs
+const chatTabs = document.querySelectorAll(".chatTab");
+const chatSection = document.getElementById("chat_section");
+const messagesSection = document.getElementById("messages_section");
+const notesSection = document.getElementById("notes_section");
+const backBtn = document.querySelector(".back-btn");
+
+// Chat Tab switching
+chatTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    chatTabs.forEach((t) => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    // Hide all sections first
+    chatSection.classList.add("hidden");
+    messagesSection.classList.add("hidden");
+    notesSection.classList.add("hidden");
+
+    // Decide which section to show
+    let sectionToShow = tab.dataset.tab === "chat" ? chatSection : notesSection;
+
+    // Small delay + drop animation
+    setTimeout(() => {
+      sectionToShow.classList.remove("hidden");
+      sectionToShow.classList.add("tab-content");
+
+      sectionToShow.addEventListener(
+        "animationend",
+        () => {
+          sectionToShow.classList.remove("tab-content");
+        },
+        { once: true }
+      );
+    }, 100); // short delay
+  });
+});
+
+// Click on any chat item → show messages section
+document.querySelectorAll(".chat-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    chatSection.classList.add("hidden");
+    notesSection.classList.add("hidden");
+
+    setTimeout(() => {
+      messagesSection.classList.remove("hidden");
+      messagesSection.classList.add("tab-content");
+
+      messagesSection.addEventListener(
+        "animationend",
+        () => messagesSection.classList.remove("tab-content"),
+        { once: true }
+      );
+    }, 100); // short delay for drop feel
+  });
+});
+
+// Back button → show chat list again with drop effect
+backBtn.addEventListener("click", () => {
+  messagesSection.classList.add("hidden");
+
+  setTimeout(() => {
+    chatSection.classList.remove("hidden");
+    chatSection.classList.add("tab-content");
+
+    chatSection.addEventListener(
+      "animationend",
+      () => chatSection.classList.remove("tab-content"),
+      { once: true }
+    );
+  }, 100);
+});
