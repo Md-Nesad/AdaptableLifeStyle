@@ -784,3 +784,87 @@ backBtn.addEventListener("click", () => {
     );
   }, 100);
 });
+
+// short video controller
+// সব short section select
+// const shorts = document.querySelectorAll(".short");
+
+// shorts.forEach((short) => {
+//   const video = short.querySelector(".video");
+//   const playBtn = short.querySelector(".play-btn");
+//   const soundBtn = short.querySelector(".sound-btn");
+//   const progressFill = short.querySelector(".short_progress_fill");
+
+// initial mute
+// video.muted = true;
+
+// play/pause button
+// playBtn.addEventListener("click", () => {
+//   if (video.paused) {
+//     video.play();
+//     playBtn.classList.remove("fa-play");
+//     playBtn.classList.add("fa-pause");
+//   } else {
+//     video.pause();
+//     playBtn.classList.remove("fa-pause");
+//     playBtn.classList.add("fa-play");
+//   }
+// });
+
+// manual sound toggle
+// soundBtn.addEventListener("click", () => {
+//   video.muted = !video.muted;
+//   if (video.muted) {
+//     soundBtn.classList.remove("fa-volume-high");
+//     soundBtn.classList.add("fa-volume-xmark");
+//   } else {
+//     soundBtn.classList.remove("fa-volume-xmark");
+//     soundBtn.classList.add("fa-volume-high");
+//   }
+// });
+
+// progress bar
+//   video.addEventListener("timeupdate", () => {
+//     if (!video.duration) return;
+//     const percent = (video.currentTime / video.duration) * 100;
+//     progressFill.style.width = percent + "%";
+//   });
+// });
+
+// Intersection Observer for scroll
+// const options = {
+//   root: null,
+//   rootMargin: "0px",
+//   threshold: 0.7,
+// };
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     const video = entry.target.querySelector(".video");
+//     const playBtn = entry.target.querySelector(".play-btn");
+//     const soundBtn = entry.target.querySelector(".sound-btn");
+
+//     if (entry.isIntersecting) {
+
+//       video.play();
+//       video.muted = false;
+
+//       playBtn.classList.remove("fa-play");
+//       playBtn.classList.add("fa-pause");
+
+//       soundBtn.classList.remove("fa-volume-xmark");
+//       soundBtn.classList.add("fa-volume-high");
+//     } else {
+//       video.pause();
+//       video.muted = true;
+
+//       playBtn.classList.remove("fa-pause");
+//       playBtn.classList.add("fa-play");
+
+//       soundBtn.classList.remove("fa-volume-high");
+//       soundBtn.classList.add("fa-volume-xmark");
+//     }
+//   });
+// }, options);
+
+// shorts.forEach((short) => observer.observe(short));
