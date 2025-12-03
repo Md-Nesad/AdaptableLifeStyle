@@ -12141,7 +12141,7 @@ svg {
   position: relative;
   scroll-snap-align: start;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
   align-items: self-end;
 }
@@ -12160,18 +12160,6 @@ svg {
   flex-direction: column;
   align-items: self-end;
   gap: 16px;
-}
-
-@media (max-width: 576px) {
-  .short_actions {
-    display: flex;
-    flex-direction: column;
-    align-items: self-end;
-    gap: 16px;
-    position: absolute;
-    right: 15px;
-    bottom: 10px;
-  }
 }
 
 .video {
@@ -12227,7 +12215,6 @@ svg {
 }
 
 /* Right side buttons */
-
 .short_actions i {
   background-color: #f2f2f2;
   color: white;
@@ -12299,21 +12286,71 @@ svg {
   margin-left: 9px;
 }
 
-/* 📱 Mobile responsive */
-@media (max-width: 480px) {
-  .video-box,
-  .info {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
+@media (max-width: 576px) {
+  .short_actions {
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    gap: 16px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
   }
+  .shorts-container {
+  margin-top: 0px;
+  padding-bottom: 30px;
+  border-radius: 0px;
+}
+.video-box {
+  border-radius: 0px;
+}
+.short_controller {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  display: none !important;
+  gap: 10px;
+}
+.short_controller.show {
+  display: flex !important;
+}
+.short_controller span:last-child {
+  display: none !important;
+}
+.short_actions i {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.short_actions span {
+  color: white;
+  opacity: 0.9;
+}
+.short_progress {
+  height: 3px;
+}
+.small-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
 
-  .actions {
-    right: 10px;
-    bottom: 120px;
-  }
+.short_name {
+  font-size: 13px;
+}
 
-  .sub {
-    padding: 5px 10px;
-  }
+.sub {
+  font-size: 12px;
+}
+
+.short_desc {
+  font-size: 13px;
+}
+.short_profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
 }

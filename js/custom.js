@@ -785,86 +785,89 @@ backBtn.addEventListener("click", () => {
   }, 100);
 });
 
-// short video controller
-// সব short section select
-// const shorts = document.querySelectorAll(".short");
+//short video logic
+const shorts = document.querySelectorAll(".short");
 
-// shorts.forEach((short) => {
-//   const video = short.querySelector(".video");
-//   const playBtn = short.querySelector(".play-btn");
-//   const soundBtn = short.querySelector(".sound-btn");
-//   const progressFill = short.querySelector(".short_progress_fill");
+shorts.forEach((short) => {
+  const video = short.querySelector(".video");
+  const playBtn = short.querySelector(".play-btn");
+  const soundBtn = short.querySelector(".sound-btn");
+  const progressFill = short.querySelector(".short_progress_fill");
+  const shortController = short.querySelector(".short_controller");
 
-// initial mute
-// video.muted = true;
+  video.addEventListener("click", () => {
+    shortController.classList.toggle("show");
+  });
 
-// play/pause button
-// playBtn.addEventListener("click", () => {
-//   if (video.paused) {
-//     video.play();
-//     playBtn.classList.remove("fa-play");
-//     playBtn.classList.add("fa-pause");
-//   } else {
-//     video.pause();
-//     playBtn.classList.remove("fa-pause");
-//     playBtn.classList.add("fa-play");
-//   }
-// });
+  // initial mute
+  video.muted = true;
 
-// manual sound toggle
-// soundBtn.addEventListener("click", () => {
-//   video.muted = !video.muted;
-//   if (video.muted) {
-//     soundBtn.classList.remove("fa-volume-high");
-//     soundBtn.classList.add("fa-volume-xmark");
-//   } else {
-//     soundBtn.classList.remove("fa-volume-xmark");
-//     soundBtn.classList.add("fa-volume-high");
-//   }
-// });
+  // play/pause button
+  playBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      playBtn.classList.remove("fa-play");
+      playBtn.classList.add("fa-pause");
+    } else {
+      video.pause();
+      playBtn.classList.remove("fa-pause");
+      playBtn.classList.add("fa-play");
+    }
+  });
 
-// progress bar
-//   video.addEventListener("timeupdate", () => {
-//     if (!video.duration) return;
-//     const percent = (video.currentTime / video.duration) * 100;
-//     progressFill.style.width = percent + "%";
-//   });
-// });
+  // manual sound toggle
+  soundBtn.addEventListener("click", () => {
+    video.muted = !video.muted;
+    if (video.muted) {
+      soundBtn.classList.remove("fa-volume-high");
+      soundBtn.classList.add("fa-volume-xmark");
+    } else {
+      soundBtn.classList.remove("fa-volume-xmark");
+      soundBtn.classList.add("fa-volume-high");
+    }
+  });
 
-// Intersection Observer for scroll
-// const options = {
-//   root: null,
-//   rootMargin: "0px",
-//   threshold: 0.7,
-// };
+  //progress bar
+  video.addEventListener("timeupdate", () => {
+    if (!video.duration) return;
+    const percent = (video.currentTime / video.duration) * 100;
+    progressFill.style.width = percent + "%";
+  });
+});
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     const video = entry.target.querySelector(".video");
-//     const playBtn = entry.target.querySelector(".play-btn");
-//     const soundBtn = entry.target.querySelector(".sound-btn");
+//Intersection Observer for scroll
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.7,
+};
 
-//     if (entry.isIntersecting) {
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const video = entry.target.querySelector(".video");
+    const playBtn = entry.target.querySelector(".play-btn");
+    const soundBtn = entry.target.querySelector(".sound-btn");
 
-//       video.play();
-//       video.muted = false;
+    if (entry.isIntersecting) {
+      video.play();
+      video.muted = false;
 
-//       playBtn.classList.remove("fa-play");
-//       playBtn.classList.add("fa-pause");
+      playBtn.classList.remove("fa-play");
+      playBtn.classList.add("fa-pause");
 
-//       soundBtn.classList.remove("fa-volume-xmark");
-//       soundBtn.classList.add("fa-volume-high");
-//     } else {
-//       video.pause();
-//       video.muted = true;
+      soundBtn.classList.remove("fa-volume-xmark");
+      soundBtn.classList.add("fa-volume-high");
+    } else {
+      video.pause();
+      video.muted = true;
 
-//       playBtn.classList.remove("fa-pause");
-//       playBtn.classList.add("fa-play");
+      playBtn.classList.remove("fa-pause");
+      playBtn.classList.add("fa-play");
 
-//       soundBtn.classList.remove("fa-volume-high");
-//       soundBtn.classList.add("fa-volume-xmark");
-//     }
-//   });
-// }, options);
+      soundBtn.classList.remove("fa-volume-high");
+      soundBtn.classList.add("fa-volume-xmark");
+    }
+  });
+}, options);
 
-// shorts.forEach((short) => observer.observe(short));
+shorts.forEach((short) => observer.observe(short));
