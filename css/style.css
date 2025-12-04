@@ -11967,6 +11967,10 @@ svg {
     margin-right: 10px;
     height: calc(100vh - 150px);
   }
+
+  .msg-container {
+    height: calc(100vh - 250px);
+  }
 }
 
 /* sign up and login styles here */
