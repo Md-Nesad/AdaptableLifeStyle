@@ -1162,6 +1162,7 @@
   .header_area .icon_area ul.active {
     visibility: visible;
     opacity: 1;
+    z-index: 50;
   }
 }
 
@@ -11426,7 +11427,7 @@ svg {
   right: 0;
   top: 85px;
   width: 26.4%;
-  z-index: 999999;
+  z-index: 999999999;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100%;
@@ -11464,6 +11465,10 @@ svg {
 .msg-input::placeholder {
   color: #979797;
 }
+.msg_input_box {
+  width: 100%;
+  position: relative;
+}
 
 .msg-send-btn {
   background: transparent;
@@ -11472,7 +11477,9 @@ svg {
   font-size: 20px;
   cursor: pointer;
   color: #000;
-  margin-left: 10px;
+  position: absolute;
+  top: 1/2;
+  right: 0;
 }
 
 @keyframes noteFadeUp {
@@ -11916,16 +11923,37 @@ svg {
   text-align: right;
 }
 
-/* msg input */
+@media (min-width: 980px) and (max-width: 1200px) {
+  .chat_modal {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+  .chat_modal {
+    width: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat_modal {
+    width: 95%;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+}
 
 /* sign up and login styles here */
+.sign_out_body {
+  background-color: var(--bs-dark);
+}
 .form-wrapper {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 40px auto;
-  background: #f9f4f1;
+  background: var(--bs-body-bg);
   padding: 40px;
   border-radius: 12px;
-  border: 2px solid #e7dfcf;
+  border: 1px solid #c3e66e;
 }
 
 .form-wrapper h5 {
@@ -11941,6 +11969,7 @@ svg {
 
 .sign-up-upload-box {
   border: 2px dashed #dcd2bd;
+  border-color: #bdbdbd;
   border-radius: 12px;
   height: 120px;
   display: flex;
@@ -11953,7 +11982,7 @@ svg {
 }
 
 .sign-up-upload-box span {
-  background-color: #f6fbe9;
+  background-color: var(--bs-body-bg);
   color: #abd545;
   border: 01px solid #abd545;
   padding: 4px 15px;
@@ -12031,13 +12060,13 @@ svg {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1020px) {
   .upload-box {
     height: 110px;
   }
 
   .form-wrapper {
-    margin: 10px;
+    margin: 15px;
   }
 }
 
@@ -12047,6 +12076,10 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.login_title {
+  color: var(--bs-primary);
 }
 
 .main-box {
@@ -12059,14 +12092,17 @@ svg {
 }
 
 .left-box {
-  border: 1px solid #e0efc4;
+  border: 1px solid #c3e66e;
   border-radius: 10px;
   padding: 48px 70px;
+  background-color: var(--bs-body-bg);
 }
 
 .left-box img {
   width: 100%;
   max-width: 450px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .right-box {
@@ -12074,10 +12110,10 @@ svg {
 }
 
 .login-box {
-  background: #f7f3ef;
+  background: var(--bs-body-bg);
   border: 1px solid #e0efc4;
   border-radius: 10px;
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 
 .login-box input {
@@ -12108,16 +12144,6 @@ svg {
   color: #000;
 }
 
-.logo-text {
-  font-size: 26px;
-  font-weight: 600;
-  color: #f6871f;
-}
-
-.logo-green {
-  color: #7bc043;
-}
-
 .small-text {
   color: #a9aaad;
   font-size: 13px;
@@ -12127,6 +12153,61 @@ svg {
   text-decoration: none;
   color: #abd545;
   font-size: 13px;
+}
+
+/* ==============================
+   📌 Responsive — up to 1040px
+   Flex column + equal width
+=============================== */
+@media (max-width: 1040px) {
+  .main-box {
+    flex-direction: column;
+    gap: 20px;
+    margin: 50px 100px; /* left & right 5px */
+  }
+
+  .left-box,
+  .right-box {
+    width: 100%; /* Equal width */
+  }
+
+  .left-box {
+    display: flex; /* Center image */
+    justify-content: center;
+    align-items: center;
+    padding: 30px 25px;
+  }
+
+  .right-box {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   Responsive (Mobile)
+=========================== */
+@media (max-width: 768px) {
+  .main-box {
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px;
+  }
+
+  .left-box {
+    display: none;
+  }
+
+  .right-box {
+    width: 100%;
+  }
+
+  .login-box {
+    width: 100%;
+    padding: 40px 15px;
+  }
+  .small-text a {
+    font-size: 11px;
+  }
 }
 
 /* shorts video style here */
@@ -12158,7 +12239,7 @@ svg {
 .short_actions {
   display: flex;
   flex-direction: column;
-  align-items: self-end;
+  align-items: center;
   gap: 16px;
 }
 
@@ -12216,21 +12297,20 @@ svg {
 
 /* Right side buttons */
 .short_actions i {
-  background-color: #f2f2f2;
-  color: white;
+  background-color: var(--bs-body-bg);
   text-align: center;
-  font-size: 25px;
   cursor: pointer;
-  padding: 10px;
+  padding: 15px;
   border-radius: 50%;
-  font-size: 16px;
-  color: black;
-  opacity: 0.5;
+  font-size: 18px;
+  color: var(--bs-primary);
+  opacity: 0.9;
 }
 
 .short_actions span {
   display: block;
-  color: #595c65;
+  color: var(--bs-primary);
+  opacity: 0.8;
   font-size: 10px;
   margin-top: 3px;
   text-align: center;
@@ -12290,67 +12370,67 @@ svg {
   .short_actions {
     display: flex;
     flex-direction: column;
-    align-items: self-end;
+    align-items: center;
     gap: 16px;
     position: absolute;
-    right: 15px;
+    right: 10px;
     bottom: 15px;
   }
   .shorts-container {
-  margin-top: 0px;
-  padding-bottom: 30px;
-  border-radius: 0px;
-}
-.video-box {
-  border-radius: 0px;
-}
-.short_controller {
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  display: none !important;
-  gap: 10px;
-}
-.short_controller.show {
-  display: flex !important;
-}
-.short_controller span:last-child {
-  display: none !important;
-}
-.short_actions i {
-  background-color: transparent;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  opacity: 0.9;
-}
-.short_actions span {
-  color: white;
-  opacity: 0.9;
-}
-.short_progress {
-  height: 3px;
-}
-.small-pic {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
+    margin-top: 0px;
+    padding-bottom: 30px;
+    border-radius: 0px;
+  }
+  .video-box {
+    border-radius: 0px;
+  }
+  .short_controller {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    display: none !important;
+    gap: 10px;
+  }
+  .short_controller.show {
+    display: flex !important;
+  }
+  .short_controller span:last-child {
+    display: none !important;
+  }
+  .short_actions i {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  .short_actions span {
+    color: white;
+    opacity: 0.9;
+  }
+  .short_progress {
+    height: 3px;
+  }
+  .small-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
 
-.short_name {
-  font-size: 13px;
-}
+  .short_name {
+    font-size: 13px;
+  }
 
-.sub {
-  font-size: 12px;
-}
+  .sub {
+    font-size: 12px;
+  }
 
-.short_desc {
-  font-size: 13px;
-}
-.short_profile {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
+  .short_desc {
+    font-size: 13px;
+  }
+  .short_profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+  }
 }

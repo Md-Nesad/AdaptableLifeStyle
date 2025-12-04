@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="./css/nice-select.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body style="background-color: white">
+  <body class="sign_out_body">
     <div class="form-wrapper">
       <div class="text-center mb-4">
         <img
@@ -167,10 +167,20 @@
       </form>
     </div>
 
-    <!-- <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/jquery.nice-select.js"></script>
-    <script src="./js/custom.js"></script> -->
+    <script>
+      const html = document.documentElement;
+
+      const savedTheme = localStorage.getItem("theme") || "light";
+      html.setAttribute("data-bs-theme", savedTheme);
+      updateButton(savedTheme);
+
+      // theme toggle
+      window.addEventListener("load", () => {
+        const current = html.getAttribute("data-bs-theme");
+        const next = current === "light" ? "dark" : "light";
+        html.setAttribute("data-bs-theme", next);
+        localStorage.setItem("theme", next);
+      });
+    </script>
   </body>
 </html>
