@@ -11850,7 +11850,7 @@ svg {
 
 .msg-body {
   padding: 15px;
-  overflow-y: auto;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -11965,7 +11965,7 @@ svg {
     width: 95%;
     border-radius: 10px;
     margin-right: 10px;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 150px);
   }
 }
 
