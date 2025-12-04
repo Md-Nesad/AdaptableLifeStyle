@@ -11965,7 +11965,7 @@ svg {
     width: 95%;
     border-radius: 10px;
     margin-right: 10px;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 100px);
   }
 }
 
