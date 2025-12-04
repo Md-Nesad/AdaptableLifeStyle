@@ -8,6 +8,7 @@
 :root,
 [data-bs-theme="light"] {
   --bs-blue: #272a3380;
+  --bs-short-action: #F2F2F2;
   --bs-border-color: #0000001a;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -143,6 +144,7 @@
 [data-bs-theme="dark"] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
+  --bs-short-action: #1E1B18;
   --bs-border-color: #444341;
   --bs-blue: #272a33;
   --bs-dark: #040200;

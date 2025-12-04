@@ -11422,15 +11422,14 @@ svg {
 .chat_modal {
   background: var(--bs-dark);
   color: var(--bs-primary);
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 85px;
   width: 26.4%;
   z-index: 999999999;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 100%;
-  padding-bottom: 100px;
+  height: calc(100vh - 90px);
 }
 
 .messages_section {
@@ -11446,7 +11445,7 @@ svg {
   box-sizing: border-box;
   width: 90%;
   position: absolute;
-  bottom: 110px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -11675,7 +11674,7 @@ svg {
 }
 
 .tab-content {
-  animation: drop-down 0.7s ease forwards;
+  animation: drop-down 0.7s;
 }
 
 .note-container {
@@ -11804,9 +11803,14 @@ svg {
 .msg-container {
   width: 100%;
   background: var(--bs-dark);
-  height: 100%;
+  height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+}
+
+.msg-container::-webkit-scrollbar {
+  display: none !important;
 }
 
 .msg-header {
@@ -11850,6 +11854,10 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.msg-body::-webkit-scrollbar {
+  display: none !important;
 }
 
 .msg-row {
@@ -11996,6 +12004,17 @@ svg {
   background: var(--bs-dark);
   cursor: pointer;
   transition: 0.3s;
+  position: relative;
+}
+
+.upload-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .sign-up-upload-box span {
@@ -12023,9 +12042,9 @@ svg {
   background-color: var(--bs-dark);
   border: none;
   outline: none;
-  color: #272a3366;
+  color: #272a3360;
   padding: 15px;
-  font-size: 14px;
+  font-size: 13px;
   border-radius: 5px;
 }
 
@@ -12171,11 +12190,6 @@ svg {
   color: #abd545;
   font-size: 13px;
 }
-
-/* ==============================
-   📌 Responsive — up to 1040px
-   Flex column + equal width
-=============================== */
 @media (max-width: 1040px) {
   .main-box {
     flex-direction: column;
@@ -12200,9 +12214,6 @@ svg {
   }
 }
 
-/* ===========================
-   Responsive (Mobile)
-=========================== */
 @media (max-width: 768px) {
   .main-box {
     flex-direction: column;
@@ -12230,27 +12241,42 @@ svg {
 /* shorts video style here */
 .shorts-container {
   background-color: var(--bs-dark);
-  margin-top: 20px;
-  border-radius: 10px;
-  padding-bottom: 30px;
+  height: calc(var(--vh, 1vh) * 100 - 100px);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  margin-top: 15px;
 }
+
 .short {
-  height: 95vh;
-  position: relative;
   scroll-snap-align: start;
   display: flex;
-  gap: 15px;
   justify-content: center;
-  align-items: self-end;
+  align-items: end;
+  gap: 15px;
+  padding: 15px 0;
+  height: calc(var(--vh, 1vh) * 100 - 100px);
 }
 
 .video-box {
   position: relative;
   width: 380px;
-  height: 95%;
+  height: 100%;
   border-radius: 7px;
   overflow: hidden;
   background: #222;
+  flex-shrink: 1;
+}
+
+@media (min-width: 1600px) {
+  .video-box {
+    width: 450px;
+  }
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .short_actions {
@@ -12258,12 +12284,6 @@ svg {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-}
-
-.video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* Sound Button */
@@ -12314,14 +12334,19 @@ svg {
 
 /* Right side buttons */
 .short_actions i {
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-short-action);
   text-align: center;
   cursor: pointer;
   padding: 15px;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--bs-primary);
   opacity: 0.9;
+}
+
+.short_actions i:hover {
+  background-color: var(--bs-border-color);
+  transition: 0.3s;
 }
 
 .short_actions span {
@@ -12388,10 +12413,10 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 13px;
     position: absolute;
     right: 10px;
-    bottom: 15px;
+    bottom: 30px;
   }
   .shorts-container {
     margin-top: 0px;
@@ -12400,6 +12425,7 @@ svg {
   }
   .video-box {
     border-radius: 0px;
+    width: 100%;
   }
   .short_controller {
     position: absolute;
@@ -12418,12 +12444,16 @@ svg {
     background-color: transparent;
     color: white;
     text-align: center;
+    font-size: 20px;
     cursor: pointer;
     opacity: 0.9;
   }
   .short_actions span {
+    font-size: 11px;
     color: white;
     opacity: 0.9;
+    margin-top: -7px;
+    font-weight: 500;
   }
   .short_progress {
     height: 3px;

@@ -797,6 +797,16 @@ shorts.forEach((short) => {
 
   video.addEventListener("click", () => {
     shortController.classList.toggle("show");
+
+    if (video.paused) {
+      video.play();
+      playBtn.classList.remove("fa-play");
+      playBtn.classList.add("fa-pause");
+    } else {
+      video.pause();
+      playBtn.classList.remove("fa-pause");
+      playBtn.classList.add("fa-play");
+    }
   });
 
   // initial mute
@@ -871,3 +881,14 @@ const observer = new IntersectionObserver((entries) => {
 }, options);
 
 shorts.forEach((short) => observer.observe(short));
+
+//view port
+function setViewport() {
+  document.documentElement.style.setProperty(
+    "--vh",
+    window.innerHeight * 0.01 + "px"
+  );
+}
+
+setViewport();
+window.addEventListener("resize", setViewport);
