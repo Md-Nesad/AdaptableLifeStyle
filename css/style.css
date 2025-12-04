@@ -11405,7 +11405,6 @@ svg {
 }
 
 /* chat modal styles code here */
-
 .note-chat_modal_parent {
   position: absolute;
   top: 0;
@@ -11439,7 +11438,7 @@ svg {
 }
 
 .msg-input-wrapper {
-  background: #dedede;
+  background: var(--bs-body-bg);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -11459,11 +11458,12 @@ svg {
   background: transparent;
   font-size: 16px;
   color: var(--bs-primary);
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .msg-input::placeholder {
-  color: #979797;
+  color: var(--bs-primary);
+  opacity: 0.9;
 }
 .msg_input_box {
   width: 100%;
@@ -11476,7 +11476,7 @@ svg {
   outline: none;
   font-size: 20px;
   cursor: pointer;
-  color: #000;
+  color: var(--bs-primary);
   position: absolute;
   top: 1/2;
   right: 0;
@@ -11524,6 +11524,7 @@ svg {
   text-align: center;
   margin: 05px;
   color: white;
+  border-radius: 10px;
 }
 
 .chat_tabs button {
@@ -11531,13 +11532,15 @@ svg {
   padding: 10px;
   border: none;
   outline: none;
-  border-radius: 5px;
+  border-radius: 0px;
   font-weight: 600;
+  background: var(--bs-body-bg);
 }
 
 .chatTab.active {
   background-color: #c3e66e;
   border-radius: 05px;
+  color: black;
 }
 
 .chat_header {
@@ -11545,7 +11548,8 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #ddd;
+  border-top: 2px solid;
+  border-color: var(--bs-border-color);
 }
 
 .chat-list-title h4 {
@@ -11574,7 +11578,7 @@ svg {
   justify-content: center;
   width: 30px;
   height: 30px;
-  background-color: #f6fbe9;
+  background-color: var(--bs-body-bg);
   color: #abd545;
   font-size: 22px;
   font-weight: bold;
@@ -11583,7 +11587,7 @@ svg {
 }
 
 .chat-ellips i {
-  background-color: #e5e5e5;
+  background-color: var(--bs-body-bg);
   padding: 3px 15px;
   border-radius: 5px;
   font-size: 20px;
@@ -11592,17 +11596,19 @@ svg {
 .section-label {
   padding: 8px 20px;
   font-size: 14px;
-  color: #777;
+  color: var(--bs-primary);
   font-weight: bold;
-  border-top: 01px solid #ddd;
-  border-bottom: 01px solid #ddd;
+  border-top: 01px solid;
+  border-bottom: 01px solid;
+  border-color: var(--bs-border-color);
 }
 
 .chat-item {
   display: flex;
   gap: 12px;
   padding: 12px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid;
+  border-color: var(--bs-border-color);
   cursor: pointer;
 }
 
@@ -11654,8 +11660,9 @@ svg {
 }
 
 .chat-status {
-  color: gray;
+  color: var(--bs-primary);
   font-size: 13px;
+  opacity: 0.9;
 }
 /* notes area */
 @keyframes drop-down {
@@ -11680,7 +11687,8 @@ svg {
 
 .note-header {
   padding: 13px 20px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid;
+  border-color: var(--bs-border-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11708,7 +11716,7 @@ svg {
 .note-search-btn {
   width: 32px;
   height: 32px;
-  background: #f9f4f1;
+  background: var(--bs-body-bg);
   color: #828487;
   border-radius: 10px;
   display: flex;
@@ -11720,7 +11728,7 @@ svg {
 .note-icon-btn {
   width: 32px;
   height: 32px;
-  background: #f6fbe9;
+  background: var(--bs-border-color);
   color: #abd545;
   border-radius: 50%;
   display: flex;
@@ -11731,7 +11739,8 @@ svg {
 
 .note-item {
   padding: 14px 20px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid;
+  border-color: var(--bs-border-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11739,7 +11748,7 @@ svg {
 }
 
 .note-item:hover {
-  background: #fafafa;
+  background: var(--bs-body-bg);
 }
 
 .note-text {
@@ -11794,7 +11803,7 @@ svg {
 
 .msg-container {
   width: 100%;
-  background: white;
+  background: var(--bs-dark);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -11802,8 +11811,9 @@ svg {
 
 .msg-header {
   padding: 10px 15px;
-  border-bottom: 1px solid #ddd;
-  border-top: 01px solid #ddd;
+  border-bottom: 1px solid;
+  border-top: 01px solid;
+  border-color: var(--bs-border-color);
   font-size: 18px;
   font-weight: bold;
   display: flex;
@@ -11828,6 +11838,10 @@ svg {
   font-size: 11px;
   font-weight: 500;
   color: #abd545;
+}
+
+.back-btn {
+  color: var(--bs-primary);
 }
 
 .msg-body {
@@ -11895,9 +11909,9 @@ svg {
 }
 
 .msg-right {
-  background: #f6fbe9;
+  background: var(--bs-body-bg);
   width: fit-content;
-  color: #1f1f1f;
+  color: var(--bs-primary);
   font-size: 13px;
   font-weight: 500;
   line-height: 1.4;
@@ -11914,13 +11928,16 @@ svg {
   top: 0;
   width: 0px;
   height: 0px;
-  border-top: 15px solid #f6fbe9;
+  border-top: 15px solid;
+  border-color: var(--bs-body-bg);
   border-right: 15px solid transparent;
   border-bottom: 0;
 }
 
 .msg-right-box .msg-time {
   text-align: right;
+  color: var(--bs-primary);
+  opacity: 0.9;
 }
 
 @media (min-width: 980px) and (max-width: 1200px) {
