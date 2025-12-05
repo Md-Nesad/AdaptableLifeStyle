@@ -11803,7 +11803,7 @@ svg {
 
 .msg-container {
   width: 100%;
-  height: calc(100vh - 220px);
+  height: calc(100vh - 210px);
   background: var(--bs-dark);
   display: flex;
   flex-direction: column;
@@ -11967,12 +11967,12 @@ svg {
     width: 95%;
     border-radius: 10px;
     margin-right: 10px;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 140px);
   }
 
-  /* .msg-container {
-    height: calc(100vh - 250px);
-  } */
+  .msg-container {
+    height: calc(100vh - 230px);
+  }
 }
 
 /* sign up and login styles here */
