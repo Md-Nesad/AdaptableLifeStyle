@@ -300,6 +300,7 @@ function togglePrivacyPolicy() {
   }
   body.classList.toggle("sidebar-collapsed");
   body.classList.toggle("total_cabs_collapse");
+  body.classList.toggle("header_navbar_collapsed");
 }
 
 //date for footer

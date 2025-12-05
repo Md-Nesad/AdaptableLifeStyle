@@ -11547,7 +11547,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 2px solid;
+  border-top: 1px solid;
   border-color: var(--bs-border-color);
 }
 
@@ -11687,6 +11687,7 @@ svg {
 .note-header {
   padding: 13px 20px;
   border-bottom: 1px solid;
+  border-top: 1px solid;
   border-color: var(--bs-border-color);
   display: flex;
   align-items: center;
@@ -11802,8 +11803,8 @@ svg {
 
 .msg-container {
   width: 100%;
+  height: calc(100vh - 220px);
   background: var(--bs-dark);
-  height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
@@ -11948,10 +11949,11 @@ svg {
   opacity: 0.9;
 }
 
-@media (min-width: 980px) and (max-width: 1200px) {
+@media (min-width: 980px) and (max-width: 1280px) {
   .chat_modal {
-    width: 30%;
-  }
+  top: 90px;
+  width: 29%;
+}
 }
 
 @media (min-width: 768px) and (max-width: 980px) {
@@ -11965,12 +11967,12 @@ svg {
     width: 95%;
     border-radius: 10px;
     margin-right: 10px;
-    height: calc(100vh - 150px);
+    /* height: calc(100vh - 150px); */
   }
 
-  .msg-container {
+  /* .msg-container {
     height: calc(100vh - 250px);
-  }
+  } */
 }
 
 /* sign up and login styles here */
@@ -12486,3 +12488,27 @@ svg {
     border-radius: 5px;
   }
 }
+
+/* .header_navbar {
+  position: fixed;
+  top: 0;
+  width: calc(100% - 17%);
+  right: 0px;
+  z-index: 100;
+} */
+
+/* @media (min-width: 1300px) {
+  .header_navbar_collapsed .header_navbar {
+    width: 90%;
+  }
+} */
+
+/* @media (max-width: 1300px) {
+  .header_navbar {
+    width: 100%;
+  }
+}
+
+.main_content {
+  padding-top: 91px;
+} */
