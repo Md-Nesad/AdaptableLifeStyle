@@ -11951,9 +11951,9 @@ svg {
 
 @media (min-width: 980px) and (max-width: 1280px) {
   .chat_modal {
-  top: 90px;
-  width: 29%;
-}
+    top: 90px;
+    width: 29%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 980px) {
@@ -11967,7 +11967,7 @@ svg {
     width: 95%;
     border-radius: 10px;
     margin-right: 10px;
-    /* height: calc(100vh - 150px); */
+    height: calc(100vh - 150px);
   }
 
   /* .msg-container {
