@@ -239,8 +239,8 @@
             </aside>
           </div>
           <div class="col-lg-10 tk_width">
-            <div class="row">
-              <header>
+            <div class="main_content">
+              <header class="header_navbar">
                 <div class="header_area tk_style_1">
                   <div class="row align-items-center tk_none_sm">
                     <!-- Left side (menu) -->
@@ -378,582 +378,577 @@
                     </div>
                   </div>
                 </div>
+              </header>
 
-                <!-- chat modal -->
-                <div class="chat_modal_parent note-chat_modal_parent">
-                  <div class="chat_modal" id="chatModal">
-                    <!-- chat tabs -->
-                    <div class="chat_tabs">
-                      <button class="chatTab active" data-tab="chat">
-                        Chat
-                      </button>
-                      <button class="chatTab" data-tab="notes">Notes</button>
+              <div class="chat_modal_parent note-chat_modal_parent">
+                <div class="chat_modal" id="chatModal">
+                  <!-- chat tabs -->
+                  <div class="chat_tabs">
+                    <button class="chatTab active" data-tab="chat">Chat</button>
+                    <button class="chatTab" data-tab="notes">Notes</button>
+                  </div>
+
+                  <!-- chat section -->
+                  <div id="chat_section">
+                    <div class="chat_header">
+                      <div class="chat-list-title">
+                        <h4>Chat List</h4>
+                        <p>Show All</p>
+                      </div>
+                      <div class="d-flex gap-3 align-items-center">
+                        <span class="chat-add-btn">+</span>
+                        <span class="chat-ellips"
+                          ><i class="fa-solid fa-ellipsis"></i
+                        ></span>
+                      </div>
                     </div>
+                    <!-- A Section -->
+                    <div class="section-label">A</div>
 
-                    <!-- chat section -->
-                    <div id="chat_section">
-                      <div class="chat_header">
-                        <div class="chat-list-title">
-                          <h4>Chat List</h4>
-                          <p>Show All</p>
-                        </div>
-                        <div class="d-flex gap-3 align-items-center">
-                          <span class="chat-add-btn">+</span>
-                          <span class="chat-ellips"
-                            ><i class="fa-solid fa-ellipsis"></i
-                          ></span>
-                        </div>
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
                       </div>
-                      <!-- A Section -->
-                      <div class="section-label">A</div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Archie Parker</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Archie Parker</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Archie Parker</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Archie Parker</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
-                      </div>
-
-                      <!-- B Section -->
-                      <div class="section-label">B</div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Breddie Ronan</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Breddie Ronan</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Breddie Ronan</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Breddie Ronan</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
-                      </div>
-                      <!-- c section -->
-                      <div class="section-label">C</div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Cameron</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Cameron</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Cameron</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Cameron</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
-                      </div>
-
-                      <!-- D section -->
-                      <div class="section-label">D</div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Dominic</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Dominic</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Dominic</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Dominic</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
-                      </div>
-
-                      <!-- E section -->
-                      <div class="section-label">E</div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Emmanuel</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Emmanuel</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot online"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Emmanuel</div>
-                          <div class="chat-status">Kalid is online</div>
-                        </div>
-                      </div>
-
-                      <div class="chat-item">
-                        <div class="chat_avatar_wrapper">
-                          <img src="./images/video/chatProfile.png" />
-                          <span class="status-dot offline"></span>
-                        </div>
-                        <div class="chat-details">
-                          <div class="chat-name">Emmanuel</div>
-                          <div class="chat-status">Kalid left 7 mins ago</div>
-                        </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Archie Parker</div>
+                        <div class="chat-status">Kalid is online</div>
                       </div>
                     </div>
 
-                    <!-- Messages Section (Static HTML & CSS) -->
-                    <div id="messages_section" class="hidden">
-                      <div class="msg-container">
-                        <div class="msg-header">
-                          <div class="d-flex align-items-center gap-4">
-                            <button class="back-btn">
-                              <i class="fa-solid fa-arrow-left"></i>
-                            </button>
-                            <div>
-                              <h3>Chat with Khelesh</h3>
-                              <small>Online</small>
-                            </div>
-                          </div>
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Archie Parker</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
 
-                          <span class="chat-ellips"
-                            ><i class="fa-solid fa-ellipsis"></i
-                          ></span>
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Archie Parker</div>
+                        <div class="chat-status">Kalid is online</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Archie Parker</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
+
+                    <!-- B Section -->
+                    <div class="section-label">B</div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Breddie Ronan</div>
+                        <div class="chat-status">Kalid is online</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Breddie Ronan</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Breddie Ronan</div>
+                        <div class="chat-status">Kalid is online</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Breddie Ronan</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
+                    <!-- c section -->
+                    <div class="section-label">C</div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Cameron</div>
+                        <div class="chat-status">Kalid is online</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Cameron</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Cameron</div>
+                        <div class="chat-status">Kalid is online</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Cameron</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
+
+                    <!-- D section -->
+                    <div class="section-label">D</div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Dominic</div>
+                        <div class="chat-status">Kalid is online</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Dominic</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Dominic</div>
+                        <div class="chat-status">Kalid is online</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Dominic</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
+
+                    <!-- E section -->
+                    <div class="section-label">E</div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Emmanuel</div>
+                        <div class="chat-status">Kalid is online</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Emmanuel</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot online"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Emmanuel</div>
+                        <div class="chat-status">Kalid is online</div>
+                      </div>
+                    </div>
+
+                    <div class="chat-item">
+                      <div class="chat_avatar_wrapper">
+                        <img src="./images/video/chatProfile.png" />
+                        <span class="status-dot offline"></span>
+                      </div>
+                      <div class="chat-details">
+                        <div class="chat-name">Emmanuel</div>
+                        <div class="chat-status">Kalid left 7 mins ago</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Messages Section (Static HTML & CSS) -->
+                  <div id="messages_section" class="hidden">
+                    <div class="msg-container">
+                      <div class="msg-header">
+                        <div class="d-flex align-items-center gap-4">
+                          <button class="back-btn">
+                            <i class="fa-solid fa-arrow-left"></i>
+                          </button>
+                          <div>
+                            <h3>Chat with Khelesh</h3>
+                            <small>Online</small>
+                          </div>
                         </div>
 
-                        <div class="msg-body">
-                          <!-- Incoming -->
-                          <div class="msg-row">
-                            <img
-                              src="./images/video/chatProfile.png"
-                              class="msg-avatar"
-                            />
-                            <div class="msg-bubble">
-                              I am looking for your next templates
-                              <span class="msg-time">9:07 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Outgoing -->
-                          <div class="msg-right-box">
-                            <div class="msg-right">
-                              Ok, Thank you have a good day
-
-                              <span class="msg-time">9:10 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Incoming -->
-                          <div class="msg-row">
-                            <img
-                              src="./images/video/chatProfile.png"
-                              class="msg-avatar"
-                            />
-                            <div class="msg-bubble">
-                              Bye, see you
-                              <span class="msg-time">9:07 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Incoming -->
-                          <div class="msg-row">
-                            <img
-                              src="./images/video/chatProfile.png"
-                              class="msg-avatar"
-                            />
-                            <div class="msg-bubble">
-                              Hi, how are you Peter Purkar?
-                              <span class="msg-time">9:07 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Outgoing -->
-                          <div class="msg-right-box">
-                            <div class="msg-right">
-                              Hi, Khalid I am good tnx, how about you?
-
-                              <span class="msg-time">9:10 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- second chat -->
-                          <div class="msg-row">
-                            <img
-                              src="./images/video/chatProfile.png"
-                              class="msg-avatar"
-                            />
-                            <div class="msg-bubble">
-                              Bye, see you
-                              <span class="msg-time">9:07 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Incoming -->
-                          <div class="msg-row">
-                            <img
-                              src="./images/video/chatProfile.png"
-                              class="msg-avatar"
-                            />
-                            <div class="msg-bubble">
-                              Hi, how are you Peter Purkar?
-                              <span class="msg-time">9:07 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Outgoing -->
-                          <div class="msg-right-box">
-                            <div class="msg-right">
-                              Hi, Khalid I am good tnx, how about you?
-
-                              <span class="msg-time">9:10 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- third -->
-                          <div class="msg-row">
-                            <img
-                              src="./images/video/chatProfile.png"
-                              class="msg-avatar"
-                            />
-                            <div class="msg-bubble">
-                              Bye, see you
-                              <span class="msg-time">9:07 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Incoming -->
-                          <div class="msg-row">
-                            <img
-                              src="./images/video/chatProfile.png"
-                              class="msg-avatar"
-                            />
-                            <div class="msg-bubble">
-                              Hi, how are you Peter Purkar?
-                              <span class="msg-time">9:07 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Outgoing -->
-                          <div class="msg-right-box">
-                            <div class="msg-right">
-                              Hi, Khalid I am good tnx, how about you?
-
-                              <span class="msg-time">9:10 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- forth -->
-                          <div class="msg-row">
-                            <img
-                              src="./images/video/chatProfile.png"
-                              class="msg-avatar"
-                            />
-                            <div class="msg-bubble">
-                              Bye, see you
-                              <span class="msg-time">9:07 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Incoming -->
-                          <div class="msg-row">
-                            <img
-                              src="./images/video/chatProfile.png"
-                              class="msg-avatar"
-                            />
-                            <div class="msg-bubble">
-                              Hi, how are you Peter Purkar?
-                              <span class="msg-time">9:07 AM, Today</span>
-                            </div>
-                          </div>
-
-                          <!-- Outgoing -->
-                          <div class="msg-right-box">
-                            <div class="msg-right">
-                              Hi, Khalid I am good tnx, how about you?
-
-                              <span class="msg-time">9:10 AM, Today</span>
-                            </div>
-                          </div>
-                        </div>
+                        <span class="chat-ellips"
+                          ><i class="fa-solid fa-ellipsis"></i
+                        ></span>
                       </div>
 
-                      <div class="msg_area">
-                        <div class="msg-input-wrapper">
-                          <div class="msg_input_box">
-                            <input
-                              type="text"
-                              placeholder="Type your message"
-                              class="msg-input"
-                            />
-                            <button class="msg-send-btn">➤</button>
+                      <div class="msg-body">
+                        <!-- Incoming -->
+                        <div class="msg-row">
+                          <img
+                            src="./images/video/chatProfile.png"
+                            class="msg-avatar"
+                          />
+                          <div class="msg-bubble">
+                            I am looking for your next templates
+                            <span class="msg-time">9:07 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Outgoing -->
+                        <div class="msg-right-box">
+                          <div class="msg-right">
+                            Ok, Thank you have a good day
+
+                            <span class="msg-time">9:10 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Incoming -->
+                        <div class="msg-row">
+                          <img
+                            src="./images/video/chatProfile.png"
+                            class="msg-avatar"
+                          />
+                          <div class="msg-bubble">
+                            Bye, see you
+                            <span class="msg-time">9:07 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Incoming -->
+                        <div class="msg-row">
+                          <img
+                            src="./images/video/chatProfile.png"
+                            class="msg-avatar"
+                          />
+                          <div class="msg-bubble">
+                            Hi, how are you Peter Purkar?
+                            <span class="msg-time">9:07 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Outgoing -->
+                        <div class="msg-right-box">
+                          <div class="msg-right">
+                            Hi, Khalid I am good tnx, how about you?
+
+                            <span class="msg-time">9:10 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- second chat -->
+                        <div class="msg-row">
+                          <img
+                            src="./images/video/chatProfile.png"
+                            class="msg-avatar"
+                          />
+                          <div class="msg-bubble">
+                            Bye, see you
+                            <span class="msg-time">9:07 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Incoming -->
+                        <div class="msg-row">
+                          <img
+                            src="./images/video/chatProfile.png"
+                            class="msg-avatar"
+                          />
+                          <div class="msg-bubble">
+                            Hi, how are you Peter Purkar?
+                            <span class="msg-time">9:07 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Outgoing -->
+                        <div class="msg-right-box">
+                          <div class="msg-right">
+                            Hi, Khalid I am good tnx, how about you?
+
+                            <span class="msg-time">9:10 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- third -->
+                        <div class="msg-row">
+                          <img
+                            src="./images/video/chatProfile.png"
+                            class="msg-avatar"
+                          />
+                          <div class="msg-bubble">
+                            Bye, see you
+                            <span class="msg-time">9:07 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Incoming -->
+                        <div class="msg-row">
+                          <img
+                            src="./images/video/chatProfile.png"
+                            class="msg-avatar"
+                          />
+                          <div class="msg-bubble">
+                            Hi, how are you Peter Purkar?
+                            <span class="msg-time">9:07 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Outgoing -->
+                        <div class="msg-right-box">
+                          <div class="msg-right">
+                            Hi, Khalid I am good tnx, how about you?
+
+                            <span class="msg-time">9:10 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- forth -->
+                        <div class="msg-row">
+                          <img
+                            src="./images/video/chatProfile.png"
+                            class="msg-avatar"
+                          />
+                          <div class="msg-bubble">
+                            Bye, see you
+                            <span class="msg-time">9:07 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Incoming -->
+                        <div class="msg-row">
+                          <img
+                            src="./images/video/chatProfile.png"
+                            class="msg-avatar"
+                          />
+                          <div class="msg-bubble">
+                            Hi, how are you Peter Purkar?
+                            <span class="msg-time">9:07 AM, Today</span>
+                          </div>
+                        </div>
+
+                        <!-- Outgoing -->
+                        <div class="msg-right-box">
+                          <div class="msg-right">
+                            Hi, Khalid I am good tnx, how about you?
+
+                            <span class="msg-time">9:10 AM, Today</span>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <!-- notes section -->
-                    <div id="notes_section" class="hidden">
-                      <div class="note-container">
-                        <!-- Header -->
-                        <div class="note-header">
-                          <div class="note-header-left">
-                            <h2>Notes</h2>
-                            <div class="note-add-new">Add New Notes</div>
-                          </div>
+                    <div class="msg_area">
+                      <div class="msg-input-wrapper">
+                        <div class="msg_input_box">
+                          <input
+                            type="text"
+                            placeholder="Type your message"
+                            class="msg-input"
+                          />
+                          <button class="msg-send-btn">➤</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                          <div class="note-header-right">
-                            <div class="note-search-btn">
-                              <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            <div class="note-icon-btn">
-                              <i class="fa-solid fa-plus"></i>
-                            </div>
-                          </div>
+                  <!-- notes section -->
+                  <div id="notes_section" class="hidden">
+                    <div class="note-container">
+                      <!-- Header -->
+                      <div class="note-header">
+                        <div class="note-header-left">
+                          <h2>Notes</h2>
+                          <div class="note-add-new">Add New Notes</div>
                         </div>
 
-                        <!-- Notes List -->
-                        <div class="note-item">
-                          <div class="note-text">
-                            <div class="note-title">New order placed...</div>
-                            <div class="note-date">10 Aug, 2025</div>
+                        <div class="note-header-right">
+                          <div class="note-search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
                           </div>
-
-                          <div class="note-actions">
-                            <div class="note-edit">
-                              <i class="fa-solid fa-pencil"></i>
-                            </div>
-                            <div class="note-delete">
-                              <i class="fa-regular fa-trash-can"></i>
-                            </div>
+                          <div class="note-icon-btn">
+                            <i class="fa-solid fa-plus"></i>
                           </div>
                         </div>
+                      </div>
 
-                        <div class="note-item">
-                          <div class="note-text">
-                            <div class="note-title">Youtube, a video...</div>
-                            <div class="note-date">10 Aug, 2025</div>
-                          </div>
-
-                          <div class="note-actions">
-                            <div class="note-edit">
-                              <i class="fa-solid fa-pencil"></i>
-                            </div>
-                            <div class="note-delete">
-                              <i class="fa-regular fa-trash-can"></i>
-                            </div>
-                          </div>
+                      <!-- Notes List -->
+                      <div class="note-item">
+                        <div class="note-text">
+                          <div class="note-title">New order placed...</div>
+                          <div class="note-date">10 Aug, 2025</div>
                         </div>
 
-                        <div class="note-item">
-                          <div class="note-text">
-                            <div class="note-title">
-                              John just by your pro...
-                            </div>
-                            <div class="note-date">10 Aug, 2025</div>
+                        <div class="note-actions">
+                          <div class="note-edit">
+                            <i class="fa-solid fa-pencil"></i>
                           </div>
-
-                          <div class="note-actions">
-                            <div class="note-edit">
-                              <i class="fa-solid fa-pencil"></i>
-                            </div>
-                            <div class="note-delete">
-                              <i class="fa-regular fa-trash-can"></i>
-                            </div>
+                          <div class="note-delete">
+                            <i class="fa-regular fa-trash-can"></i>
                           </div>
                         </div>
+                      </div>
 
-                        <div class="note-item">
-                          <div class="note-text">
-                            <div class="note-title">Athan Jacoby</div>
-                            <div class="note-date">10 Aug, 2025</div>
-                          </div>
-
-                          <div class="note-actions">
-                            <div class="note-edit">
-                              <i class="fa-solid fa-pencil"></i>
-                            </div>
-                            <div class="note-delete">
-                              <i class="fa-regular fa-trash-can"></i>
-                            </div>
-                          </div>
+                      <div class="note-item">
+                        <div class="note-text">
+                          <div class="note-title">Youtube, a video...</div>
+                          <div class="note-date">10 Aug, 2025</div>
                         </div>
 
-                        <div class="note-item">
-                          <div class="note-text">
-                            <div class="note-title">New order placed...</div>
-                            <div class="note-date">10 Aug, 2025</div>
+                        <div class="note-actions">
+                          <div class="note-edit">
+                            <i class="fa-solid fa-pencil"></i>
                           </div>
-
-                          <div class="note-actions">
-                            <div class="note-edit">
-                              <i class="fa-solid fa-pencil"></i>
-                            </div>
-                            <div class="note-delete">
-                              <i class="fa-regular fa-trash-can"></i>
-                            </div>
+                          <div class="note-delete">
+                            <i class="fa-regular fa-trash-can"></i>
                           </div>
                         </div>
+                      </div>
 
-                        <div class="note-item">
-                          <div class="note-text">
-                            <div class="note-title">Youtube, a video...</div>
-                            <div class="note-date">10 Aug, 2025</div>
+                      <div class="note-item">
+                        <div class="note-text">
+                          <div class="note-title">John just by your pro...</div>
+                          <div class="note-date">10 Aug, 2025</div>
+                        </div>
+
+                        <div class="note-actions">
+                          <div class="note-edit">
+                            <i class="fa-solid fa-pencil"></i>
                           </div>
+                          <div class="note-delete">
+                            <i class="fa-regular fa-trash-can"></i>
+                          </div>
+                        </div>
+                      </div>
 
-                          <div class="note-actions">
-                            <div class="note-edit">
-                              <i class="fa-solid fa-pencil"></i>
-                            </div>
-                            <div class="note-delete">
-                              <i class="fa-regular fa-trash-can"></i>
-                            </div>
+                      <div class="note-item">
+                        <div class="note-text">
+                          <div class="note-title">Athan Jacoby</div>
+                          <div class="note-date">10 Aug, 2025</div>
+                        </div>
+
+                        <div class="note-actions">
+                          <div class="note-edit">
+                            <i class="fa-solid fa-pencil"></i>
+                          </div>
+                          <div class="note-delete">
+                            <i class="fa-regular fa-trash-can"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="note-item">
+                        <div class="note-text">
+                          <div class="note-title">New order placed...</div>
+                          <div class="note-date">10 Aug, 2025</div>
+                        </div>
+
+                        <div class="note-actions">
+                          <div class="note-edit">
+                            <i class="fa-solid fa-pencil"></i>
+                          </div>
+                          <div class="note-delete">
+                            <i class="fa-regular fa-trash-can"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="note-item">
+                        <div class="note-text">
+                          <div class="note-title">Youtube, a video...</div>
+                          <div class="note-date">10 Aug, 2025</div>
+                        </div>
+
+                        <div class="note-actions">
+                          <div class="note-edit">
+                            <i class="fa-solid fa-pencil"></i>
+                          </div>
+                          <div class="note-delete">
+                            <i class="fa-regular fa-trash-can"></i>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </header>
+              </div>
             </div>
             <!-- top rated trainers -->
-            <div class="row style_life">
+            <div class="row style_life side_content">
               <div class="col-lg-8 style_1">
                 <div class="main_content tk_style_01">
                   <div class="trainer_content">
