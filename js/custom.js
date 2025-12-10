@@ -896,8 +896,7 @@ window.addEventListener("resize", setViewport);
 
 // comments box
 const shortParents = document.querySelectorAll(".short_parent");
-// const shareModalTwo = document.getElementById("shareModaltwo");
-// const shareCloseModal = document.querySelector(".short_close_btn");
+const shareModalTwo = document.getElementById("shareModaltwo");
 
 shortParents.forEach((parent) => {
   const commentBtn = parent.querySelector(".short_cmt");
@@ -923,9 +922,9 @@ shortParents.forEach((parent) => {
   // });
 });
 
-// function closeShareModaltwo() {
-//   shareModalTwo.style.display = "none";
-// }
+function closeShareModaltwo() {
+  shareModalTwo.style.display = "none";
+}
 
 // toggle nested comment
 const replyBtns = document.querySelectorAll(".sht_reply_btn");
