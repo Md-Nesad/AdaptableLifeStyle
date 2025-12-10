@@ -903,7 +903,7 @@ shortParents.forEach((parent) => {
   const commentSection = parent.querySelector(".short_video_comment_section");
   const closeBtn = parent.querySelector(".short_close_btn");
   const short = parent.querySelector(".short");
-  // const shortShare = parent.querySelector(".short_share");
+  const shortShare = parent.querySelector(".short_share");
 
   // comment open
   commentBtn.addEventListener("click", () => {
@@ -917,9 +917,9 @@ shortParents.forEach((parent) => {
     short.classList.add("show");
   });
 
-  // shortShare.addEventListener("click", () => {
-  //   shareModalTwo.style.display = "flex";
-  // });
+  shortShare.addEventListener("click", () => {
+    shareModalTwo.style.display = "flex";
+  });
 });
 
 function closeShareModaltwo() {
