@@ -1001,7 +1001,7 @@
                         <div role="button" class="icon short_cmt">
                           <i class="fa-regular fa-message"></i><span>0</span>
                         </div>
-                        <div class="icon">
+                        <div role="button" class="icon short_share">
                           <i class="fa-solid fa-share"></i><span>Share</span>
                         </div>
                         <img
@@ -1435,7 +1435,7 @@
                         <div role="button" class="icon short_cmt">
                           <i class="fa-regular fa-message"></i><span>0</span>
                         </div>
-                        <div class="icon">
+                        <div role="button" class="icon short_share">
                           <i class="fa-solid fa-share"></i><span>Share</span>
                         </div>
                         <img
@@ -1870,7 +1870,7 @@
                         <div role="button" class="icon short_cmt">
                           <i class="fa-regular fa-message"></i><span>0</span>
                         </div>
-                        <div class="icon">
+                        <div role="button" class="icon short_share">
                           <i class="fa-solid fa-share"></i><span>Share</span>
                         </div>
                         <img
@@ -2255,6 +2255,51 @@
                       </div>
                     </div>
                   </section>
+
+                  <!-- share modal -->
+                  <div class="short_share_modal" id="shareModaltwo">
+                    <div class="short_modal_content">
+                      <button
+                        class="short_share_close_btn"
+                        onclick="closeShareModaltwo()"
+                      >
+                        ✕
+                      </button>
+
+                      <h2>Share with Family & Friends</h2>
+
+                      <p class="short_share_title">Share this link via:</p>
+
+                      <div class="short_share_icons">
+                        <div class="short_s_icons fb">
+                          <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div class="short_s_icons x">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </div>
+                        <div class="short_s_icons wa">
+                          <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="short_s_icons rd">
+                          <i class="fa-brands fa-reddit-alien"></i>
+                        </div>
+                        <div class="short_s_icons pn">
+                          <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                      </div>
+
+                      <p class="short_copy_title">Or copy link:</p>
+
+                      <div class="copy-box">
+                        <input
+                          type="text"
+                          value="example.com/share-link"
+                          readonly
+                        />
+                        <button class="share_copy_btn">Copy</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

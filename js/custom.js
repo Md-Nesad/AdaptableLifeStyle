@@ -896,12 +896,15 @@ window.addEventListener("resize", setViewport);
 
 // comments box
 const shortParents = document.querySelectorAll(".short_parent");
+const shareModalTwo = document.getElementById("shareModaltwo");
+const shareCloseModal = document.querySelector(".short_close_btn");
 
 shortParents.forEach((parent) => {
   const commentBtn = parent.querySelector(".short_cmt");
   const commentSection = parent.querySelector(".short_video_comment_section");
   const closeBtn = parent.querySelector(".short_close_btn");
   const short = parent.querySelector(".short");
+  const shortShare = parent.querySelector(".short_share");
 
   // comment open
   commentBtn.addEventListener("click", () => {
@@ -914,7 +917,15 @@ shortParents.forEach((parent) => {
     commentSection.classList.remove("active");
     short.classList.add("show");
   });
+
+  shortShare.addEventListener("click", () => {
+    shareModalTwo.style.display = "flex";
+  });
 });
+
+function closeShareModaltwo() {
+  shareModalTwo.style.display = "none";
+}
 
 // toggle nested comment
 const replyBtns = document.querySelectorAll(".sht_reply_btn");
