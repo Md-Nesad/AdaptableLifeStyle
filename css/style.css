@@ -12836,7 +12836,7 @@ svg {
   position: fixed;
   inset: 0;
   background: rgba(16, 2, 2, 0.724);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
