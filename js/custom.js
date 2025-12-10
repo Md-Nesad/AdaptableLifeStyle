@@ -908,12 +908,14 @@ shortParents.forEach((parent) => {
   // comment open
   commentBtn.addEventListener("click", () => {
     short.classList.remove("show");
+    short.classList.add("animate");
     commentSection.classList.add("active");
   });
 
   // comment close
   closeBtn.addEventListener("click", () => {
     commentSection.classList.remove("active");
+    short.classList.remove("animate");
     short.classList.add("show");
   });
 
