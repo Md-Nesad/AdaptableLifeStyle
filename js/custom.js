@@ -893,3 +893,62 @@ function setViewport() {
 
 setViewport();
 window.addEventListener("resize", setViewport);
+
+// comments box
+const shortParents = document.querySelectorAll(".short_parent");
+
+shortParents.forEach((parent) => {
+  const commentBtn = parent.querySelector(".short_cmt");
+  const commentSection = parent.querySelector(".short_video_comment_section");
+  const closeBtn = parent.querySelector(".short_close_btn");
+  const short = parent.querySelector(".short");
+
+  // comment open
+  commentBtn.addEventListener("click", () => {
+    short.classList.remove("show");
+    commentSection.classList.add("active");
+  });
+
+  // comment close
+  closeBtn.addEventListener("click", () => {
+    commentSection.classList.remove("active");
+    short.classList.add("show");
+  });
+});
+
+// toggle nested comment
+const replyBtns = document.querySelectorAll(".sht_reply_btn");
+
+replyBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (btn.style.fontWeight === "bold") {
+      btn.style.fontWeight = "normal";
+    } else {
+      btn.style.fontWeight = "bold";
+    }
+    const container = btn.closest(".comment_content");
+    const replyButton = container.querySelector(".shot_reply_button");
+    const replyMessage = container.querySelector(".reply_message");
+
+    // Toggle reply button + message
+    if (replyButton.style.display === "block") {
+      replyButton.style.display = "none";
+      replyMessage.style.display = "none";
+    } else {
+      replyButton.style.display = "block";
+      replyButton.innerHTML = `<i class="fa-solid fa-angle-down"></i> 1 Replies`;
+      // add bold when showing
+    }
+
+    // Toggle reply message on reply button click
+    replyButton.onclick = () => {
+      if (replyMessage.style.display === "block") {
+        replyMessage.style.display = "none";
+        replyButton.innerHTML = `<i class="fa-solid fa-angle-down"></i> 1 Replies`;
+      } else {
+        replyMessage.style.display = "block";
+        replyButton.innerHTML = `<i class="fa-solid fa-angle-up"></i> 1 Replies`;
+      }
+    };
+  });
+});

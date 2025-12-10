@@ -952,180 +952,1309 @@
               <div>
                 <div class="shorts-container">
                   <!-- SHORT #1 -->
-                  <section class="short">
-                    <div class="video-box">
-                      <video
-                        class="video"
-                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                        playsinline
-                        muted
-                      ></video>
 
-                      <!-- Sound + Play Buttons -->
-                      <div class="short_controller d-flex gap-3">
-                        <span
-                          ><i class="fa-solid fa-play play-btn short_i"></i
-                        ></span>
-                        <span
-                          ><i
-                            class="fa-solid fa-volume-high sound-btn short_i"
-                          ></i
-                        ></span>
+                  <section class="short_parent">
+                    <div class="short">
+                      <div class="video-box">
+                        <video
+                          class="video"
+                          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                          playsinline
+                          muted
+                        ></video>
+
+                        <!-- Sound + Play Buttons -->
+                        <div class="short_controller d-flex gap-3">
+                          <span><i class="fa-solid fa-play play-btn"></i></span>
+                          <span
+                            ><i class="fa-solid fa-volume-high sound-btn"></i
+                          ></span>
+                        </div>
+
+                        <!-- Bottom Info -->
+                        <div class="info">
+                          <img
+                            src="./images/video/profile.png"
+                            class="small-pic"
+                          />
+                          <span class="short_name">Your Channel</span>
+                          <button class="sub">Subscribe</button>
+                          <p class="short_desc">Premium Workout Session</p>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="short_progress">
+                          <div class="short_progress_fill"></div>
+                        </div>
                       </div>
 
-                      <!-- Bottom Info -->
-                      <div class="info">
+                      <!-- Right Buttons -->
+                      <div class="short_actions">
+                        <div class="icon">
+                          <i class="fa-regular fa-thumbs-up"></i
+                          ><span>205K</span>
+                        </div>
+                        <div class="icon">
+                          <i class="fa-regular fa-thumbs-down"></i
+                          ><span>Dislike</span>
+                        </div>
+                        <div role="button" class="icon short_cmt">
+                          <i class="fa-regular fa-message"></i><span>0</span>
+                        </div>
+                        <div class="icon">
+                          <i class="fa-solid fa-share"></i><span>Share</span>
+                        </div>
                         <img
+                          class="short_profile"
                           src="./images/video/profile.png"
-                          class="small-pic"
                         />
-                        <span class="short_name">Your Channel 1</span>
-                        <button class="sub">Subscribe</button>
-                        <p class="short_desc">30 minute cardio section</p>
-                      </div>
-
-                      <!-- Progress Bar -->
-                      <div class="short_progress">
-                        <div class="short_progress_fill"></div>
                       </div>
                     </div>
 
-                    <!-- Right Buttons -->
-                    <div class="short_actions">
-                      <div class="icon">
-                        <i class="fa-regular fa-thumbs-up"></i><span>205K</span>
+                    <!-- comment secton -->
+                    <div class="short_video_comment_section">
+                      <div class="comment_header">
+                        <h3>Comment <span>1.1K</span></h3>
+                        <button class="short_close_btn">&times;</button>
                       </div>
-                      <div class="icon">
-                        <i class="fa-regular fa-thumbs-down"></i
-                        ><span>Dislike</span>
+
+                      <div class="comments_list">
+                        <!-- Single Comment -->
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="icon">
-                        <i class="fa-regular fa-message"></i><span>0</span>
+
+                      <!-- Add Comment Box -->
+                      <div class="add_comment">
+                        <div class="input_wrapper">
+                          <img
+                            src="./images/video/profile.png"
+                            alt="User Avatar"
+                          />
+                          <input type="text" placeholder="Add a comment..." />
+                        </div>
                       </div>
-                      <div class="icon">
-                        <i class="fa-solid fa-share"></i><span>Share</span>
+                    </div>
+                  </section>
+
+                  <section class="short_parent">
+                    <div class="short">
+                      <div class="video-box">
+                        <video
+                          class="video"
+                          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                          playsinline
+                          muted
+                        ></video>
+
+                        <!-- Sound + Play Buttons -->
+                        <div class="short_controller d-flex gap-3">
+                          <span><i class="fa-solid fa-play play-btn"></i></span>
+                          <span
+                            ><i class="fa-solid fa-volume-high sound-btn"></i
+                          ></span>
+                        </div>
+
+                        <!-- Bottom Info -->
+                        <div class="info">
+                          <img
+                            src="./images/video/profile.png"
+                            class="small-pic"
+                          />
+                          <span class="short_name">Your Channel</span>
+                          <button class="sub">Subscribe</button>
+                          <p class="short_desc">Premium Workout Session</p>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="short_progress">
+                          <div class="short_progress_fill"></div>
+                        </div>
                       </div>
-                      <img
-                        class="short_profile"
-                        src="./images/video/profile.png"
-                      />
+
+                      <!-- Right Buttons -->
+                      <div class="short_actions">
+                        <div class="icon">
+                          <i class="fa-regular fa-thumbs-up"></i
+                          ><span>205K</span>
+                        </div>
+                        <div class="icon">
+                          <i class="fa-regular fa-thumbs-down"></i
+                          ><span>Dislike</span>
+                        </div>
+                        <div role="button" class="icon short_cmt">
+                          <i class="fa-regular fa-message"></i><span>0</span>
+                        </div>
+                        <div class="icon">
+                          <i class="fa-solid fa-share"></i><span>Share</span>
+                        </div>
+                        <img
+                          class="short_profile"
+                          src="./images/video/profile.png"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- comment secton -->
+                    <div class="short_video_comment_section">
+                      <div class="comment_header">
+                        <h3>Comment <span>1.1K</span></h3>
+                        <button class="short_close_btn">&times;</button>
+                      </div>
+
+                      <div class="comments_list">
+                        <!-- Single Comment -->
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Add Comment Box -->
+                      <div class="add_comment">
+                        <div class="input_wrapper">
+                          <img
+                            src="./images/video/profile.png"
+                            alt="User Avatar"
+                          />
+                          <input type="text" placeholder="Add a comment..." />
+                        </div>
+                      </div>
                     </div>
                   </section>
 
                   <!-- SHORT #2 -->
-                  <section class="short">
-                    <div class="video-box">
-                      <video
-                        class="video"
-                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                        playsinline
-                        muted
-                      ></video>
+                  <section class="short_parent">
+                    <div class="short">
+                      <div class="video-box">
+                        <video
+                          class="video"
+                          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                          playsinline
+                          muted
+                        ></video>
 
-                      <!-- Sound + Play Buttons -->
-                      <div class="short_controller d-flex gap-3">
-                        <span><i class="fa-solid fa-play play-btn"></i></span>
-                        <span
-                          ><i class="fa-solid fa-volume-high sound-btn"></i
-                        ></span>
+                        <!-- Sound + Play Buttons -->
+                        <div class="short_controller d-flex gap-3">
+                          <span><i class="fa-solid fa-play play-btn"></i></span>
+                          <span
+                            ><i class="fa-solid fa-volume-high sound-btn"></i
+                          ></span>
+                        </div>
+
+                        <!-- Bottom Info -->
+                        <div class="info">
+                          <img
+                            src="./images/video/profile.png"
+                            class="small-pic"
+                          />
+                          <span class="short_name">Your Channel</span>
+                          <button class="sub">Subscribe</button>
+                          <p class="short_desc">Premium Workout Session</p>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="short_progress">
+                          <div class="short_progress_fill"></div>
+                        </div>
                       </div>
 
-                      <!-- Bottom Info -->
-                      <div class="info">
+                      <!-- Right Buttons -->
+                      <div class="short_actions">
+                        <div class="icon">
+                          <i class="fa-regular fa-thumbs-up"></i
+                          ><span>205K</span>
+                        </div>
+                        <div class="icon">
+                          <i class="fa-regular fa-thumbs-down"></i
+                          ><span>Dislike</span>
+                        </div>
+                        <div role="button" class="icon short_cmt">
+                          <i class="fa-regular fa-message"></i><span>0</span>
+                        </div>
+                        <div class="icon">
+                          <i class="fa-solid fa-share"></i><span>Share</span>
+                        </div>
                         <img
+                          class="short_profile"
                           src="./images/video/profile.png"
-                          class="small-pic"
                         />
-                        <span class="short_name">Your Channel</span>
-                        <button class="sub">Subscribe</button>
-                        <p class="short_desc">Premium Workout Session</p>
-                      </div>
-
-                      <!-- Progress Bar -->
-                      <div class="short_progress">
-                        <div class="short_progress_fill"></div>
                       </div>
                     </div>
 
-                    <!-- Right Buttons -->
-                    <div class="short_actions">
-                      <div class="icon">
-                        <i class="fa-regular fa-thumbs-up"></i><span>205K</span>
+                    <!-- comment secton -->
+                    <div class="short_video_comment_section">
+                      <div class="comment_header">
+                        <h3>Comment <span>1.1K</span></h3>
+                        <button class="short_close_btn">&times;</button>
                       </div>
-                      <div class="icon">
-                        <i class="fa-regular fa-thumbs-down"></i
-                        ><span>Dislike</span>
+
+                      <div class="comments_list">
+                        <!-- Single Comment -->
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <!-- Already present reply button -->
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <!-- Already present reply message -->
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="comment_item">
+                          <div class="comment_avatar">
+                            <img
+                              src="./images/video/profile.png"
+                              alt="User Avatar"
+                            />
+                          </div>
+
+                          <div class="comment_content">
+                            <p class="username">
+                              @jhonsmith254 <small>22 min ago</small>
+                            </p>
+                            <p class="comment_text">
+                              This video made my day and I am happy with this
+                              video
+                            </p>
+                            <div class="comment_actions">
+                              <span class="short_cmt_likes"
+                                ><i class="fa-regular fa-thumbs-up"></i>
+                                250</span
+                              >
+                              <span
+                                role="button"
+                                class="short_cmt_likes sht_reply_btn"
+                                ><i class="fa-regular fa-thumbs-down"></i>
+                                Reply</span
+                              >
+                            </div>
+
+                            <div class="shot_reply_button">1 Reply</div>
+
+                            <div
+                              class="reply_message"
+                              style="
+                                display: none;
+                                margin-left: 5px;
+                                color: gray;
+                              "
+                            >
+                              <div class="comment_item">
+                                <div class="comment_avatar">
+                                  <img
+                                    src="./images/video/profile.png"
+                                    alt="User Avatar"
+                                  />
+                                </div>
+                                <div class="comment_content">
+                                  <p class="username">
+                                    @jhonsmith254 <small>22 min ago</small>
+                                  </p>
+                                  <p class="comment_text">
+                                    This is a nested reply.
+                                  </p>
+                                  <div class="comment_actions">
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-up"></i>
+                                      250</span
+                                    >
+                                    <span class="short_cmt_likes"
+                                      ><i class="fa-regular fa-thumbs-down"></i>
+                                      Reply</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="icon">
-                        <i class="fa-regular fa-message"></i><span>0</span>
+
+                      <!-- Add Comment Box -->
+                      <div class="add_comment">
+                        <div class="input_wrapper">
+                          <img
+                            src="./images/video/profile.png"
+                            alt="User Avatar"
+                          />
+                          <input type="text" placeholder="Add a comment..." />
+                        </div>
                       </div>
-                      <div class="icon">
-                        <i class="fa-solid fa-share"></i><span>Share</span>
-                      </div>
-                      <img
-                        class="short_profile"
-                        src="./images/video/profile.png"
-                      />
                     </div>
                   </section>
-
-                  <!-- short three -->
-                  <section class="short">
-                    <div class="video-box">
-                      <video
-                        class="video"
-                        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                        playsinline
-                        muted
-                      ></video>
-
-                      <!-- Sound + Play Buttons -->
-                      <div class="short_controller d-flex gap-3">
-                        <span><i class="fa-solid fa-play play-btn"></i></span>
-                        <span
-                          ><i class="fa-solid fa-volume-high sound-btn"></i
-                        ></span>
-                      </div>
-
-                      <!-- Bottom Info -->
-                      <div class="info">
-                        <img
-                          src="./images/video/profile.png"
-                          class="small-pic"
-                        />
-                        <span class="short_name">Your Channel</span>
-                        <button class="sub">Subscribe</button>
-                        <p class="short_desc">Premium Workout Session</p>
-                      </div>
-
-                      <!-- Progress Bar -->
-                      <div class="short_progress">
-                        <div class="short_progress_fill"></div>
-                      </div>
-                    </div>
-
-                    <!-- Right Buttons -->
-                    <div class="short_actions">
-                      <div class="icon">
-                        <i class="fa-regular fa-thumbs-up"></i><span>205K</span>
-                      </div>
-                      <div class="icon">
-                        <i class="fa-regular fa-thumbs-down"></i
-                        ><span>Dislike</span>
-                      </div>
-                      <div class="icon">
-                        <i class="fa-regular fa-message"></i><span>0</span>
-                      </div>
-                      <div class="icon">
-                        <i class="fa-solid fa-share"></i><span>Share</span>
-                      </div>
-                      <img
-                        class="short_profile"
-                        src="./images/video/profile.png"
-                      />
-                    </div>
-                  </section>
-                  <!--  -->
                 </div>
               </div>
             </div>
@@ -1138,6 +2267,6 @@
     <script src="./js/slick.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery.nice-select.js"></script>
-    <script src="./js/custom.js"></script>
+    <script src="./js/custom.js" defer></script>
   </body>
 </html>
