@@ -1922,7 +1922,7 @@
 
 .video_area .heading i {
   color: #ffdeb3;
-  font-size: 26px;
+  font-size: 27px;
 }
 
 @media (min-width: 1301px) and (max-width: 1520px) {
@@ -2028,7 +2028,7 @@
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .videos_of_the_day.style_1 {
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
 
@@ -2291,7 +2291,7 @@
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .diet_area {
-    margin-top: 30px !important;
+    margin-top: 20px !important;
   }
 }
 
@@ -2317,7 +2317,7 @@
   height: 52px;
   line-height: 52px;
   text-align: center;
-  background: #c3e66e;
+  background: #ffdeb3;
   color: #000000;
   opacity: 0.5;
   display: inline-block;
@@ -2359,7 +2359,7 @@
   height: 52px;
   line-height: 52px;
   text-align: center;
-  background: #c3e66e;
+  background: #ffdeb3;
   color: #000000;
   opacity: 0.5;
   display: inline-block;
@@ -2456,7 +2456,7 @@
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .quick_view {
-    margin-top: 30px !important;
+    margin-top: 20px !important;
   }
 }
 
@@ -5626,7 +5626,7 @@
 }
 
 .trainer_ranked_section.style_1 {
-  margin-top: 58px;
+  margin-top: 20px;
 }
 
 .trainer_content {
@@ -5974,6 +5974,13 @@
 .trainer_content .view_more_btn {
   margin-top: 60px;
   text-align: center;
+}
+
+@media (max-width:768px) {
+  .trainer_content .view_more_btn {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 1301px) and (max-width: 1520px) {
