@@ -9137,7 +9137,7 @@ canvas {
   margin-bottom: -5px;
 }
 .account_setting_quick_videos {
-  margin: 25px -13px 0px -15px;
+  margin: 25px 0px 0px 0px;
   border-bottom: 01px solid #0000001a;
   padding-bottom: 40px;
 }
@@ -10659,7 +10659,7 @@ input[type="date"]:not(:valid):before {
 }
 
 .video_category_title {
-  margin-top: -20px;
+  margin-top: -10px;
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: 600;
